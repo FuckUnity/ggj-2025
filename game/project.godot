@@ -18,9 +18,10 @@ config/icon="res://icon.png"
 [display]
 
 window/size/viewport_width=1600
-window/size/viewport_height=720
+window/size/viewport_height=960
 window/size/initial_position_type=2
 window/stretch/mode="viewport"
+window/dpi/allow_hidpi=false
 
 [dotnet]
 
