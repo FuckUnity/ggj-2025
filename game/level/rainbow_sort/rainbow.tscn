@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://xqmj2pm06rq7"]
+
+[ext_resource type="Script" path="res://level/rainbow_sort/rainbow.gd" id="1_d2fdv"]
+
+[node name="Rainbow" type="Node"]
+script = ExtResource("1_d2fdv")
