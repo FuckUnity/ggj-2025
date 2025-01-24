@@ -1,24 +1,25 @@
-[gd_scene load_steps=13 format=3 uid="uid://d35fcfy4ngulx"]
+[gd_scene load_steps=10 format=3 uid="uid://d35fcfy4ngulx"]
 
 [ext_resource type="Script" path="res://level/main/main.gd" id="1_rswi3"]
-[ext_resource type="Texture2D" uid="uid://dnub5cpkjdy2l" path="res://assets/Kitchen.png" id="2_l2i18"]
-[ext_resource type="Texture2D" uid="uid://3aeevk8u7vqg" path="res://assets/main.jpg" id="2_sadau"]
-[ext_resource type="Texture2D" uid="uid://b07rfa12n1rmf" path="res://assets/Mug.png" id="3_fjpey"]
-[ext_resource type="Texture2D" uid="uid://boxcsqq341cwc" path="res://assets/Desk.png" id="4_5t5fv"]
-[ext_resource type="Texture2D" uid="uid://co8ylh4bk2ple" path="res://assets/Coffee_room.png" id="4_ccutl"]
-[ext_resource type="Texture2D" uid="uid://cwnuw8r0md4x4" path="res://assets/Kratzbaum.png" id="5_kxywm"]
-[ext_resource type="Texture2D" uid="uid://b117e2hih2e6b" path="res://assets/Plants_sad.png" id="6_kt6gt"]
+[ext_resource type="Texture2D" uid="uid://bj7yb3qclre7g" path="res://assets/stage/stage.jpeg" id="2_ae4i5"]
+[ext_resource type="Shader" path="res://level/main/grayscale.gdshader" id="2_ui23u"]
+[ext_resource type="Texture2D" uid="uid://dyr7dm7lsv7wn" path="res://assets/stage/bubble_01.png" id="5_n1ox1"]
+[ext_resource type="Texture2D" uid="uid://bqslba55e18gv" path="res://assets/stage/bubble_02.png" id="6_c0vk8"]
 [ext_resource type="Shader" path="res://level/main/hover.gdshader" id="8_al7t1"]
-[ext_resource type="Texture2D" uid="uid://bqxybok0lfjdy" path="res://assets/napf.png" id="9_efw6u"]
 [ext_resource type="AudioStream" uid="uid://ciaomyl45n8k4" path="res://level/main/WohnzimmerBackroundloop.mp3" id="10_koedn"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_unlex"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kowo6"]
+shader = ExtResource("2_ui23u")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_40i0e"]
 shader = ExtResource("8_al7t1")
-shader_parameter/width = 12.0
+shader_parameter/width = 8.0
 shader_parameter/outline_color = Color(0.8, 0.8, 0.8, 0.259)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_rswi3")
+shader_disabled = SubResource("ShaderMaterial_kowo6")
+shader_hover = SubResource("ShaderMaterial_40i0e")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -41,119 +42,30 @@ ratio = 1.77
 
 [node name="TextureRectRoom" type="TextureRect" parent="Control/AspectRatioContainer"]
 layout_mode = 2
-texture = ExtResource("2_sadau")
+texture = ExtResource("2_ae4i5")
 
-[node name="TextureRectWindows" type="TextureRect" parent="Control/AspectRatioContainer"]
+[node name="Control" type="Control" parent="Control/AspectRatioContainer"]
 layout_mode = 2
 
-[node name="TextureRectKitchen" type="TextureRect" parent="Control/AspectRatioContainer"]
-layout_mode = 2
-texture = ExtResource("2_l2i18")
-
-[node name="TextureRectHover" type="TextureRect" parent="Control/AspectRatioContainer"]
-z_as_relative = false
-material = SubResource("ShaderMaterial_unlex")
-layout_mode = 2
-
-[node name="TextureRectCatTree" type="TextureRect" parent="Control/AspectRatioContainer"]
-layout_mode = 2
-texture = ExtResource("5_kxywm")
-
-[node name="TextureRectPlants" type="TextureRect" parent="Control/AspectRatioContainer"]
-layout_mode = 2
-texture = ExtResource("6_kt6gt")
-
-[node name="TextureRectDesk" type="TextureRect" parent="Control/AspectRatioContainer"]
-layout_mode = 2
-texture = ExtResource("4_5t5fv")
-
-[node name="TextureRectCoffeeMaker" type="TextureRect" parent="Control/AspectRatioContainer"]
-layout_mode = 2
-texture = ExtResource("4_ccutl")
-
-[node name="TextureRectMug" type="TextureRect" parent="Control/AspectRatioContainer"]
-layout_mode = 2
-texture = ExtResource("3_fjpey")
-
-[node name="TextureRectCouch" type="TextureRect" parent="Control/AspectRatioContainer"]
-layout_mode = 2
-
-[node name="TextureRectChair" type="TextureRect" parent="Control/AspectRatioContainer"]
-layout_mode = 2
-
-[node name="TextureRectFoodBowl" type="TextureRect" parent="Control/AspectRatioContainer"]
-layout_mode = 2
-texture = ExtResource("9_efw6u")
-
-[node name="ButtonWindow" type="TextureButton" parent="Control"]
-layout_mode = 2
-offset_left = 306.0
-offset_top = 195.0
-offset_right = 979.0
-offset_bottom = 516.0
-
-[node name="ButtonKitchen" type="TextureButton" parent="Control"]
+[node name="ButtonBubble00" type="TextureButton" parent="Control/AspectRatioContainer/Control"]
+clip_contents = true
 layout_mode = 0
-offset_left = 1216.0
-offset_top = 469.0
-offset_right = 1355.0
-offset_bottom = 622.0
+offset_left = 500.0
+offset_top = 800.0
+offset_right = 1300.0
+offset_bottom = 1400.0
+texture_normal = ExtResource("5_n1ox1")
+stretch_mode = 4
 
-[node name="ButtonCatTree" type="TextureButton" parent="Control"]
-layout_mode = 0
-offset_left = 1012.0
-offset_top = 352.0
-offset_right = 1208.0
-offset_bottom = 863.0
-
-[node name="ButtonPlant0" type="TextureButton" parent="Control"]
-layout_mode = 0
-offset_left = 137.0
-offset_top = 416.0
-offset_right = 306.0
-offset_bottom = 853.0
-
-[node name="ButtonPlant1" type="TextureButton" parent="Control"]
-layout_mode = 0
-offset_left = 842.0
-offset_top = 354.0
-offset_right = 928.0
-offset_bottom = 536.0
-
-[node name="ButtonPlant2" type="TextureButton" parent="Control"]
-layout_mode = 0
-offset_left = 1301.0
-offset_top = 623.0
-offset_right = 1389.0
-offset_bottom = 846.0
-
-[node name="ButtonPlant3" type="TextureButton" parent="Control"]
-layout_mode = 0
-offset_left = 6.0
-offset_top = 29.0
-offset_right = 209.0
-offset_bottom = 274.0
-
-[node name="ButtonComputer" type="TextureButton" parent="Control"]
-layout_mode = 0
-offset_left = -2.0
-offset_top = 509.0
-offset_right = 128.0
-offset_bottom = 849.0
-
-[node name="ButtonEasterEgg" type="TextureButton" parent="Control"]
-layout_mode = 0
-offset_left = 1200.0
-offset_top = 189.0
-offset_right = 1303.0
-offset_bottom = 258.0
-
-[node name="ButtonFoodBowl" type="TextureButton" parent="Control"]
-layout_mode = 0
-offset_left = 1114.0
-offset_top = 879.0
-offset_right = 1226.0
-offset_bottom = 945.0
+[node name="ButtonBubble01" type="TextureButton" parent="Control/AspectRatioContainer/Control"]
+layout_mode = 2
+offset_left = 3400.0
+offset_top = 650.0
+offset_right = 4200.0
+offset_bottom = 1250.0
+texture_normal = ExtResource("6_c0vk8")
+ignore_texture_size = true
+stretch_mode = 4
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

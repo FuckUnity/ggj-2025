@@ -103,9 +103,5 @@ func _spawn_point():
 func _get_plants_image():
 	if not game or not game.state:
 		return null
-	match game.state.mainState[MainState.MainSceneObjects.PLANTS]:
-		"sad":
-			return plant_sad
-		"happy":
-			return plant_happy
-	return null
+		
+	return plant_sad
