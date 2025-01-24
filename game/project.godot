@@ -17,8 +17,9 @@ config/icon="res://icon.png"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
+window/size/viewport_width=1600
+window/size/viewport_height=720
+window/size/initial_position_type=2
 window/stretch/mode="viewport"
 
 [dotnet]
@@ -29,6 +30,16 @@ project/assembly_name="Catventures"
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/tnowe_extra_controls/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://level/fakenews_please/": "gray"
+}
 
 [input]
 
