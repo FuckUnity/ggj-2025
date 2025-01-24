@@ -1,16 +1,18 @@
 # Idee
 
 ## Namensvorschläge
-- Bubblomat
-- Burst my Bubble
+- ~~Bubblomat~~
+- Burst the Bubble
  
-- Mini-Game Collection
-  - Sonntagsfrage als Visual
-  - Nach jedem minigame verändern sich die Balken
-  - Round-Table / Stammtisch, Sprechblasen mit nicht leesbarem Text -> Starten minigame, danach ist die Bubble weg
+## Mini-Game Collection
+  - ~~Sonntagsfrage als Visual~~
+  - ~~Nach jedem minigame verändern sich die Balken~~
+  - ~~Round-Table / Stammtisch, Sprechblasen mit nicht leesbarem Text -> Starten minigame, danach ist die Bubble weg~~
   - Actualy Secret Hitler, Reporter davor?
     - Sprechblasen von Reportern und/oder Redner
     - Person auf Podium hält Rede, nach jedem Mini-Game verliert er ein Verkleidungsstück, am ende Steht Hitler da
+    - Puplikum in unterschiedlichen Farben oder Blau und nach Peerbubble durchmischt / Rainbow 
+    - Für das letzte Minigame kommt eine Hand mit Microfon ins Bild
  
 ## Minigames
 - Christian Lindner Torten ins Gesicht werfen
