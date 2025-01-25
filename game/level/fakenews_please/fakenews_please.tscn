@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cv2xgcfitlne7"]
+[gd_scene load_steps=29 format=3 uid="uid://cv2xgcfitlne7"]
 
 [ext_resource type="Script" path="res://level/fakenews_please/fakenews_please.gd" id="1_2e40f"]
 [ext_resource type="Texture2D" uid="uid://cnjmx83eom82y" path="res://level/fakenews_please/paper.jpg" id="2_ewlqc"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://d33tt1sa20rxs" path="res://assets/fakenews_please/steam_3.png" id="16_6sumv"]
 [ext_resource type="Texture2D" uid="uid://h1jii40u3aq" path="res://assets/fakenews_please/customer.png" id="19_m6hbt"]
 [ext_resource type="AudioStream" uid="uid://dilqt44eu3x6u" path="res://audio/Dark City.Wav" id="19_oiov1"]
+[ext_resource type="Texture2D" uid="uid://d0o5cm2duj7qw" path="res://assets/fakenews_please/papsti.png" id="20_nkqls"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2mayo"]
 animations = [{
@@ -207,6 +208,14 @@ paper_texture = ExtResource("2_ewlqc")
 person_texture = ExtResource("19_m6hbt")
 is_fake = 2
 failure_message = "Sadly this article is filled with misinformation and hate :("
+
+[node name="2" type="Node" parent="CustomerPrefabs"]
+script = ExtResource("14_r88dh")
+customer_name = "test1"
+paper_texture = ExtResource("20_nkqls")
+person_texture = ExtResource("19_m6hbt")
+is_fake = 2
+failure_message = "How would anyone believe this, AI is rotting our brains"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("19_oiov1")
