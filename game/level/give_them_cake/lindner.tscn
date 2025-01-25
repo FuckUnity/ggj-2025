@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://dbjflm7idxskb"]
+
+[ext_resource type="Script" path="res://level/give_them_cake/lindner.gd" id="1_qhu6s"]
+[ext_resource type="Texture2D" uid="uid://cl6yiu0465om5" path="res://assets/give_them_cake/lindner_01.png" id="2_h2ynl"]
+[ext_resource type="Texture2D" uid="uid://be5vpoosya0qy" path="res://assets/give_them_cake/lindner_02.png" id="3_wqkix"]
+[ext_resource type="Texture2D" uid="uid://b0nj3yi6b5ao2" path="res://assets/give_them_cake/lindner_03.png" id="4_5bnhu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1hn3f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_h2ynl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wqkix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5bnhu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wqkix")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Lindner" type="Node2D"]
+script = ExtResource("1_qhu6s")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, 0)
+scale = Vector2(0.267798, 0.267798)
+sprite_frames = SubResource("SpriteFrames_1hn3f")
+frame_progress = 0.569646
