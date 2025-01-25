@@ -14,6 +14,7 @@ class_name FakenewsPlease extends level_base
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	super._ready()
 	play_next_customer()
 	response_confirm.connect("pressed", on_confirm_response)
 	(response_confirm.get_parent() as Sprite2D).set_visible(false)
