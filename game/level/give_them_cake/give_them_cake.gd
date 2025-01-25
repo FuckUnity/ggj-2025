@@ -29,7 +29,7 @@ func _ready():
 	bird_holder = $"./BirdHolder"
 	points_holder = $"./PointsHolder"
 	points_visual = $"Control2/AspectRatioContainer/Control/PointsHolder/Points"
-	Input.set_custom_mouse_cursor(cursor_cake, 0, Vector2(64, 64))
+	Input.set_custom_mouse_cursor(cursor_cake, 0, Vector2(128, 128))
 
 func _physics_process(delta):
 	_next_bird_spawn_in_s = _next_bird_spawn_in_s - delta
