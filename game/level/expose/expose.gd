@@ -32,7 +32,7 @@ const argument_icons = {
 	'war': "res://assets/expose/icons/war.png",
 	'climate': "res://assets/expose/icons/temperature_climate.png",
 	'child': "res://assets/expose/icons/child.png",
-	'cake': "res://assets/tiny_paw.png",
+	'cake': "res://assets/expose/icons/throw_cake.png",
 	'oil': "res://assets/expose/icons/oil-barrel.png"
 }
 
