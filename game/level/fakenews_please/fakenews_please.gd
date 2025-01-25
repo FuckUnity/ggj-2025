@@ -7,7 +7,7 @@ class_name FakenewsPlease extends level_base
 @export var customer_sprite: Sprite2D
 
 @export var customer_start: Vector2
-@export var customer_end: Vector2
+@export var customer_end: Vector2	
 
 @export var response_label: RichTextLabel
 @export var response_confirm: Button
