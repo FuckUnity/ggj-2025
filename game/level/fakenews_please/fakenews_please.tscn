@@ -71,8 +71,8 @@ paper_spawn_pos = Vector2(328, 703)
 customers = [NodePath("CustomerPrefabs/1")]
 paper_prefab = ExtResource("14_ji504")
 customer_sprite = NodePath("CanvasLayer/CustomerClipping/Customer")
-customer_start = Vector2(0, -183)
-customer_end = Vector2(0, 124)
+customer_start = Vector2(0, -290)
+customer_end = Vector2(0, 85)
 response_label = NodePath("CanvasLayer/Response/responselabel")
 response_confirm = NodePath("CanvasLayer/Response/Confirm")
 
@@ -124,7 +124,8 @@ texture = SubResource("PlaceholderTexture2D_1oq2j")
 centered = false
 
 [node name="Customer" type="Sprite2D" parent="CanvasLayer/CustomerClipping"]
-position = Vector2(0, 124)
+position = Vector2(-9, -290)
+scale = Vector2(1.56522, 1.54802)
 texture = ExtResource("19_m6hbt")
 centered = false
 
