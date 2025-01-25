@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cv2xgcfitlne7"]
+[gd_scene load_steps=27 format=3 uid="uid://cv2xgcfitlne7"]
 
 [ext_resource type="Script" path="res://level/fakenews_please/fakenews_please.gd" id="1_2e40f"]
 [ext_resource type="Texture2D" uid="uid://cnjmx83eom82y" path="res://level/fakenews_please/paper.jpg" id="2_ewlqc"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bjbu43xqiqa6c" path="res://level/fakenews_please/notebook.jpg" id="5_bl3ud"]
 [ext_resource type="Texture2D" uid="uid://d08idec8pnkh3" path="res://assets/fakenews_please/stamp_fake.png" id="6_dlulk"]
 [ext_resource type="Script" path="res://level/fakenews_please/stamp.gd" id="6_oorjg"]
+[ext_resource type="Texture2D" uid="uid://bn7ry7yjj1lqn" path="res://level/fakenews_please/speechbubble.png" id="7_eox1u"]
 [ext_resource type="Texture2D" uid="uid://coqgawcqfs67s" path="res://assets/fakenews_please/stamp_fake_down.png" id="8_6hvg6"]
 [ext_resource type="Texture2D" uid="uid://dya6tau5v10vh" path="res://assets/fakenews_please/stamp_real.png" id="10_3viky"]
 [ext_resource type="Texture2D" uid="uid://clucqba7g1ilc" path="res://assets/fakenews_please/stamp_fake_decal.png" id="10_xruff"]
@@ -17,6 +18,7 @@
 [ext_resource type="Script" path="res://level/fakenews_please/customer.gd" id="14_r88dh"]
 [ext_resource type="Texture2D" uid="uid://cd0ul7fvfw7du" path="res://assets/fakenews_please/steam_2.png" id="15_7nd5a"]
 [ext_resource type="Texture2D" uid="uid://d33tt1sa20rxs" path="res://assets/fakenews_please/steam_3.png" id="16_6sumv"]
+[ext_resource type="AudioStream" uid="uid://dilqt44eu3x6u" path="res://audio/Dark City.Wav" id="19_oiov1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2mayo"]
 animations = [{
@@ -34,9 +36,6 @@ animations = [{
 "name": &"default",
 "speed": 1.0
 }]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6aybi"]
-load_path = "res://.godot/imported/comic-2.png-e4667d36d95b44337685d31d7130ac4a.ctex"
 
 [sub_resource type="Theme" id="Theme_6dxcb"]
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
@@ -94,7 +93,7 @@ frame_progress = 0.520588
 
 [node name="Response" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(592, 202)
-texture = SubResource("CompressedTexture2D_6aybi")
+texture = ExtResource("7_eox1u")
 flip_h = true
 
 [node name="responselabel" type="RichTextLabel" parent="CanvasLayer/Response"]
@@ -205,3 +204,7 @@ paper_texture = ExtResource("2_ewlqc")
 person_texture = ExtResource("6_dlulk")
 is_fake = 2
 failure_message = "FAKE"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_oiov1")
+autoplay = true
