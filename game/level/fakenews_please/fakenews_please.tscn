@@ -68,7 +68,7 @@ RichTextLabel/font_sizes/normal_font_size = 33
 [node name="FakenewsPlease" type="Node2D" node_paths=PackedStringArray("customers", "customer_sprite", "response_label", "response_confirm")]
 script = ExtResource("1_2e40f")
 paper_spawn_pos = Vector2(328, 703)
-customers = [NodePath("CustomerPrefabs/1")]
+customers = [NodePath("CustomerPrefabs/1"), NodePath("CustomerPrefabs/2")]
 paper_prefab = ExtResource("14_ji504")
 customer_sprite = NodePath("CanvasLayer/CustomerClipping/Customer")
 customer_start = Vector2(0, -290)
