@@ -43,6 +43,10 @@ folder_colors={
 "res://level/fakenews_please/": "gray"
 }
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 up={
