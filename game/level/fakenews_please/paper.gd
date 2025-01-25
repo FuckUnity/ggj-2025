@@ -1,14 +1,9 @@
-class_name Paper extends CharacterBody2D
+class_name Paper extends DraggableBody
 
+enum PaperState {NONE, CHECKED, FAKE}
+	
+var paper_state = PaperState.NONE
 
-var can_grab = true
-var grabbed_offset = Vector2()
-
-func _input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton:
-		can_grab = event.pressed
-		grabbed_offset = position - get_global_mouse_position()
-
-func _process(delta):
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and can_grab:
-		position = get_global_mouse_position() + grabbed_offset
+func get_global_rect():
+	var size = $"Sprite2D".texture.get_size() * $"Sprite2D".global_scale;
+	return Rect2(global_position - size / 2, size)

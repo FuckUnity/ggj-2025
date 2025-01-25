@@ -3,17 +3,15 @@
 [ext_resource type="Script" path="res://level/fakenews_please/fakenews_please.gd" id="1_2e40f"]
 [ext_resource type="Texture2D" uid="uid://cnjmx83eom82y" path="res://level/fakenews_please/paper.jpg" id="2_ewlqc"]
 [ext_resource type="Texture2D" uid="uid://cr5k7swqkui0v" path="res://assets/fakenews_please/IMG_0124.jpeg" id="2_q5xr0"]
-[ext_resource type="Script" path="res://level/fakenews_please/guidelines.gd" id="3_5dyak"]
 [ext_resource type="Script" path="res://level/fakenews_please/paper.gd" id="4_wx6cn"]
 [ext_resource type="Texture2D" uid="uid://bjbu43xqiqa6c" path="res://level/fakenews_please/notebook.jpg" id="5_bl3ud"]
+[ext_resource type="Script" path="res://addons/tnowe_extra_controls/elements/draggable.gd" id="5_gvwrs"]
 [ext_resource type="Texture2D" uid="uid://d08idec8pnkh3" path="res://assets/fakenews_please/stamp_fake.png" id="6_dlulk"]
 [ext_resource type="Script" path="res://level/fakenews_please/stamp.gd" id="6_oorjg"]
 [ext_resource type="Texture2D" uid="uid://coqgawcqfs67s" path="res://assets/fakenews_please/stamp_fake_down.png" id="8_6hvg6"]
+[ext_resource type="PackedScene" uid="uid://rmtehh55ojgi" path="res://level/fakenews_please/stamp_decal.tscn" id="9_7xf67"]
 [ext_resource type="Texture2D" uid="uid://dya6tau5v10vh" path="res://assets/fakenews_please/stamp_real.png" id="10_3viky"]
 [ext_resource type="Texture2D" uid="uid://w1jko4jlsgfo" path="res://assets/fakenews_please/stamp_real_down.png" id="11_toc38"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wbx3b"]
-size = Vector2(1005.41, 1002.7)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikm4t"]
 size = Vector2(432, 243)
@@ -32,18 +30,22 @@ grow_vertical = 2
 texture = ExtResource("2_q5xr0")
 expand_mode = 2
 
-[node name="Guidelines" type="CharacterBody2D" parent="CanvasLayer"]
-position = Vector2(1358, 741)
+[node name="Guidelines" type="Container" parent="CanvasLayer"]
+custom_minimum_size = Vector2(16, 16)
+offset_left = 1170.0
+offset_top = 705.0
+offset_right = 2170.0
+offset_bottom = 1705.0
 scale = Vector2(0.37, 0.37)
-input_pickable = true
-script = ExtResource("3_5dyak")
+mouse_filter = 0
+script = ExtResource("5_gvwrs")
+drop_color = Color(1, 1, 1, 0.501961)
+resize_margin_offset_children = false
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Guidelines"]
-position = Vector2(2.062e-05, 1.35137)
-shape = SubResource("RectangleShape2D_wbx3b")
-
-[node name="TextureRect" type="Sprite2D" parent="CanvasLayer/Guidelines"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Guidelines"]
+layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("5_bl3ud")
 
 [node name="Papers" type="Node" parent="CanvasLayer"]
@@ -63,7 +65,6 @@ position = Vector2(-1.00001, -0.5)
 shape = SubResource("RectangleShape2D_ikm4t")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Papers/Paper"]
-clip_children = 2
 scale = Vector2(0.225421, 0.225421)
 texture = ExtResource("2_ewlqc")
 
@@ -78,6 +79,7 @@ script = ExtResource("6_oorjg")
 unpressed_texture = ExtResource("6_dlulk")
 pressed_texture = ExtResource("8_6hvg6")
 papers_root = NodePath("../../../Papers")
+stamp_decal = ExtResource("9_7xf67")
 
 [node name="Checked" type="Node" parent="CanvasLayer/Stamps"]
 
@@ -88,3 +90,4 @@ script = ExtResource("6_oorjg")
 unpressed_texture = ExtResource("10_3viky")
 pressed_texture = ExtResource("11_toc38")
 papers_root = NodePath("../../../Papers")
+stamp_decal = ExtResource("9_7xf67")

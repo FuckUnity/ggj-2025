@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1rgdbv38a23x"
-path="res://.godot/imported/stempel_down.png-316ed06c77dee09551152a4a0e612fff.ctex"
+uid="uid://ce0dm41ay1hx"
+path="res://.godot/imported/oil-barrel.png-16427bf4eff7ed9ab5cd0afb8495fac1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level/fakenews_please/stempel_down.png"
-dest_files=["res://.godot/imported/stempel_down.png-316ed06c77dee09551152a4a0e612fff.ctex"]
+source_file="res://assets/expose/icons/oil-barrel.png"
+dest_files=["res://.godot/imported/oil-barrel.png-16427bf4eff7ed9ab5cd0afb8495fac1.ctex"]
 
 [params]
 
