@@ -1,12 +1,17 @@
-[gd_scene load_steps=10 format=3 uid="uid://d35fcfy4ngulx"]
+[gd_scene load_steps=15 format=3 uid="uid://d35fcfy4ngulx"]
 
 [ext_resource type="Script" path="res://level/main/main.gd" id="1_rswi3"]
-[ext_resource type="Texture2D" uid="uid://bj7yb3qclre7g" path="res://assets/stage/stage.jpeg" id="2_ae4i5"]
 [ext_resource type="Shader" path="res://level/main/grayscale.gdshader" id="2_ui23u"]
+[ext_resource type="Texture2D" uid="uid://dktk1cih7iqli" path="res://assets/stage/layer_00_bg.png" id="4_a4rvx"]
 [ext_resource type="Texture2D" uid="uid://dyr7dm7lsv7wn" path="res://assets/stage/bubble_01.png" id="5_n1ox1"]
+[ext_resource type="Texture2D" uid="uid://dy78gmlnbnv0j" path="res://assets/stage/layer_04_chart.png" id="5_pusry"]
 [ext_resource type="Texture2D" uid="uid://bqslba55e18gv" path="res://assets/stage/bubble_02.png" id="6_c0vk8"]
+[ext_resource type="Texture2D" uid="uid://c75u15rvm1o1w" path="res://assets/stage/layer_05_person.png" id="6_pv2a8"]
+[ext_resource type="Texture2D" uid="uid://bsul0hlup17k8" path="res://assets/stage/layer_10_crowd.png" id="7_2hpjl"]
 [ext_resource type="Shader" path="res://level/main/hover.gdshader" id="8_al7t1"]
+[ext_resource type="Texture2D" uid="uid://djs6e8o1fik12" path="res://assets/stage/bubble_03.png" id="10_8cwtr"]
 [ext_resource type="AudioStream" uid="uid://ciaomyl45n8k4" path="res://level/main/WohnzimmerBackroundloop.mp3" id="10_koedn"]
+[ext_resource type="Texture2D" uid="uid://c8xfefayg7bbw" path="res://assets/stage/bubble_04.png" id="11_5843r"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kowo6"]
 shader = ExtResource("2_ui23u")
@@ -42,7 +47,23 @@ ratio = 1.77
 
 [node name="TextureRectRoom" type="TextureRect" parent="Control/AspectRatioContainer"]
 layout_mode = 2
-texture = ExtResource("2_ae4i5")
+texture = ExtResource("4_a4rvx")
+
+[node name="TextureRectChart" type="TextureRect" parent="Control/AspectRatioContainer"]
+layout_mode = 2
+texture = ExtResource("5_pusry")
+
+[node name="TextureRectPerson" type="TextureRect" parent="Control/AspectRatioContainer"]
+layout_mode = 2
+texture = ExtResource("6_pv2a8")
+
+[node name="TextureRectPodium" type="TextureRect" parent="Control/AspectRatioContainer"]
+layout_mode = 2
+texture = ExtResource("6_pv2a8")
+
+[node name="TextureRectCrowd" type="TextureRect" parent="Control/AspectRatioContainer"]
+layout_mode = 2
+texture = ExtResource("7_2hpjl")
 
 [node name="Control" type="Control" parent="Control/AspectRatioContainer"]
 layout_mode = 2
@@ -59,37 +80,37 @@ stretch_mode = 4
 
 [node name="ButtonBubble01" type="TextureButton" parent="Control/AspectRatioContainer/Control"]
 layout_mode = 2
-offset_left = 3400.0
-offset_top = 650.0
-offset_right = 4200.0
-offset_bottom = 1250.0
+offset_left = 3227.71
+offset_top = 716.418
+offset_right = 4027.71
+offset_bottom = 1316.42
 texture_normal = ExtResource("6_c0vk8")
 ignore_texture_size = true
 stretch_mode = 4
 
 [node name="ButtonBubble02" type="TextureButton" parent="Control/AspectRatioContainer/Control"]
-offset_left = 2475.05
-offset_top = 1247.33
-offset_right = 3275.05
-offset_bottom = 1847.33
-texture_normal = ExtResource("6_c0vk8")
+offset_left = 2287.42
+offset_top = 652.452
+offset_right = 3087.42
+offset_bottom = 1252.45
+texture_normal = ExtResource("10_8cwtr")
 ignore_texture_size = true
 stretch_mode = 4
 
 [node name="ButtonBubble03" type="TextureButton" parent="Control/AspectRatioContainer/Control"]
 clip_contents = true
-offset_left = 999.569
-offset_top = 1381.66
-offset_right = 1799.57
-offset_bottom = 1981.66
-texture_normal = ExtResource("5_n1ox1")
+offset_left = 1323.66
+offset_top = 710.021
+offset_right = 2123.66
+offset_bottom = 1310.02
+texture_normal = ExtResource("11_5843r")
 stretch_mode = 4
 
 [node name="ButtonBubble04" type="TextureButton" parent="Control/AspectRatioContainer/Control"]
-offset_left = 1867.37
-offset_top = 1545.84
-offset_right = 2667.37
-offset_bottom = 2145.84
+offset_left = 954.793
+offset_top = 1477.61
+offset_right = 1754.79
+offset_bottom = 2077.61
 texture_normal = ExtResource("6_c0vk8")
 ignore_texture_size = true
 stretch_mode = 4
