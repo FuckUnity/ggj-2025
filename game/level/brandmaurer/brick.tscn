@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://4jfhtaf6jff2"]
+
+[ext_resource type="ArrayMesh" uid="uid://c6c3n40sbgii4" path="res://assets/brandmauer/brick 1x1.res" id="1_dwg3k"]
+[ext_resource type="Material" uid="uid://duia5u4bc5vj7" path="res://level/brandmaurer/brick.tres" id="2_pwuu4"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0a42w"]
+friction = 0.68
+bounce = 0.23
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b3dsy"]
+size = Vector3(2.08691, 2.08804, 1.97323)
+
+[node name="Brick" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0514482, 1.35074, -1.38358)
+collision_mask = 3
+physics_material_override = SubResource("PhysicsMaterial_0a42w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.161503, 0, 0, 0, 0.161503, 0, 0, 0, 0.161503, 0, 0, 0)
+shape = SubResource("BoxShape3D_b3dsy")
+
+[node name="Brick1x1" type="MeshInstance3D" parent="CollisionShape3D"]
+mesh = ExtResource("1_dwg3k")
+skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("2_pwuu4")

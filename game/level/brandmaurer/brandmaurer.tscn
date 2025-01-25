@@ -1,55 +1,81 @@
-[gd_scene load_steps=9 format=3 uid="uid://bt8qkdevwpkn4"]
+[gd_scene load_steps=18 format=3 uid="uid://bt8qkdevwpkn4"]
 
 [ext_resource type="Script" path="res://level/brandmaurer/brandmaurer.gd" id="1_bmxlc"]
-[ext_resource type="ArrayMesh" uid="uid://c6c3n40sbgii4" path="res://assets/brandmauer/brick 1x1.res" id="2_8k3t7"]
-[ext_resource type="Material" uid="uid://duia5u4bc5vj7" path="res://level/brandmaurer/brick.tres" id="3_a18pt"]
+[ext_resource type="Script" path="res://level/brandmaurer/controller.gd" id="2_7uuj0"]
+[ext_resource type="PackedScene" uid="uid://4jfhtaf6jff2" path="res://level/brandmaurer/brick.tscn" id="2_a35ou"]
+[ext_resource type="Texture2D" uid="uid://dx1svwlulkhut" path="res://assets/brandmauer/banner.png" id="3_mev6i"]
 [ext_resource type="Texture2D" uid="uid://3ejapgvovgco" path="res://assets/brandmauer/ls_platform.jpg" id="4_1ej2y"]
+[ext_resource type="PackedScene" uid="uid://bd4bwdejlbapj" path="res://level/brandmaurer/merz_kapsel.tscn" id="6_ei426"]
+[ext_resource type="Texture2D" uid="uid://daednlmfr6afk" path="res://assets/brandmauer/merz1.jpg" id="6_t5kjc"]
+[ext_resource type="Script" path="res://level/brandmaurer/merz_spawner.gd" id="7_rfq7w"]
+[ext_resource type="Texture2D" uid="uid://csek321fkaqal" path="res://assets/brandmauer/merz2.jpg" id="9_6fm16"]
+[ext_resource type="Texture2D" uid="uid://vqot4qnw5b44" path="res://assets/brandmauer/merz3.jpg" id="10_ikeem"]
+[ext_resource type="Texture2D" uid="uid://ceanepp6lg2x7" path="res://assets/brandmauer/merz4.jpg" id="11_cm448"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0a42w"]
-bounce = 0.67
+[sub_resource type="QuadMesh" id="QuadMesh_kdeck"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_b3dsy"]
-size = Vector3(2.08691, 2.08804, 1.97323)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cnwfh"]
+albedo_texture = ExtResource("3_mev6i")
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_j7o8k"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qtcqh"]
-size = Vector3(1, 0.00512695, 1)
+size = Vector3(1.83871, 0.00512695, 1)
 
-[node name="Brandmaurer" type="Node3D"]
+[sub_resource type="QuadMesh" id="QuadMesh_f2gvb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fgxot"]
+albedo_texture = ExtResource("4_1ej2y")
+
+[node name="Brandmaurer" type="Node3D" node_paths=PackedStringArray("brick_spawner", "end_label")]
 script = ExtResource("1_bmxlc")
+brick = ExtResource("2_a35ou")
+brick_spawner = NodePath("BrickSpawner")
+end_label = NodePath("EndLabel")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.613651, 0.789577, 0, -0.789577, 0.613651, -0.0254085, 0.812349, -0.816542)
-fov = 92.8125
+[node name="Banner" type="MeshInstance3D" parent="."]
+transform = Transform3D(71.8027, 0, 0, 0, 30.3592, 0, 0, 0, 3.51617, 0, 10.0324, -27.5488)
+mesh = SubResource("QuadMesh_kdeck")
+surface_material_override/0 = SubResource("StandardMaterial3D_cnwfh")
 
-[node name="RigidBody3D" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0514482, 1.35074, -1.38358)
-physics_material_override = SubResource("PhysicsMaterial_0a42w")
+[node name="EndLabel" type="Label3D" parent="."]
+transform = Transform3D(2.87, 0, 0, 0, 2.87, 0, 0, 0, 2.87, 0, 4.357, -4.984)
+visible = false
+text = "Eh, good enough i guess.
+What could go wrong"
+font_size = 107
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
-transform = Transform3D(0.161503, 0, 0, 0, 0.161503, 0, 0, 0, 0.161503, -0.041504, -0.442875, -0.0177908)
-shape = SubResource("BoxShape3D_b3dsy")
+[node name="Brick" parent="." instance=ExtResource("2_a35ou")]
 
-[node name="Brick1x1" type="MeshInstance3D" parent="RigidBody3D/CollisionShape3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.041504, -0.0611725, 0.0177908)
-mesh = ExtResource("2_8k3t7")
-skeleton = NodePath("../../..")
-surface_material_override/0 = ExtResource("3_a18pt")
+[node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("brick_spawn")]
+transform = Transform3D(1, 0, 0, 0, 0.996694, -0.0812425, 0, 0.0812425, 0.996694, -0.0254085, 1.16405, 1.32994)
+fov = 64.5
+script = ExtResource("2_7uuj0")
+brick_spawn = NodePath("../BrickSpawner")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="Floor" type="StaticBody3D" parent="."]
 transform = Transform3D(3.71239, 0, 0, 0, 3.71239, 0, 0, 0, 3.71239, 0, 0, 0)
 physics_material_override = SubResource("PhysicsMaterial_j7o8k")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(2.87598, 0, 0, 0, 2.87598, 0, 0, 0, 2.87598, 0, 0, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+transform = Transform3D(2.821, 0, 0, 0, 2.821, 0, 0, 0, 2.821, -0.227301, 0, 0)
 shape = SubResource("BoxShape3D_qtcqh")
 
-[node name="Sprite3D" type="Sprite3D" parent="StaticBody3D/CollisionShape3D"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-texture = ExtResource("4_1ej2y")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor/CollisionShape3D"]
+transform = Transform3D(1.845, 0, 0, 0, -8.06475e-08, 1.845, 0, -1.845, -8.06475e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_f2gvb")
+surface_material_override/0 = SubResource("StandardMaterial3D_fgxot")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.401133, 0.91602, 0, -0.91602, 0.401133, 0, 1.07984, -1.11804)
 light_angular_distance = 1.47
 shadow_enabled = true
+
+[node name="BrickSpawner" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.3792, -1.43146)
+
+[node name="MerzSpawner" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00012961, 0.444504, 0.811123)
+script = ExtResource("7_rfq7w")
+merz_kapsel = ExtResource("6_ei426")
+textures = Array[Texture2D]([ExtResource("6_t5kjc"), ExtResource("9_6fm16"), ExtResource("10_ikeem"), ExtResource("11_cm448")])
