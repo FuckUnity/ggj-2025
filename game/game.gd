@@ -42,7 +42,10 @@ func _open_level(level: int):
 		remove_child(state.current_level_ref)
 	
 	var level_scene = state.get_scene(level, assets.template_level_main)
-	
+	if not level_scene: 
+		level_scene = assets.template_level_main
+		print("Tried to load non existing level")
+		
 	state.set_level(level, assets.spawn_level(self, level_scene))
 
 var _double_esc: float = 0

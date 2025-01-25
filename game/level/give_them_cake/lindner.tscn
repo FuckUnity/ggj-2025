@@ -1,9 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://dbjflm7idxskb"]
+[gd_scene load_steps=8 format=3 uid="uid://dbjflm7idxskb"]
 
 [ext_resource type="Script" path="res://level/give_them_cake/lindner.gd" id="1_qhu6s"]
+[ext_resource type="Shader" path="res://shaders/outline.gdshader" id="2_8rarn"]
 [ext_resource type="Texture2D" uid="uid://cl6yiu0465om5" path="res://assets/give_them_cake/lindner_01.png" id="2_h2ynl"]
 [ext_resource type="Texture2D" uid="uid://be5vpoosya0qy" path="res://assets/give_them_cake/lindner_02.png" id="3_wqkix"]
 [ext_resource type="Texture2D" uid="uid://b0nj3yi6b5ao2" path="res://assets/give_them_cake/lindner_03.png" id="4_5bnhu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sntbk"]
+shader = ExtResource("2_8rarn")
+shader_parameter/width = 4.0
+shader_parameter/outline_color = Color(0.8, 0.8, 0.8, 0.259)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1hn3f"]
 animations = [{
@@ -29,6 +35,7 @@ animations = [{
 script = ExtResource("1_qhu6s")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_sntbk")
 position = Vector2(-1, 0)
 scale = Vector2(0.267798, 0.267798)
 sprite_frames = SubResource("SpriteFrames_1hn3f")

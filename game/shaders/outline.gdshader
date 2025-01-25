@@ -1,6 +1,6 @@
 shader_type canvas_item;
 
-uniform float width: hint_range(0.0, 30.0, 0.1) = 8;
+uniform float width: hint_range(0.0, 30.0, 0.1) = 4;
 uniform vec4 outline_color: source_color = vec4(0.8, 0.8, 0.8, 0.259);
 
 void vertex() {
