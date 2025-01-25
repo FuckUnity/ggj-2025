@@ -21,7 +21,6 @@ func _input(event: InputEvent) -> void:
 	var to = from + project_ray_normal(mouse_pos) * ray_length
 	
 	if event is InputEventMouseButton and event.is_pressed():
-		print("press")
 		var space = get_world_3d().direct_space_state
 		var ray_query = PhysicsRayQueryParameters3D.new()
 		ray_query.from = from
