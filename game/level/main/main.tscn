@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://d35fcfy4ngulx"]
 
 [ext_resource type="Script" path="res://level/main/main.gd" id="1_rswi3"]
-[ext_resource type="Shader" path="res://level/main/grayscale.gdshader" id="2_ui23u"]
+[ext_resource type="Shader" path="res://shaders/grayscale.gdshader" id="2_ui23u"]
 [ext_resource type="Texture2D" uid="uid://dktk1cih7iqli" path="res://assets/stage/layer_00_bg.png" id="4_a4rvx"]
 [ext_resource type="Texture2D" uid="uid://dyr7dm7lsv7wn" path="res://assets/stage/bubble_01.png" id="5_n1ox1"]
 [ext_resource type="Texture2D" uid="uid://dy78gmlnbnv0j" path="res://assets/stage/layer_04_chart.png" id="5_pusry"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c75u15rvm1o1w" path="res://assets/stage/layer_05_person.png" id="6_pv2a8"]
 [ext_resource type="Texture2D" uid="uid://bsul0hlup17k8" path="res://assets/stage/layer_10_crowd.png" id="7_2hpjl"]
 [ext_resource type="Texture2D" uid="uid://cadyhda27aplb" path="res://assets/stage/layer_06_podium.png" id="7_l4ga8"]
-[ext_resource type="Shader" path="res://level/main/hover.gdshader" id="8_al7t1"]
+[ext_resource type="Shader" path="res://shaders/outline.gdshader" id="8_al7t1"]
 [ext_resource type="Texture2D" uid="uid://djs6e8o1fik12" path="res://assets/stage/bubble_03.png" id="10_8cwtr"]
 [ext_resource type="AudioStream" uid="uid://ciaomyl45n8k4" path="res://level/main/WohnzimmerBackroundloop.mp3" id="10_koedn"]
 [ext_resource type="Texture2D" uid="uid://c8xfefayg7bbw" path="res://assets/stage/bubble_04.png" id="11_5843r"]
@@ -19,7 +19,7 @@ shader = ExtResource("2_ui23u")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_40i0e"]
 shader = ExtResource("8_al7t1")
-shader_parameter/width = 8.0
+shader_parameter/width = 4.0
 shader_parameter/outline_color = Color(0.8, 0.8, 0.8, 0.259)
 
 [node name="Main" type="Node2D"]
@@ -40,6 +40,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="AspectRatioContainer" type="AspectRatioContainer" parent="Control"]
+layout_mode = 0
 offset_right = 4096.0
 offset_bottom = 2304.0
 scale = Vector2(0.469, 0.469)
@@ -73,7 +74,7 @@ clip_contents = true
 layout_mode = 0
 offset_left = 500.0
 offset_top = 800.0
-offset_right = 1300.0
+offset_right = 1130.0
 offset_bottom = 1400.0
 texture_normal = ExtResource("5_n1ox1")
 stretch_mode = 4
@@ -89,24 +90,27 @@ ignore_texture_size = true
 stretch_mode = 4
 
 [node name="ButtonBubble02" type="TextureButton" parent="Control/AspectRatioContainer/Control"]
-offset_left = 2287.42
-offset_top = 652.452
-offset_right = 3087.42
-offset_bottom = 1252.45
+layout_mode = 0
+offset_left = 2287.0
+offset_top = 652.0
+offset_right = 3087.0
+offset_bottom = 1226.0
 texture_normal = ExtResource("10_8cwtr")
 ignore_texture_size = true
 stretch_mode = 4
 
 [node name="ButtonBubble03" type="TextureButton" parent="Control/AspectRatioContainer/Control"]
 clip_contents = true
-offset_left = 1323.66
-offset_top = 710.021
-offset_right = 2123.66
-offset_bottom = 1310.02
+layout_mode = 0
+offset_left = 1324.0
+offset_top = 710.0
+offset_right = 1912.0
+offset_bottom = 1310.0
 texture_normal = ExtResource("11_5843r")
 stretch_mode = 4
 
 [node name="ButtonBubble04" type="TextureButton" parent="Control/AspectRatioContainer/Control"]
+layout_mode = 0
 offset_left = 954.793
 offset_top = 1477.61
 offset_right = 1754.79
