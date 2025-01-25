@@ -67,6 +67,33 @@ texture_normal = ExtResource("6_c0vk8")
 ignore_texture_size = true
 stretch_mode = 4
 
+[node name="ButtonBubble02" type="TextureButton" parent="Control/AspectRatioContainer/Control"]
+offset_left = 2475.05
+offset_top = 1247.33
+offset_right = 3275.05
+offset_bottom = 1847.33
+texture_normal = ExtResource("6_c0vk8")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ButtonBubble03" type="TextureButton" parent="Control/AspectRatioContainer/Control"]
+clip_contents = true
+offset_left = 999.569
+offset_top = 1381.66
+offset_right = 1799.57
+offset_bottom = 1981.66
+texture_normal = ExtResource("5_n1ox1")
+stretch_mode = 4
+
+[node name="ButtonBubble04" type="TextureButton" parent="Control/AspectRatioContainer/Control"]
+offset_left = 1867.37
+offset_top = 1545.84
+offset_right = 2667.37
+offset_bottom = 2145.84
+texture_normal = ExtResource("6_c0vk8")
+ignore_texture_size = true
+stretch_mode = 4
+
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
