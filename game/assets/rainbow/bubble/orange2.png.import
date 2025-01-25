@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dp5v7tcjg3qlt"
-path="res://.godot/imported/green.png-864362058f6bccf6e331f5816dfa2126.ctex"
+uid="uid://d1byjq2eyitc"
+path="res://.godot/imported/orange2.png-4b1933eac7ecb530bd21aaad5a822d53.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/rainbow/meeple/green.png"
-dest_files=["res://.godot/imported/green.png-864362058f6bccf6e331f5816dfa2126.ctex"]
+source_file="res://assets/rainbow/bubble/orange2.png"
+dest_files=["res://.godot/imported/orange2.png-4b1933eac7ecb530bd21aaad5a822d53.ctex"]
 
 [params]
 

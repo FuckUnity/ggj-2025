@@ -1,0 +1,34 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://bebiq3ttrll04"]
+
+[ext_resource type="Texture2D" uid="uid://b374sniamfjwd" path="res://assets/rainbow/bubble/pink1.png" id="1_njjrv"]
+[ext_resource type="Texture2D" uid="uid://dheh6xxswlp7r" path="res://assets/rainbow/bubble/pink2.png" id="2_g32cw"]
+[ext_resource type="Texture2D" uid="uid://rjofuygclggw" path="res://assets/rainbow/bubble/pink3.png" id="3_n7cy6"]
+[ext_resource type="Texture2D" uid="uid://b5mfqyrsgfegh" path="res://assets/rainbow/bubble/pink4.png" id="4_jh8yj"]
+[ext_resource type="Texture2D" uid="uid://c6084hmkcbovl" path="res://assets/rainbow/bubble/pink5.png" id="5_jytle"]
+[ext_resource type="Texture2D" uid="uid://xf3smfiwd34m" path="res://assets/rainbow/bubble/empty.png" id="6_o47dg"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_njjrv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g32cw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_n7cy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jh8yj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jytle")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_o47dg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

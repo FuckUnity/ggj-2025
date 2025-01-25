@@ -1,335 +1,538 @@
-[gd_scene load_steps=22 format=3 uid="uid://xqmj2pm06rq7"]
+[gd_scene load_steps=45 format=3 uid="uid://xqmj2pm06rq7"]
 
 [ext_resource type="Script" path="res://level/rainbow_sort/rainbow.gd" id="1_d2fdv"]
-[ext_resource type="Texture2D" uid="uid://cm1jsmmlo017d" path="res://assets/rainbow/bubble/bubblelila1.png" id="2_7r5mq"]
-[ext_resource type="Texture2D" uid="uid://d2bnsqs8hkr04" path="res://assets/rainbow/bubble/bubblelila2.png" id="3_0ry1s"]
+[ext_resource type="Script" path="res://level/rainbow_sort/game.gd" id="2_7wg4w"]
+[ext_resource type="SpriteFrames" uid="uid://ch2g8oxd1i0lr" path="res://level/rainbow_sort/bubblelila.tres" id="2_xbgy5"]
 [ext_resource type="Script" path="res://level/rainbow_sort/person.gd" id="3_jstp7"]
 [ext_resource type="Texture2D" uid="uid://pj8kyom8jf4p" path="res://assets/expose/icons/¥€$.png" id="4_5crxd"]
-[ext_resource type="Texture2D" uid="uid://w3bs8ar2o0rc" path="res://assets/rainbow/bubble/bubblelila3.png" id="4_m55la"]
-[ext_resource type="Texture2D" uid="uid://cvf8pgrvfw3v4" path="res://assets/rainbow/big_bubble.png" id="4_yswd4"]
 [ext_resource type="Texture2D" uid="uid://bsa5x4s0snyo8" path="res://assets/rainbow/meeple/pink.png" id="5_7key3"]
 [ext_resource type="Script" path="res://level/rainbow_sort/bubble.gd" id="5_36yos"]
-[ext_resource type="Texture2D" uid="uid://dpyq8e5fn4kts" path="res://assets/rainbow/bubble/bubblelila4.png" id="5_r37wd"]
-[ext_resource type="Texture2D" uid="uid://bcbgvtg8fhvd0" path="res://assets/rainbow/bubble/bubblelila5.png" id="6_fh4yp"]
 [ext_resource type="Texture2D" uid="uid://3qs42viwu7bv" path="res://assets/expose/icons/nature.png" id="7_6w01r"]
-[ext_resource type="Texture2D" uid="uid://xf3smfiwd34m" path="res://assets/rainbow/bubble/empty.png" id="7_vxf4q"]
-[ext_resource type="Texture2D" uid="uid://dp5v7tcjg3qlt" path="res://assets/rainbow/meeple/green.png" id="8_t7wqd"]
+[ext_resource type="SpriteFrames" uid="uid://hjtjbjxmf1n" path="res://assets/rainbow/bubble/bubbleteal.tres" id="7_ojkgs"]
+[ext_resource type="SpriteFrames" uid="uid://bebiq3ttrll04" path="res://assets/rainbow/bubble/bubblepink.tres" id="7_w1hpd"]
+[ext_resource type="Texture2D" uid="uid://dp5v7tcjg3qlt" path="res://assets/rainbow/meeple/teal.png" id="8_t7wqd"]
 [ext_resource type="Texture2D" uid="uid://b3sre1k2w3j2m" path="res://assets/rainbow/meeple/blue.png" id="9_sg8ur"]
 [ext_resource type="Texture2D" uid="uid://b88rygfs35f1m" path="res://assets/expose/icons/cross.png" id="10_al6hs"]
+[ext_resource type="Texture2D" uid="uid://wgnksete20k8" path="res://assets/rainbow/bubble/türkis.png" id="10_ujuhe"]
 [ext_resource type="Texture2D" uid="uid://b4shjx3r655oj" path="res://assets/rainbow/meeple/purple.png" id="11_rd1un"]
+[ext_resource type="Texture2D" uid="uid://r8pfps1dl55d" path="res://assets/rainbow/bubble/türkis2.png" id="11_t3274"]
+[ext_resource type="Texture2D" uid="uid://dhwixvgkwy127" path="res://assets/rainbow/bubble/türkis3.png" id="12_03gt5"]
 [ext_resource type="Texture2D" uid="uid://ekxwgpqhllcw" path="res://assets/expose/icons/communist.png" id="12_sy1oy"]
 [ext_resource type="Texture2D" uid="uid://w4ned50aq8ul" path="res://assets/rainbow/meeple/orange.png" id="13_c4me8"]
-[ext_resource type="Texture2D" uid="uid://bkxg8w8c8c0lq" path="res://assets/rainbow/meeple/rainbow.png" id="14_17r45"]
+[ext_resource type="Texture2D" uid="uid://jywhnct0s22w" path="res://assets/rainbow/bubble/türkis4.png" id="13_w3qrq"]
+[ext_resource type="Texture2D" uid="uid://yxe540sfxnbi" path="res://assets/rainbow/bubble/türkis5.png" id="14_wct0b"]
+[ext_resource type="Texture2D" uid="uid://cyqrrxptmrlhy" path="res://assets/expose/icons/flagge.png" id="16_c5c3h"]
+[ext_resource type="Texture2D" uid="uid://xf3smfiwd34m" path="res://assets/rainbow/bubble/empty.png" id="16_y82ym"]
+[ext_resource type="Texture2D" uid="uid://d2vtyhh6ugcdg" path="res://assets/expose/icons/pets.png" id="16_yqcjw"]
+[ext_resource type="SpriteFrames" uid="uid://bmjwce14rl5f6" path="res://assets/rainbow/bubble/bubbleorange.tres" id="18_pxn4y"]
+[ext_resource type="Texture2D" uid="uid://b404cqrqo8vgk" path="res://assets/rainbow/bubble/bubblebunt1.png" id="21_th0il"]
+[ext_resource type="Texture2D" uid="uid://dt4e8yovnxjgw" path="res://assets/rainbow/bubble/bubblebunt2.png" id="22_bx3u1"]
+[ext_resource type="Texture2D" uid="uid://cinpbbdrxeujs" path="res://assets/rainbow/bubble/bubblebunt3.png" id="23_fjm03"]
+[ext_resource type="Texture2D" uid="uid://dnslyg10vc7gi" path="res://assets/rainbow/bubble/bubblebunt4.png" id="24_rc8ll"]
+[ext_resource type="Texture2D" uid="uid://de7hh164in4op" path="res://assets/rainbow/bubble/bubblebunt5.png" id="25_bc3pm"]
+[ext_resource type="Texture2D" uid="uid://6ifyrm5ieolf" path="res://assets/expose/icons/alleinerziehend.png" id="26_m3rop"]
+[ext_resource type="Texture2D" uid="uid://7bbqvnv0icit" path="res://assets/expose/icons/wheelchair_placeholer.png" id="30_wpco5"]
+[ext_resource type="Texture2D" uid="uid://vdbwam3bcrru" path="res://assets/expose/icons/guitar.png" id="31_urdsr"]
+[ext_resource type="Texture2D" uid="uid://y7lotvswmwg8" path="res://assets/expose/icons/family_kind.png" id="32_3fe7m"]
+[ext_resource type="Texture2D" uid="uid://mbntn6kc5re6" path="res://assets/expose/icons/bankruptcy.png" id="34_og2l1"]
+[ext_resource type="Texture2D" uid="uid://dqscxk0tcijg5" path="res://assets/expose/icons/glasses.png" id="35_xeth6"]
+[ext_resource type="Texture2D" uid="uid://bc1v84yfaikor" path="res://assets/expose/icons/war.png" id="36_0yrj8"]
+[ext_resource type="Texture2D" uid="uid://cmfyc31nr2uci" path="res://assets/expose/icons/wildfire.png" id="37_kkjo5"]
+[ext_resource type="Script" path="res://level/rainbow_sort/help.gd" id="38_r735w"]
+[ext_resource type="Script" path="res://level/rainbow_sort/close_help.gd" id="39_1lvxw"]
+[ext_resource type="Texture2D" uid="uid://c0e7xtumpvakk" path="res://assets/rainbow/rules.png" id="39_7siv2"]
+[ext_resource type="Texture2D" uid="uid://bx4kkq0oqrj0e" path="res://assets/rainbow/medium_bubble.png" id="40_14w2m"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_swchw"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_xgdab"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_7r5mq")
+"texture": ExtResource("21_th0il")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_0ry1s")
+"texture": ExtResource("22_bx3u1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_m55la")
+"texture": ExtResource("23_fjm03")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_r37wd")
+"texture": ExtResource("24_rc8ll")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_fh4yp")
+"texture": ExtResource("25_bc3pm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_vxf4q")
+"texture": ExtResource("16_y82ym")
 }],
-"loop": false,
+"loop": true,
 "name": &"default",
-"speed": 8.0
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bruwf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_ujuhe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_t3274")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_03gt5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_w3qrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_wct0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_y82ym")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
 }]
 
 [node name="Rainbow" type="Node"]
 script = ExtResource("1_d2fdv")
 
-[node name="Yellow" type="Node2D" parent="."]
-position = Vector2(139, -7)
+[node name="game" type="Node2D" parent="."]
+script = ExtResource("2_7wg4w")
 
-[node name="bubble" type="AnimatedSprite2D" parent="Yellow"]
-position = Vector2(164, 145)
-scale = Vector2(0.3, 0.3)
-sprite_frames = SubResource("SpriteFrames_swchw")
+[node name="lone_parent" type="Node2D" parent="game"]
+position = Vector2(1050, 300)
+
+[node name="bubble" type="AnimatedSprite2D" parent="game/lone_parent"]
+self_modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(9, -104)
+scale = Vector2(0.22, 0.22)
+sprite_frames = SubResource("SpriteFrames_xgdab")
+frame = 1
 script = ExtResource("5_36yos")
 
-[node name="icon" type="Sprite2D" parent="Yellow/bubble"]
+[node name="icon" type="Sprite2D" parent="game/lone_parent/bubble"]
+self_modulate = Color(1, 1, 1, 0.588235)
 position = Vector2(-20, 58.3333)
-scale = Vector2(21.0417, 19.0625)
+scale = Vector2(2, 2)
+texture = ExtResource("26_m3rop")
+
+[node name="wheelchair" type="Node2D" parent="game"]
+position = Vector2(970, 610)
+
+[node name="bubble" type="AnimatedSprite2D" parent="game/wheelchair"]
+self_modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(9, -104)
+scale = Vector2(0.22, 0.22)
+sprite_frames = SubResource("SpriteFrames_xgdab")
+frame = 1
+script = ExtResource("5_36yos")
+
+[node name="icon" type="Sprite2D" parent="game/wheelchair/bubble"]
+self_modulate = Color(1, 1, 1, 0.588235)
+position = Vector2(-20, 58.3333)
+scale = Vector2(2, 2)
+texture = ExtResource("30_wpco5")
+
+[node name="guitar" type="Node2D" parent="game"]
+position = Vector2(1350, 245)
+
+[node name="bubble" type="AnimatedSprite2D" parent="game/guitar"]
+self_modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(9, -104)
+scale = Vector2(0.22, 0.22)
+sprite_frames = SubResource("SpriteFrames_xgdab")
+frame = 1
+script = ExtResource("5_36yos")
+
+[node name="icon" type="Sprite2D" parent="game/guitar/bubble"]
+self_modulate = Color(1, 1, 1, 0.588235)
+position = Vector2(-20, 58.3333)
+scale = Vector2(2, 2)
+texture = ExtResource("31_urdsr")
+
+[node name="family" type="Node2D" parent="game"]
+position = Vector2(1650, 300)
+
+[node name="bubble" type="AnimatedSprite2D" parent="game/family"]
+self_modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(9, -104)
+scale = Vector2(0.22, 0.22)
+sprite_frames = SubResource("SpriteFrames_xgdab")
+frame = 1
+script = ExtResource("5_36yos")
+
+[node name="icon" type="Sprite2D" parent="game/family/bubble"]
+self_modulate = Color(1, 1, 1, 0.588235)
+position = Vector2(-20, 58.3333)
+scale = Vector2(2, 2)
+texture = ExtResource("32_3fe7m")
+
+[node name="pets" type="Node2D" parent="game"]
+position = Vector2(1720, 610)
+
+[node name="bubble" type="AnimatedSprite2D" parent="game/pets"]
+self_modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(9, -104)
+scale = Vector2(0.22, 0.22)
+sprite_frames = SubResource("SpriteFrames_xgdab")
+frame = 1
+script = ExtResource("5_36yos")
+
+[node name="icon" type="Sprite2D" parent="game/pets/bubble"]
+self_modulate = Color(1, 1, 1, 0.588235)
+position = Vector2(-20, 58.3333)
+scale = Vector2(2, 2)
+texture = ExtResource("16_yqcjw")
+
+[node name="poor" type="Node2D" parent="game"]
+position = Vector2(1050, 920)
+
+[node name="bubble" type="AnimatedSprite2D" parent="game/poor"]
+self_modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(9, -104)
+scale = Vector2(0.22, 0.22)
+sprite_frames = SubResource("SpriteFrames_xgdab")
+frame = 1
+script = ExtResource("5_36yos")
+
+[node name="icon" type="Sprite2D" parent="game/poor/bubble"]
+self_modulate = Color(1, 1, 1, 0.588235)
+position = Vector2(-20, 58.3333)
+scale = Vector2(2, 2)
+texture = ExtResource("34_og2l1")
+
+[node name="glasses" type="Node2D" parent="game"]
+position = Vector2(1350, 955)
+
+[node name="bubble" type="AnimatedSprite2D" parent="game/glasses"]
+self_modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(9, -104)
+scale = Vector2(0.22, 0.22)
+sprite_frames = SubResource("SpriteFrames_xgdab")
+frame = 1
+script = ExtResource("5_36yos")
+
+[node name="icon" type="Sprite2D" parent="game/glasses/bubble"]
+self_modulate = Color(1, 1, 1, 0.588235)
+position = Vector2(-20, 58.3333)
+scale = Vector2(2, 2)
+texture = ExtResource("35_xeth6")
+
+[node name="war" type="Node2D" parent="game"]
+position = Vector2(1650, 920)
+
+[node name="bubble" type="AnimatedSprite2D" parent="game/war"]
+self_modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(9, -104)
+scale = Vector2(0.22, 0.22)
+sprite_frames = SubResource("SpriteFrames_xgdab")
+frame = 1
+script = ExtResource("5_36yos")
+
+[node name="icon" type="Sprite2D" parent="game/war/bubble"]
+self_modulate = Color(1, 1, 1, 0.588235)
+position = Vector2(-20, 58.3333)
+scale = Vector2(2, 2)
+texture = ExtResource("36_0yrj8")
+
+[node name="Lila" type="Node2D" parent="game"]
+position = Vector2(58, -7)
+
+[node name="bubble" type="AnimatedSprite2D" parent="game/Lila"]
+self_modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(164, 145)
+scale = Vector2(0.22, 0.22)
+sprite_frames = ExtResource("2_xbgy5")
+script = ExtResource("5_36yos")
+
+[node name="icon" type="Sprite2D" parent="game/Lila/bubble"]
+self_modulate = Color(1, 1, 1, 0.588235)
+position = Vector2(-20, 58.3333)
+scale = Vector2(2, 2)
 texture = ExtResource("4_5crxd")
 
-[node name="Person" type="Sprite2D" parent="Yellow"]
+[node name="Person" type="Sprite2D" parent="game/Lila"]
 position = Vector2(154, 228)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("5_7key3")
+texture = ExtResource("11_rd1un")
 script = ExtResource("3_jstp7")
+attributes = Array[int]([0, 1, 7])
 
-[node name="Person2" type="Sprite2D" parent="Yellow"]
+[node name="Person2" type="Sprite2D" parent="game/Lila"]
 position = Vector2(188, 208)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("5_7key3")
+texture = ExtResource("11_rd1un")
 script = ExtResource("3_jstp7")
+attributes = Array[int]([2, 4, 5, 6])
 
-[node name="Person3" type="Sprite2D" parent="Yellow"]
+[node name="Person3" type="Sprite2D" parent="game/Lila"]
 position = Vector2(106.5, 164.5)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("5_7key3")
+texture = ExtResource("11_rd1un")
 script = ExtResource("3_jstp7")
+attributes = Array[int]([3, 7, 4])
 
-[node name="Person4" type="Sprite2D" parent="Yellow"]
+[node name="Person4" type="Sprite2D" parent="game/Lila"]
 position = Vector2(140.5, 144.5)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("5_7key3")
+texture = ExtResource("11_rd1un")
 script = ExtResource("3_jstp7")
+attributes = Array[int]([3, 6])
 
-[node name="Green2" type="Node2D" parent="."]
-position = Vector2(-1, 281)
+[node name="Person5" type="Sprite2D" parent="game/Lila"]
+position = Vector2(161, 87)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_rd1un")
+script = ExtResource("3_jstp7")
+attributes = Array[int]([5, 4])
 
-[node name="bubble" type="Sprite2D" parent="Green2"]
-position = Vector2(161, 161)
-texture = ExtResource("4_yswd4")
+[node name="Pink" type="Node2D" parent="game"]
+position = Vector2(-19, 280)
+
+[node name="bubble" type="AnimatedSprite2D" parent="game/Pink"]
+self_modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(174, 175)
+scale = Vector2(0.22, 0.22)
+sprite_frames = ExtResource("7_w1hpd")
 script = ExtResource("5_36yos")
 
-[node name="icon" type="Sprite2D" parent="Green2/bubble"]
-position = Vector2(-3.8147e-06, 4.5)
-scale = Vector2(5.875, 5.65625)
+[node name="icon" type="Sprite2D" parent="game/Pink/bubble"]
+self_modulate = Color(1, 1, 1, 0.588235)
+position = Vector2(-20, 58.3333)
+scale = Vector2(2, 2)
 texture = ExtResource("7_6w01r")
 
-[node name="Person" type="Sprite2D" parent="Green2"]
+[node name="Person" type="Sprite2D" parent="game/Pink"]
 position = Vector2(154, 228)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("8_t7wqd")
-script = ExtResource("3_jstp7")
-
-[node name="Person2" type="Sprite2D" parent="Green2"]
-position = Vector2(188, 208)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("8_t7wqd")
-script = ExtResource("3_jstp7")
-
-[node name="Person3" type="Sprite2D" parent="Green2"]
-position = Vector2(106.5, 164.5)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("8_t7wqd")
-script = ExtResource("3_jstp7")
-
-[node name="Person4" type="Sprite2D" parent="Green2"]
-position = Vector2(140.5, 144.5)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("8_t7wqd")
-script = ExtResource("3_jstp7")
-
-[node name="Blue2" type="Node2D" parent="."]
-position = Vector2(28, 604)
-
-[node name="bubble" type="Sprite2D" parent="Blue2"]
-position = Vector2(161, 161)
-texture = ExtResource("4_yswd4")
-script = ExtResource("5_36yos")
-
-[node name="icon" type="Sprite2D" parent="Blue2/bubble"]
-
-[node name="Person" type="Sprite2D" parent="Blue2"]
-position = Vector2(154, 228)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("9_sg8ur")
-script = ExtResource("3_jstp7")
-
-[node name="Person2" type="Sprite2D" parent="Blue2"]
-position = Vector2(188, 208)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("9_sg8ur")
-script = ExtResource("3_jstp7")
-
-[node name="Person3" type="Sprite2D" parent="Blue2"]
-position = Vector2(106.5, 164.5)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("9_sg8ur")
-script = ExtResource("3_jstp7")
-
-[node name="Person4" type="Sprite2D" parent="Blue2"]
-position = Vector2(140.5, 144.5)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("9_sg8ur")
-script = ExtResource("3_jstp7")
-
-[node name="Purple2" type="Node2D" parent="."]
-position = Vector2(363, 647)
-
-[node name="bubble" type="Sprite2D" parent="Purple2"]
-position = Vector2(161, 161)
-texture = ExtResource("4_yswd4")
-script = ExtResource("5_36yos")
-
-[node name="icon" type="Sprite2D" parent="Purple2/bubble"]
-position = Vector2(1.99998, 5.50001)
-scale = Vector2(6.5625, 5.84375)
-texture = ExtResource("10_al6hs")
-
-[node name="Person" type="Sprite2D" parent="Purple2"]
-position = Vector2(154, 228)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("11_rd1un")
-script = ExtResource("3_jstp7")
-
-[node name="Person2" type="Sprite2D" parent="Purple2"]
-position = Vector2(188, 208)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("11_rd1un")
-script = ExtResource("3_jstp7")
-
-[node name="Person3" type="Sprite2D" parent="Purple2"]
-position = Vector2(106.5, 164.5)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("11_rd1un")
-script = ExtResource("3_jstp7")
-
-[node name="Person4" type="Sprite2D" parent="Purple2"]
-position = Vector2(140.5, 144.5)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("11_rd1un")
-script = ExtResource("3_jstp7")
-
-[node name="Orange" type="Node2D" parent="."]
-position = Vector2(465, -7)
-
-[node name="bubble" type="Sprite2D" parent="Orange"]
-position = Vector2(161, 161)
-texture = ExtResource("4_yswd4")
-script = ExtResource("5_36yos")
-
-[node name="icon" type="Sprite2D" parent="Orange/bubble"]
-position = Vector2(-1.00002, -4.5)
-scale = Vector2(6, 6.03125)
-texture = ExtResource("12_sy1oy")
-
-[node name="Person" type="Sprite2D" parent="Orange"]
-position = Vector2(154, 228)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("13_c4me8")
-script = ExtResource("3_jstp7")
-
-[node name="Person2" type="Sprite2D" parent="Orange"]
-position = Vector2(188, 208)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("13_c4me8")
-script = ExtResource("3_jstp7")
-
-[node name="Person3" type="Sprite2D" parent="Orange"]
-position = Vector2(106.5, 164.5)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("13_c4me8")
-script = ExtResource("3_jstp7")
-
-[node name="Person4" type="Sprite2D" parent="Orange"]
-position = Vector2(140.5, 144.5)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("13_c4me8")
-script = ExtResource("3_jstp7")
-
-[node name="Rainbow1" type="Node2D" parent="."]
-position = Vector2(1296, 308)
-
-[node name="bubble" type="Sprite2D" parent="Rainbow1"]
-position = Vector2(161, 161)
-texture = ExtResource("4_yswd4")
-script = ExtResource("5_36yos")
-
-[node name="Person" type="Sprite2D" parent="Rainbow1"]
-position = Vector2(154, 228)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("14_17r45")
-script = ExtResource("3_jstp7")
-
-[node name="Person2" type="Sprite2D" parent="Rainbow1"]
-position = Vector2(188, 208)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("14_17r45")
-script = ExtResource("3_jstp7")
-
-[node name="Person3" type="Sprite2D" parent="Rainbow1"]
-position = Vector2(106.5, 164.5)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("14_17r45")
-script = ExtResource("3_jstp7")
-
-[node name="Person4" type="Sprite2D" parent="Rainbow1"]
-position = Vector2(140.5, 144.5)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("14_17r45")
-script = ExtResource("3_jstp7")
-
-[node name="Person5" type="Sprite2D" parent="Rainbow1"]
-position = Vector2(62, 191)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("14_17r45")
-script = ExtResource("3_jstp7")
-
-[node name="Rainbow2" type="Node2D" parent="."]
-position = Vector2(1238, 0)
-
-[node name="bubble" type="Sprite2D" parent="Rainbow2"]
-position = Vector2(161, 161)
-texture = ExtResource("4_yswd4")
-script = ExtResource("5_36yos")
-
-[node name="Person" type="Sprite2D" parent="Rainbow2"]
-position = Vector2(154, 228)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("14_17r45")
-script = ExtResource("3_jstp7")
-
-[node name="Person2" type="Sprite2D" parent="Rainbow2"]
-position = Vector2(188, 208)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("14_17r45")
-script = ExtResource("3_jstp7")
-
-[node name="Person3" type="Sprite2D" parent="Rainbow2"]
-position = Vector2(106.5, 164.5)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("14_17r45")
-script = ExtResource("3_jstp7")
-
-[node name="Person4" type="Sprite2D" parent="Rainbow2"]
-position = Vector2(140.5, 144.5)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("14_17r45")
-script = ExtResource("3_jstp7")
-
-[node name="Person5" type="Sprite2D" parent="Rainbow2"]
-position = Vector2(62, 170)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("14_17r45")
-script = ExtResource("3_jstp7")
-
-[node name="Red" type="Sprite2D" parent="."]
-position = Vector2(958, 410)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("13_c4me8")
-
-[node name="pink" type="Sprite2D" parent="."]
-position = Vector2(791, 358)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_7key3")
+script = ExtResource("3_jstp7")
+attributes = Array[int]([0, 1])
 
-[node name="Green" type="Sprite2D" parent="."]
-position = Vector2(683, 428)
+[node name="Person2" type="Sprite2D" parent="game/Pink"]
+position = Vector2(188, 208)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("8_t7wqd")
+texture = ExtResource("5_7key3")
+script = ExtResource("3_jstp7")
+attributes = Array[int]([0, 2, 7])
 
-[node name="Blue" type="Sprite2D" parent="."]
-position = Vector2(560, 571)
+[node name="Person3" type="Sprite2D" parent="game/Pink"]
+position = Vector2(106.5, 164.5)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_7key3")
+script = ExtResource("3_jstp7")
+attributes = Array[int]([5, 2, 4])
+
+[node name="Person4" type="Sprite2D" parent="game/Pink"]
+position = Vector2(140.5, 144.5)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_7key3")
+script = ExtResource("3_jstp7")
+attributes = Array[int]([3, 4])
+
+[node name="Person5" type="Sprite2D" parent="game/Pink"]
+position = Vector2(232, 210)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_7key3")
+script = ExtResource("3_jstp7")
+attributes = Array[int]([3, 6])
+
+[node name="Person6" type="Sprite2D" parent="game/Pink"]
+position = Vector2(175, 125)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_7key3")
+script = ExtResource("3_jstp7")
+attributes = Array[int]([7, 2, 4, 5])
+
+[node name="Teal" type="Node2D" parent="game"]
+position = Vector2(28, 604)
+
+[node name="bubble" type="AnimatedSprite2D" parent="game/Teal"]
+self_modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(140, 216)
+scale = Vector2(0.22, 0.22)
+sprite_frames = SubResource("SpriteFrames_bruwf")
+script = ExtResource("5_36yos")
+
+[node name="icon" type="Sprite2D" parent="game/Teal/bubble"]
+self_modulate = Color(1, 1, 1, 0.588235)
+position = Vector2(-20, 58.3333)
+scale = Vector2(2, 2)
+texture = ExtResource("16_c5c3h")
+
+[node name="Person" type="Sprite2D" parent="game/Teal"]
+position = Vector2(154, 228)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("9_sg8ur")
+script = ExtResource("3_jstp7")
+attributes = Array[int]([3, 1, 2, 4])
 
-[node name="Purple" type="Sprite2D" parent="."]
-position = Vector2(835, 530)
+[node name="Person2" type="Sprite2D" parent="game/Teal"]
+position = Vector2(188, 208)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("11_rd1un")
+texture = ExtResource("9_sg8ur")
+script = ExtResource("3_jstp7")
+attributes = Array[int]([3, 7, 5, 6])
+
+[node name="Person3" type="Sprite2D" parent="game/Teal"]
+position = Vector2(106.5, 164.5)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_sg8ur")
+script = ExtResource("3_jstp7")
+attributes = Array[int]([0, 2, 7])
+
+[node name="Person4" type="Sprite2D" parent="game/Teal"]
+position = Vector2(140.5, 144.5)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_sg8ur")
+script = ExtResource("3_jstp7")
+attributes = Array[int]([3, 5, 4])
+
+[node name="Person5" type="Sprite2D" parent="game/Teal"]
+position = Vector2(73, 224)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_sg8ur")
+script = ExtResource("3_jstp7")
+attributes = Array[int]([3, 4])
+
+[node name="Petrol" type="Node2D" parent="game"]
+position = Vector2(353, 661)
+
+[node name="bubble2" type="AnimatedSprite2D" parent="game/Petrol"]
+self_modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(141, 250)
+scale = Vector2(0.22, 0.22)
+sprite_frames = ExtResource("7_ojkgs")
+script = ExtResource("5_36yos")
+
+[node name="icon" type="Sprite2D" parent="game/Petrol/bubble2"]
+self_modulate = Color(1, 1, 1, 0.588235)
+position = Vector2(-20, 58.3333)
+scale = Vector2(2, 2)
+texture = ExtResource("10_al6hs")
+
+[node name="Person" type="Sprite2D" parent="game/Petrol"]
+position = Vector2(122.7, 328.5)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("8_t7wqd")
+script = ExtResource("3_jstp7")
+attributes = Array[int]([6, 4])
+
+[node name="Person2" type="Sprite2D" parent="game/Petrol"]
+position = Vector2(172, 319)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("8_t7wqd")
+script = ExtResource("3_jstp7")
+attributes = Array[int]([3, 7, 1])
+
+[node name="Person3" type="Sprite2D" parent="game/Petrol"]
+position = Vector2(75.2, 265)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("8_t7wqd")
+script = ExtResource("3_jstp7")
+attributes = Array[int]([6, 1, 7])
+
+[node name="Person4" type="Sprite2D" parent="game/Petrol"]
+position = Vector2(103, 198)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("8_t7wqd")
+script = ExtResource("3_jstp7")
+attributes = Array[int]([7, 3])
+
+[node name="Person5" type="Sprite2D" parent="game/Petrol"]
+position = Vector2(142, 201)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("8_t7wqd")
+script = ExtResource("3_jstp7")
+attributes = Array[int]([0, 2, 3])
+
+[node name="Person6" type="Sprite2D" parent="game/Petrol"]
+position = Vector2(215, 297)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("8_t7wqd")
+script = ExtResource("3_jstp7")
+attributes = Array[int]([4, 1, 3])
+
+[node name="Person7" type="Sprite2D" parent="game/Petrol"]
+position = Vector2(123, 267)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("8_t7wqd")
+script = ExtResource("3_jstp7")
+attributes = Array[int]([5, 6, 3, 0])
+
+[node name="Orange" type="Node2D" parent="game"]
+position = Vector2(375, -31)
+
+[node name="bubble" type="AnimatedSprite2D" parent="game/Orange"]
+self_modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(167, 147)
+scale = Vector2(0.22, 0.22)
+sprite_frames = ExtResource("18_pxn4y")
+script = ExtResource("5_36yos")
+
+[node name="icon" type="Sprite2D" parent="game/Orange/bubble"]
+self_modulate = Color(1, 1, 1, 0.588235)
+position = Vector2(-20, 58.3333)
+scale = Vector2(2, 2)
+texture = ExtResource("12_sy1oy")
+
+[node name="Person" type="Sprite2D" parent="game/Orange"]
+position = Vector2(154, 228)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("13_c4me8")
+script = ExtResource("3_jstp7")
+attributes = Array[int]([4])
+
+[node name="Person2" type="Sprite2D" parent="game/Orange"]
+position = Vector2(188, 208)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("13_c4me8")
+script = ExtResource("3_jstp7")
+attributes = Array[int]([2])
+
+[node name="Person3" type="Sprite2D" parent="game/Orange"]
+position = Vector2(106.5, 164.5)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("13_c4me8")
+script = ExtResource("3_jstp7")
+attributes = Array[int]([3])
+
+[node name="Person4" type="Sprite2D" parent="game/Orange"]
+position = Vector2(140.5, 144.5)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("13_c4me8")
+script = ExtResource("3_jstp7")
+attributes = Array[int]([0])
+
+[node name="Person5" type="Sprite2D" parent="game/Orange"]
+position = Vector2(145.2, 96)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("13_c4me8")
+script = ExtResource("3_jstp7")
+attributes = Array[int]([5])
+
+[node name="Person6" type="Sprite2D" parent="game/Orange"]
+position = Vector2(214, 156)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("13_c4me8")
+script = ExtResource("3_jstp7")
+attributes = Array[int]([0])
+
+[node name="HelpButton" type="Sprite2D" parent="game"]
+position = Vector2(41, 41.875)
+scale = Vector2(0.205263, 0.21144)
+texture = ExtResource("37_kkjo5")
+script = ExtResource("38_r735w")
+
+[node name="Help" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(958.395, 541.926)
+scale = Vector2(1.19701, 1.20461)
+texture = ExtResource("39_7siv2")
+
+[node name="CloseButton" type="Sprite2D" parent="Help"]
+position = Vector2(646.283, 294.763)
+texture = ExtResource("40_14w2m")
+script = ExtResource("39_1lvxw")
