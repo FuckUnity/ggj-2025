@@ -15,7 +15,6 @@
   - Person auf Podium hält Rede, nach jedem Mini-Game verliert er ein Verkleidungsstück, am ende Steht Hitler da
   - Puplikum in unterschiedlichen Farben oder Blau und nach Peerbubble durchmischt / Rainbow 
   - Für das letzte Minigame kommt eine Hand mit Microfon ins Bild
-  - Brandmauer aufbauen: Man muss steine stapeln und Merz poppt auf um sie umzuwerfen
 
 ## Minigames
 
@@ -26,6 +25,7 @@
 - Know your peers/ Peerbubble (Guppieren nach attributen von personen)
   - Versuchen "Bunte" Bubbles zu erstellen
 - Avoid Scandals: Jump&Run Politischen Fragen ausweichen
+- Brandmauer aufbauen: Man muss steine stapeln und Merz poppt auf um sie umzuwerfen
 - Letzte Fragen -> Fragen Labyrinth
 
 ## Credits
