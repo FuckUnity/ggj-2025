@@ -3,6 +3,7 @@ extends Sprite2D
 @export var is_pressed = false
 @export var unpressed_texture: Texture2D
 @export var pressed_texture: Texture2D
+@export var decal_texture: Texture2D
 
 @export var papers_root: Node
 
@@ -45,12 +46,15 @@ func check_document_to_stamp():
 		var this_rect = _get_global_rect()
 		var paper_rect = paper.get_global_rect()
 		var intersection = this_rect.intersection(paper_rect)
+		var overlap_significant = intersection.size.x * intersection.size.y > (this_rect.size.x * this_rect.size.y) * 0.2
 		
-		if intersection.size.x * intersection.size.y > (this_rect.size.x * this_rect.size.y) * 0.2:
-			print("STAMP", intersection.position)
-			var decal = Sprite2D.new()
-			decal.texture = pressed_texture
-			paper.get_node("./Sprite2D").add_child(decal)
-			(decal as Node2D).global_position = global_position
-			(decal as Node2D).global_scale = Vector2.ONE
+		if overlap_significant:
+			_add_decal(paper)
 			paper.paper_state = self.stamp_state
+
+func _add_decal(paper: Paper):
+	var decal = Sprite2D.new()
+	decal.texture = decal_texture
+	paper.get_node("./Sprite2D").add_child(decal)
+	(decal as Node2D).global_position = global_position
+	(decal as Node2D).global_scale = Vector2.ONE

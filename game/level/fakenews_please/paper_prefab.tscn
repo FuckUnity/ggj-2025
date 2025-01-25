@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwsjnlkswt6a2"]
+
+[ext_resource type="Script" path="res://level/fakenews_please/paper.gd" id="1_2go78"]
+[ext_resource type="Texture2D" uid="uid://cnjmx83eom82y" path="res://level/fakenews_please/paper.jpg" id="2_8hg2e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ikm4t"]
+size = Vector2(432, 243)
+
+[node name="PaperPrefab" type="CharacterBody2D"]
+position = Vector2(802, 762)
+input_pickable = true
+motion_mode = 1
+slide_on_ceiling = false
+floor_stop_on_slope = false
+floor_block_on_wall = false
+platform_on_leave = 2
+script = ExtResource("1_2go78")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.00001, -0.5)
+shape = SubResource("RectangleShape2D_ikm4t")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+clip_children = 2
+scale = Vector2(0.225421, 0.225421)
+texture = ExtResource("2_8hg2e")
