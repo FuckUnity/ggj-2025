@@ -39,11 +39,22 @@ func hand_back(paper: Paper):
 	(response_confirm.get_parent() as Sprite2D).set_visible(true)
 	if paper.paper_state == paper.customer.is_fake:
 		response_label.text = "Correct, that was fake, or not trustworthy news!"
-	response_label.text = paper.customer.failure_message
+	else:
+		response_label.text = paper.customer.failure_message
 	remove_child(paper)
 	paper.queue_free()
 
 func on_confirm_response():
 	(response_confirm.get_parent() as Sprite2D).set_visible(false)
 	response_label.text = ""
-	play_next_customer()
+	
+	var tween = create_tween()
+	tween.tween_property(customer_sprite, "position", customer_start, 2).set_ease(Tween.EASE_IN_OUT)
+	tween.tween_interval(2)
+	tween.tween_callback(next_or_end)
+	
+func next_or_end():
+	if customers.size() > 0:
+		play_next_customer()
+	else:
+		complete()

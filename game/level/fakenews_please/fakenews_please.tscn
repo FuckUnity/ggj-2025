@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://cnjmx83eom82y" path="res://level/fakenews_please/paper.jpg" id="2_ewlqc"]
 [ext_resource type="Texture2D" uid="uid://cr5k7swqkui0v" path="res://assets/fakenews_please/IMG_0124.jpeg" id="2_q5xr0"]
 [ext_resource type="Script" path="res://level/fakenews_please/guidelines.gd" id="3_5dyak"]
-[ext_resource type="Texture2D" uid="uid://cotlduyepgkat" path="res://level/comic-2.png" id="4_nyebj"]
 [ext_resource type="Texture2D" uid="uid://bjbu43xqiqa6c" path="res://level/fakenews_please/notebook.jpg" id="5_bl3ud"]
 [ext_resource type="Texture2D" uid="uid://d08idec8pnkh3" path="res://assets/fakenews_please/stamp_fake.png" id="6_dlulk"]
 [ext_resource type="Script" path="res://level/fakenews_please/stamp.gd" id="6_oorjg"]
@@ -35,6 +34,9 @@ animations = [{
 "name": &"default",
 "speed": 1.0
 }]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6aybi"]
+load_path = "res://.godot/imported/comic-2.png-e4667d36d95b44337685d31d7130ac4a.ctex"
 
 [sub_resource type="Theme" id="Theme_6dxcb"]
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
@@ -88,11 +90,11 @@ expand_mode = 2
 position = Vector2(785, 469)
 sprite_frames = SubResource("SpriteFrames_2mayo")
 autoplay = "default"
-frame_progress = 0.46408
+frame_progress = 0.520588
 
 [node name="Response" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(592, 202)
-texture = ExtResource("4_nyebj")
+texture = SubResource("CompressedTexture2D_6aybi")
 flip_h = true
 
 [node name="responselabel" type="RichTextLabel" parent="CanvasLayer/Response"]
