@@ -14,7 +14,7 @@ func get_global_rect():
 	return _get_global_rect($"Sprite2D")
 
 func _on_drag_end():
-	var drop_off_point = $"/root/FakenewsPlease/CanvasLayer/CustomerClipping" as Sprite2D
+	var drop_off_point = $"../../CustomerClipping" as Sprite2D
 	var drop_off_rect = _get_global_rect(drop_off_point)
 	var paper_rect = _get_global_rect($"Sprite2D")
 	
@@ -22,7 +22,7 @@ func _on_drag_end():
 	var percentage_drop = (intersect.size.x * intersect.size.y) / (paper_rect.size.x * paper_rect.size.y)
 	
 	if percentage_drop > 0.2:
-		($"/root/FakenewsPlease" as FakenewsPlease).hand_back(self)
+		($"../../.." as FakenewsPlease).hand_back(self)
 	
 func _get_global_rect(sprite: Sprite2D):
 	var size = sprite.texture.get_size() * sprite.global_scale;

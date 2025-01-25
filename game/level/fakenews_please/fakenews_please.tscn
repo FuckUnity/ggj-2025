@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cv2xgcfitlne7"]
+[gd_scene load_steps=28 format=3 uid="uid://cv2xgcfitlne7"]
 
 [ext_resource type="Script" path="res://level/fakenews_please/fakenews_please.gd" id="1_2e40f"]
 [ext_resource type="Texture2D" uid="uid://cnjmx83eom82y" path="res://level/fakenews_please/paper.jpg" id="2_ewlqc"]
@@ -18,6 +18,7 @@
 [ext_resource type="Script" path="res://level/fakenews_please/customer.gd" id="14_r88dh"]
 [ext_resource type="Texture2D" uid="uid://cd0ul7fvfw7du" path="res://assets/fakenews_please/steam_2.png" id="15_7nd5a"]
 [ext_resource type="Texture2D" uid="uid://d33tt1sa20rxs" path="res://assets/fakenews_please/steam_3.png" id="16_6sumv"]
+[ext_resource type="Texture2D" uid="uid://h1jii40u3aq" path="res://assets/fakenews_please/customer.png" id="19_m6hbt"]
 [ext_resource type="AudioStream" uid="uid://dilqt44eu3x6u" path="res://audio/Dark City.Wav" id="19_oiov1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2mayo"]
@@ -201,9 +202,9 @@ papers_root = NodePath("../../../Papers")
 script = ExtResource("14_r88dh")
 customer_name = "test1"
 paper_texture = ExtResource("2_ewlqc")
-person_texture = ExtResource("6_dlulk")
+person_texture = ExtResource("19_m6hbt")
 is_fake = 2
-failure_message = "FAKE"
+failure_message = "Sadly this article is filled with misinformation and hate :("
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("19_oiov1")
