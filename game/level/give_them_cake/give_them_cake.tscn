@@ -1,8 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://b88wdcxmke5r4"]
+[gd_scene load_steps=13 format=3 uid="uid://b88wdcxmke5r4"]
 
 [ext_resource type="Script" path="res://level/give_them_cake/give_them_cake.gd" id="1_r1qa1"]
 [ext_resource type="Shader" path="res://level/give_them_cake/blur.gdshader" id="2_bh1rm"]
 [ext_resource type="Texture2D" uid="uid://bj7yb3qclre7g" path="res://assets/stage/stage.jpeg" id="3_rmnew"]
+[ext_resource type="Texture2D" uid="uid://l36rvqpw58d0" path="res://assets/give_them_cake/kuchen5.png" id="4_5ca34"]
+[ext_resource type="Texture2D" uid="uid://77iy3elbcdqe" path="res://assets/give_them_cake/kuchen4.png" id="5_w2fry"]
+[ext_resource type="Texture2D" uid="uid://d2wpo7wgfac26" path="res://assets/give_them_cake/kuchen3.png" id="6_mu2tk"]
+[ext_resource type="Texture2D" uid="uid://dliwok6ph5y2a" path="res://assets/give_them_cake/kuchen2.png" id="7_ci6a1"]
+[ext_resource type="Texture2D" uid="uid://dpkem80544t7t" path="res://assets/give_them_cake/kuchen1.png" id="8_sym2n"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3o1jy"]
 shader = ExtResource("2_bh1rm")
@@ -14,6 +19,29 @@ colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 0.52549, 1, 1, 1, 0.52549, 1, 1, 
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_3r76e"]
 gradient = SubResource("Gradient_vs37c")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_28b0v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_sym2n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ci6a1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mu2tk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_w2fry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5ca34")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="GiveThemCake" type="Node2D"]
 script = ExtResource("1_r1qa1")
@@ -101,6 +129,22 @@ offset_top = -59.6017
 offset_right = 94.5
 offset_bottom = -32.6017
 text = "5%"
+
+[node name="Control2" type="Control" parent="Control2/AspectRatioContainer/Control"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 1000.0
+offset_top = -403.39
+offset_right = 1000.0
+offset_bottom = -403.39
+grow_vertical = 0
+
+[node name="Amunition" type="AnimatedSprite2D" parent="Control2/AspectRatioContainer/Control/Control2"]
+position = Vector2(-180, -121.305)
+scale = Vector2(0.7, 0.6)
+sprite_frames = SubResource("SpriteFrames_28b0v")
 
 [node name="BirdHolder" type="Node2D" parent="."]
 
