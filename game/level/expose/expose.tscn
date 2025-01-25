@@ -1,11 +1,12 @@
-[gd_scene load_steps=13 format=3 uid="uid://be7ddha5a1yoa"]
+[gd_scene load_steps=14 format=3 uid="uid://be7ddha5a1yoa"]
 
-[ext_resource type="Script" path="res://level/futternapf/futternapf.gd" id="1_258fm"]
+[ext_resource type="Script" path="res://level/expose/expose.gd" id="1_ubmwc"]
 [ext_resource type="Texture2D" uid="uid://fqy0ypvfr8v8" path="res://assets/expose/bg.png" id="2_8hgep"]
 [ext_resource type="Texture2D" uid="uid://bc1v84yfaikor" path="res://assets/expose/icons/war.png" id="3_32r83"]
 [ext_resource type="Texture2D" uid="uid://b5kvd30jowqfq" path="res://assets/expose/icons/child.png" id="4_63i5p"]
+[ext_resource type="Script" path="res://level/expose/clickable.gd" id="4_l0e6d"]
 [ext_resource type="Texture2D" uid="uid://b88rygfs35f1m" path="res://assets/expose/icons/cross.png" id="5_k0hkt"]
-[ext_resource type="Texture2D" uid="uid://bx00tp7k6h4n5" path="res://assets/expose/speech_bubble.png" id="6_xql26"]
+[ext_resource type="Texture2D" uid="uid://bx00tp7k6h4n5" path="res://level/coffee/icons/speech_bubble.png" id="6_xql26"]
 [ext_resource type="Texture2D" uid="uid://ywoeu355rr1s" path="res://assets/expose/start.png" id="7_8uv3r"]
 [ext_resource type="Texture2D" uid="uid://bcwn3lt8wnev4" path="res://assets/expose/face.png" id="8_pf4vq"]
 [ext_resource type="Texture2D" uid="uid://dgytvly01mpkg" path="res://assets/expose/arm.png" id="9_c6u3r"]
@@ -20,7 +21,7 @@ fill_from = Vector2(0.9, 0.3)
 fill_to = Vector2(0, 0.4)
 
 [node name="Expose" type="Node2D"]
-script = ExtResource("1_258fm")
+script = ExtResource("1_ubmwc")
 
 [node name="bg_placeholder" type="Sprite2D" parent="."]
 position = Vector2(942, 534)
@@ -38,39 +39,42 @@ texture = ExtResource("2_8hgep")
 
 [node name="Arguments" type="Node2D" parent="scene"]
 
-[node name="icon4" type="Sprite2D" parent="scene/Arguments"]
+[node name="a1" type="Sprite2D" parent="scene/Arguments"]
 position = Vector2(675, 301.667)
 scale = Vector2(4.27083, 3.64746)
 texture = ExtResource("3_32r83")
+script = ExtResource("4_l0e6d")
 
-[node name="icon5" type="Sprite2D" parent="scene/Arguments"]
+[node name="a2" type="Sprite2D" parent="scene/Arguments"]
 position = Vector2(1048.33, 285)
 scale = Vector2(4.27083, 3.64746)
 texture = ExtResource("4_63i5p")
+script = ExtResource("4_l0e6d")
 
-[node name="icon6" type="Sprite2D" parent="scene/Arguments"]
+[node name="a3" type="Sprite2D" parent="scene/Arguments"]
 position = Vector2(1496.67, 231.667)
 scale = Vector2(4.27083, 3.64746)
 texture = ExtResource("5_k0hkt")
+script = ExtResource("4_l0e6d")
 
 [node name="SpeechBubble" type="Sprite2D" parent="scene"]
 position = Vector2(866.667, -345)
 scale = Vector2(1.66667, 0.732422)
 texture = ExtResource("6_xql26")
 
-[node name="Argument" type="Node2D" parent="scene/SpeechBubble"]
+[node name="Q" type="Node2D" parent="scene/SpeechBubble"]
 
-[node name="icon1" type="Sprite2D" parent="scene/SpeechBubble/Argument"]
+[node name="q1" type="Sprite2D" parent="scene/SpeechBubble/Q"]
 position = Vector2(-74, -34.1334)
 scale = Vector2(2.5625, 4.98)
 texture = ExtResource("3_32r83")
 
-[node name="icon2" type="Sprite2D" parent="scene/SpeechBubble/Argument"]
+[node name="q2" type="Sprite2D" parent="scene/SpeechBubble/Q"]
 position = Vector2(35, -29.5466)
 scale = Vector2(2.5625, 4.98)
 texture = ExtResource("4_63i5p")
 
-[node name="icon3" type="Sprite2D" parent="scene/SpeechBubble/Argument"]
+[node name="q3" type="Sprite2D" parent="scene/SpeechBubble/Q"]
 position = Vector2(123, -31.8578)
 scale = Vector2(2.5625, 4.98)
 texture = ExtResource("5_k0hkt")
