@@ -1,17 +1,37 @@
-[gd_scene load_steps=13 format=3 uid="uid://b88wdcxmke5r4"]
+[gd_scene load_steps=21 format=3 uid="uid://b88wdcxmke5r4"]
 
 [ext_resource type="Script" path="res://level/give_them_cake/give_them_cake.gd" id="1_r1qa1"]
 [ext_resource type="Shader" path="res://level/give_them_cake/blur.gdshader" id="2_bh1rm"]
-[ext_resource type="Texture2D" uid="uid://bj7yb3qclre7g" path="res://assets/stage/stage.jpeg" id="3_rmnew"]
+[ext_resource type="Texture2D" uid="uid://dktk1cih7iqli" path="res://assets/stage/layer_00_bg.png" id="3_j043g"]
+[ext_resource type="Texture2D" uid="uid://dy78gmlnbnv0j" path="res://assets/stage/layer_04_chart.png" id="4_0u8ms"]
 [ext_resource type="Texture2D" uid="uid://l36rvqpw58d0" path="res://assets/give_them_cake/kuchen5.png" id="4_5ca34"]
+[ext_resource type="Texture2D" uid="uid://c75u15rvm1o1w" path="res://assets/stage/layer_05_person.png" id="5_cv04u"]
 [ext_resource type="Texture2D" uid="uid://77iy3elbcdqe" path="res://assets/give_them_cake/kuchen4.png" id="5_w2fry"]
+[ext_resource type="Texture2D" uid="uid://cadyhda27aplb" path="res://assets/stage/layer_06_podium.png" id="6_ejsk1"]
 [ext_resource type="Texture2D" uid="uid://d2wpo7wgfac26" path="res://assets/give_them_cake/kuchen3.png" id="6_mu2tk"]
 [ext_resource type="Texture2D" uid="uid://dliwok6ph5y2a" path="res://assets/give_them_cake/kuchen2.png" id="7_ci6a1"]
+[ext_resource type="Texture2D" uid="uid://bsul0hlup17k8" path="res://assets/stage/layer_10_crowd.png" id="7_r7vc4"]
 [ext_resource type="Texture2D" uid="uid://dpkem80544t7t" path="res://assets/give_them_cake/kuchen1.png" id="8_sym2n"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_3o1jy"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3mv8h"]
 shader = ExtResource("2_bh1rm")
-shader_parameter/radius = 4.0
+shader_parameter/radius = 5.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a1v5s"]
+shader = ExtResource("2_bh1rm")
+shader_parameter/radius = 5.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4yr88"]
+shader = ExtResource("2_bh1rm")
+shader_parameter/radius = 5.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6ayfm"]
+shader = ExtResource("2_bh1rm")
+shader_parameter/radius = 5.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t5n5o"]
+shader = ExtResource("2_bh1rm")
+shader_parameter/radius = 5.0
 
 [sub_resource type="Gradient" id="Gradient_vs37c"]
 offsets = PackedFloat32Array(0, 0.20802, 0.822055, 1)
@@ -52,9 +72,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -960.0
-offset_top = -480.0
+offset_top = -540.0
 offset_right = 960.0
-offset_bottom = 600.0
+offset_bottom = 540.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -63,22 +83,38 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -200.0
-offset_right = 2688.0
-offset_bottom = 2176.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.4, 0.4)
 ratio = 1.77
 
 [node name="ColorRect" type="ColorRect" parent="Control2/AspectRatioContainer"]
 layout_mode = 2
 color = Color(0.364706, 0.686275, 0.807843, 1)
 
-[node name="TextureRect" type="TextureRect" parent="Control2/AspectRatioContainer"]
-material = SubResource("ShaderMaterial_3o1jy")
+[node name="TextureRectRoom" type="TextureRect" parent="Control2/AspectRatioContainer"]
+material = SubResource("ShaderMaterial_3mv8h")
 layout_mode = 2
-texture = ExtResource("3_rmnew")
+texture = ExtResource("3_j043g")
+
+[node name="TextureRectChart" type="TextureRect" parent="Control2/AspectRatioContainer"]
+material = SubResource("ShaderMaterial_a1v5s")
+layout_mode = 2
+texture = ExtResource("4_0u8ms")
+
+[node name="TextureRectPerson" type="TextureRect" parent="Control2/AspectRatioContainer"]
+material = SubResource("ShaderMaterial_4yr88")
+layout_mode = 2
+texture = ExtResource("5_cv04u")
+
+[node name="TextureRectPodium" type="TextureRect" parent="Control2/AspectRatioContainer"]
+material = SubResource("ShaderMaterial_6ayfm")
+layout_mode = 2
+texture = ExtResource("6_ejsk1")
+
+[node name="TextureRectCrowd" type="TextureRect" parent="Control2/AspectRatioContainer"]
+material = SubResource("ShaderMaterial_t5n5o")
+layout_mode = 2
+texture = ExtResource("7_r7vc4")
 
 [node name="Control" type="Control" parent="Control2/AspectRatioContainer"]
 layout_mode = 2
@@ -90,13 +126,13 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -708.0
-offset_top = -403.39
-offset_right = -708.0
-offset_bottom = -403.39
+offset_left = -152.6
+offset_top = -140.0
+offset_right = -152.6
+offset_bottom = -140.0
 grow_horizontal = 0
 grow_vertical = 0
-scale = Vector2(3, 3)
+scale = Vector2(1.2, 1.2)
 
 [node name="TextureRect" type="TextureRect" parent="Control2/AspectRatioContainer/Control/PointsHolder"]
 layout_mode = 0
@@ -135,11 +171,12 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 1000.0
-offset_top = -403.39
-offset_right = 1000.0
-offset_bottom = -403.39
+offset_left = 260.0
+offset_top = -100.0
+offset_right = 260.0
+offset_bottom = -100.0
 grow_vertical = 0
+scale = Vector2(0.4, 0.4)
 
 [node name="Amunition" type="AnimatedSprite2D" parent="Control2/AspectRatioContainer/Control/Control2"]
 position = Vector2(-180, -121.305)

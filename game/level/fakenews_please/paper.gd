@@ -1,5 +1,7 @@
 class_name Paper extends DraggableBody
 
+const FakenewsPlease = preload("res://level/fakenews_please/fakenews_please.gd")
+
 enum PaperState {NONE, CHECKED, FAKE}
 	
 var paper_state = PaperState.NONE

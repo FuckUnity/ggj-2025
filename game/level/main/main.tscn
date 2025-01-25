@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://d35fcfy4ngulx"]
+[gd_scene load_steps=16 format=3 uid="uid://d35fcfy4ngulx"]
 
 [ext_resource type="Script" path="res://level/main/main.gd" id="1_rswi3"]
 [ext_resource type="Shader" path="res://level/main/grayscale.gdshader" id="2_ui23u"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bqslba55e18gv" path="res://assets/stage/bubble_02.png" id="6_c0vk8"]
 [ext_resource type="Texture2D" uid="uid://c75u15rvm1o1w" path="res://assets/stage/layer_05_person.png" id="6_pv2a8"]
 [ext_resource type="Texture2D" uid="uid://bsul0hlup17k8" path="res://assets/stage/layer_10_crowd.png" id="7_2hpjl"]
+[ext_resource type="Texture2D" uid="uid://cadyhda27aplb" path="res://assets/stage/layer_06_podium.png" id="7_l4ga8"]
 [ext_resource type="Shader" path="res://level/main/hover.gdshader" id="8_al7t1"]
 [ext_resource type="Texture2D" uid="uid://djs6e8o1fik12" path="res://assets/stage/bubble_03.png" id="10_8cwtr"]
 [ext_resource type="AudioStream" uid="uid://ciaomyl45n8k4" path="res://level/main/WohnzimmerBackroundloop.mp3" id="10_koedn"]
@@ -39,7 +40,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="AspectRatioContainer" type="AspectRatioContainer" parent="Control"]
-layout_mode = 0
 offset_right = 4096.0
 offset_bottom = 2304.0
 scale = Vector2(0.469, 0.469)
@@ -59,7 +59,7 @@ texture = ExtResource("6_pv2a8")
 
 [node name="TextureRectPodium" type="TextureRect" parent="Control/AspectRatioContainer"]
 layout_mode = 2
-texture = ExtResource("6_pv2a8")
+texture = ExtResource("7_l4ga8")
 
 [node name="TextureRectCrowd" type="TextureRect" parent="Control/AspectRatioContainer"]
 layout_mode = 2
