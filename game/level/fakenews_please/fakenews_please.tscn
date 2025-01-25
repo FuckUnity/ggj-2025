@@ -141,8 +141,8 @@ position = Vector2(25.676, -40.5405)
 shape = SubResource("RectangleShape2D_wbx3b")
 
 [node name="TextureRect" type="Sprite2D" parent="CanvasLayer/Guidelines"]
-position = Vector2(10.8108, -40.5405)
-scale = Vector2(9.26062, 9.51122)
+position = Vector2(40.5406, 24.3244)
+scale = Vector2(0.703886, 0.722933)
 texture = ExtResource("10_2ytn3")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Guidelines"]

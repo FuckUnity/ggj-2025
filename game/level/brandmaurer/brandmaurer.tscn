@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://bt8qkdevwpkn4"]
+
+[ext_resource type="Script" path="res://level/brandmaurer/brandmaurer.gd" id="1_bmxlc"]
+[ext_resource type="ArrayMesh" uid="uid://c6c3n40sbgii4" path="res://assets/brandmauer/brick 1x1.res" id="2_8k3t7"]
+[ext_resource type="Material" uid="uid://duia5u4bc5vj7" path="res://level/brandmaurer/brick.tres" id="3_a18pt"]
+[ext_resource type="Texture2D" uid="uid://3ejapgvovgco" path="res://assets/brandmauer/ls_platform.jpg" id="4_1ej2y"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0a42w"]
+bounce = 0.67
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b3dsy"]
+size = Vector3(2.08691, 2.08804, 1.97323)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_j7o8k"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qtcqh"]
+size = Vector3(1, 0.00512695, 1)
+
+[node name="Brandmaurer" type="Node3D"]
+script = ExtResource("1_bmxlc")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.613651, 0.789577, 0, -0.789577, 0.613651, -0.0254085, 0.812349, -0.816542)
+fov = 92.8125
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0514482, 1.35074, -1.38358)
+physics_material_override = SubResource("PhysicsMaterial_0a42w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(0.161503, 0, 0, 0, 0.161503, 0, 0, 0, 0.161503, -0.041504, -0.442875, -0.0177908)
+shape = SubResource("BoxShape3D_b3dsy")
+
+[node name="Brick1x1" type="MeshInstance3D" parent="RigidBody3D/CollisionShape3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.041504, -0.0611725, 0.0177908)
+mesh = ExtResource("2_8k3t7")
+skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("3_a18pt")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(3.71239, 0, 0, 0, 3.71239, 0, 0, 0, 3.71239, 0, 0, 0)
+physics_material_override = SubResource("PhysicsMaterial_j7o8k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2.87598, 0, 0, 0, 2.87598, 0, 0, 0, 2.87598, 0, 0, 0)
+shape = SubResource("BoxShape3D_qtcqh")
+
+[node name="Sprite3D" type="Sprite3D" parent="StaticBody3D/CollisionShape3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+texture = ExtResource("4_1ej2y")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.401133, 0.91602, 0, -0.91602, 0.401133, 0, 1.07984, -1.11804)
+light_angular_distance = 1.47
+shadow_enabled = true
