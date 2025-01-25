@@ -28,29 +28,18 @@ offset_right = 949.0
 offset_bottom = 1636.0
 text = "Credits
 
+Cat
 Jeffrey
-Yannis
 Johannes
 Lea
-Tina
 Luca"
 label_settings = SubResource("LabelSettings_8u0ee")
 
-[node name="Label2" type="Label" parent="."]
-offset_left = 1131.0
-offset_top = 219.0
-offset_right = 2247.0
-offset_bottom = 1760.0
-text = "Special Thanks
-Cat
-Anni"
-label_settings = SubResource("LabelSettings_8u0ee")
-
 [node name="Label3" type="Label" parent="."]
-offset_left = 1013.0
-offset_top = 839.0
-offset_right = 1911.0
-offset_bottom = 1070.0
+offset_left = 953.0
+offset_top = 324.0
+offset_right = 1851.0
+offset_bottom = 555.0
 text = "\"Fast Crawling Bu\" by dasrealized (licensed under the Creative Commons 0 License!) [2020-03-01].
 - Links: https://freesound.org/people/dasrealized/sounds/266014/
 https://creativecommons.org/publicdomain/zero/1.0/
