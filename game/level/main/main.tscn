@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://d35fcfy4ngulx"]
+[gd_scene load_steps=24 format=4 uid="uid://d35fcfy4ngulx"]
 
 [ext_resource type="Script" path="res://level/main/main.gd" id="1_rswi3"]
 [ext_resource type="Shader" path="res://shaders/grayscale.gdshader" id="2_ui23u"]
@@ -11,10 +11,15 @@
 [ext_resource type="Texture2D" uid="uid://cadyhda27aplb" path="res://assets/stage/layer_06_podium.png" id="7_l4ga8"]
 [ext_resource type="Shader" path="res://shaders/outline.gdshader" id="8_al7t1"]
 [ext_resource type="Texture2D" uid="uid://djs6e8o1fik12" path="res://assets/stage/bubble_03.png" id="10_8cwtr"]
+[ext_resource type="Texture2D" uid="uid://dl3ks0in6vloo" path="res://assets/give_them_cake/cursor.png" id="10_h5hui"]
 [ext_resource type="AudioStream" uid="uid://ciaomyl45n8k4" path="res://level/main/WohnzimmerBackroundloop.mp3" id="10_koedn"]
 [ext_resource type="Texture2D" uid="uid://c8xfefayg7bbw" path="res://assets/stage/bubble_04.png" id="11_5843r"]
+[ext_resource type="Texture2D" uid="uid://bqpabgyhhtnqc" path="res://assets/_main/IMG_0177.png" id="12_jsb7r"]
 [ext_resource type="Texture2D" uid="uid://dnh836x0wn01q" path="res://assets/stage/microphone.png" id="13_iqgqi"]
+[ext_resource type="Texture2D" uid="uid://d70fp5m066bb" path="res://assets/_main/IMG_0176.png" id="14_ptfmh"]
 [ext_resource type="Texture2D" uid="uid://cm8k03jvldb7l" path="res://assets/stage/layer_04_chart_b.png" id="14_wc3fb"]
+[ext_resource type="Texture2D" uid="uid://cbfb08qmu2evr" path="res://assets/_main/IMG_0178.png" id="16_26d07"]
+[ext_resource type="Texture2D" uid="uid://dql22cwefvck2" path="res://icon.png" id="16_fs446"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kowo6"]
 shader = ExtResource("2_ui23u")
@@ -85,6 +90,20 @@ offset_bottom = 1400.0
 texture_normal = ExtResource("5_n1ox1")
 stretch_mode = 4
 
+[node name="TextureRect" type="TextureRect" parent="Control/AspectRatioContainer/Control/ButtonBubble00"]
+use_parent_material = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.349
+anchor_top = 0.28
+anchor_right = 0.349
+anchor_bottom = 0.28
+offset_left = -50.7915
+offset_top = -63.9489
+offset_right = 205.208
+offset_bottom = 192.051
+texture = ExtResource("10_h5hui")
+
 [node name="ButtonBubble01" type="TextureButton" parent="Control/AspectRatioContainer/Control"]
 layout_mode = 2
 offset_left = 3227.71
@@ -94,6 +113,16 @@ offset_bottom = 1316.42
 texture_normal = ExtResource("6_c0vk8")
 ignore_texture_size = true
 stretch_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="Control/AspectRatioContainer/Control/ButtonBubble01"]
+use_parent_material = true
+layout_mode = 0
+offset_left = -6.3928
+offset_top = 6.39646
+offset_right = 1273.61
+offset_bottom = 726.396
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("12_jsb7r")
 
 [node name="ButtonBubble02" type="TextureButton" parent="Control/AspectRatioContainer/Control"]
 layout_mode = 0
@@ -105,6 +134,16 @@ texture_normal = ExtResource("10_8cwtr")
 ignore_texture_size = true
 stretch_mode = 4
 
+[node name="TextureRect" type="TextureRect" parent="Control/AspectRatioContainer/Control/ButtonBubble02"]
+use_parent_material = true
+layout_mode = 0
+offset_left = -23.0389
+offset_top = 4.71643
+offset_right = 1256.96
+offset_bottom = 724.716
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("14_ptfmh")
+
 [node name="ButtonBubble03" type="TextureButton" parent="Control/AspectRatioContainer/Control"]
 clip_contents = true
 layout_mode = 0
@@ -115,6 +154,20 @@ offset_bottom = 1310.0
 texture_normal = ExtResource("11_5843r")
 stretch_mode = 4
 
+[node name="TextureRect" type="TextureRect" parent="Control/AspectRatioContainer/Control/ButtonBubble03"]
+use_parent_material = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.349
+anchor_top = 0.28
+anchor_right = 0.349
+anchor_bottom = 0.28
+offset_left = -24.3127
+offset_top = -89.0875
+offset_right = 231.687
+offset_bottom = 166.913
+texture = ExtResource("16_fs446")
+
 [node name="ButtonBubble04" type="TextureButton" parent="Control/AspectRatioContainer/Control"]
 layout_mode = 0
 offset_left = 954.793
@@ -124,6 +177,15 @@ offset_bottom = 2077.61
 texture_normal = ExtResource("6_c0vk8")
 ignore_texture_size = true
 stretch_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="Control/AspectRatioContainer/Control/ButtonBubble04"]
+use_parent_material = true
+offset_left = 61.8333
+offset_top = 70.3644
+offset_right = 1341.83
+offset_bottom = 790.364
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("16_26d07")
 
 [node name="ButtonMicrophone" type="TextureButton" parent="Control/AspectRatioContainer/Control"]
 layout_mode = 0
