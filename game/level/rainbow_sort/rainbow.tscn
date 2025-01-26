@@ -6,7 +6,6 @@
 [ext_resource type="Script" path="res://level/rainbow_sort/person.gd" id="3_jstp7"]
 [ext_resource type="Texture2D" uid="uid://pj8kyom8jf4p" path="res://assets/expose/icons/¥€$.png" id="4_5crxd"]
 [ext_resource type="Texture2D" uid="uid://bsa5x4s0snyo8" path="res://assets/rainbow/meeple/pink.png" id="5_7key3"]
-[ext_resource type="Script" path="res://level/rainbow_sort/bubble.gd" id="5_36yos"]
 [ext_resource type="Texture2D" uid="uid://3qs42viwu7bv" path="res://assets/expose/icons/nature.png" id="7_6w01r"]
 [ext_resource type="SpriteFrames" uid="uid://hjtjbjxmf1n" path="res://assets/rainbow/bubble/bubbleteal.tres" id="7_ojkgs"]
 [ext_resource type="SpriteFrames" uid="uid://bebiq3ttrll04" path="res://assets/rainbow/bubble/bubblepink.tres" id="7_w1hpd"]
@@ -27,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://xf3smfiwd34m" path="res://assets/rainbow/bubble/empty.png" id="16_y82ym"]
 [ext_resource type="Texture2D" uid="uid://d2vtyhh6ugcdg" path="res://assets/expose/icons/pets.png" id="16_yqcjw"]
 [ext_resource type="SpriteFrames" uid="uid://bmjwce14rl5f6" path="res://assets/rainbow/bubble/bubbleorange.tres" id="18_pxn4y"]
+[ext_resource type="Script" path="res://level/rainbow_sort/party_bubble.gd" id="20_okhip"]
 [ext_resource type="Texture2D" uid="uid://b404cqrqo8vgk" path="res://assets/rainbow/bubble/bubblebunt1.png" id="21_th0il"]
 [ext_resource type="Texture2D" uid="uid://dt4e8yovnxjgw" path="res://assets/rainbow/bubble/bubblebunt2.png" id="22_bx3u1"]
 [ext_resource type="Texture2D" uid="uid://cinpbbdrxeujs" path="res://assets/rainbow/bubble/bubblebunt3.png" id="23_fjm03"]
@@ -106,7 +106,7 @@ animations = [{
 "speed": 8.0
 }]
 
-[node name="Rainbow" type="Node"]
+[node name="Rainbow" type="Node2D"]
 script = ExtResource("1_d2fdv")
 
 [node name="game" type="Node2D" parent="."]
@@ -327,7 +327,8 @@ self_modulate = Color(1, 1, 1, 0.784314)
 position = Vector2(164, 145)
 scale = Vector2(0.22, 0.22)
 sprite_frames = ExtResource("2_xbgy5")
-script = ExtResource("5_36yos")
+script = ExtResource("20_okhip")
+meeples = 5
 
 [node name="icon" type="Sprite2D" parent="game/Lila/bubble"]
 self_modulate = Color(1, 1, 1, 0.588235)
@@ -420,7 +421,8 @@ self_modulate = Color(1, 1, 1, 0.784314)
 position = Vector2(174, 175)
 scale = Vector2(0.22, 0.22)
 sprite_frames = ExtResource("7_w1hpd")
-script = ExtResource("5_36yos")
+script = ExtResource("20_okhip")
+meeples = 6
 
 [node name="icon" type="Sprite2D" parent="game/Pink/bubble"]
 self_modulate = Color(1, 1, 1, 0.588235)
@@ -531,7 +533,8 @@ self_modulate = Color(1, 1, 1, 0.784314)
 position = Vector2(140, 216)
 scale = Vector2(0.22, 0.22)
 sprite_frames = SubResource("SpriteFrames_bruwf")
-script = ExtResource("5_36yos")
+script = ExtResource("20_okhip")
+meeples = 5
 
 [node name="icon" type="Sprite2D" parent="game/Teal/bubble"]
 self_modulate = Color(1, 1, 1, 0.588235)
@@ -552,7 +555,7 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("9_sg8ur")
 script = ExtResource("3_jstp7")
 party = 10
-attributes = Array[int]([3, 1, 2, 4])
+attributes = Array[int]([1, 2, 4])
 
 [node name="Area2D" type="Area2D" parent="game/Teal/Person"]
 scale = Vector2(0.999999, 0.999999)
@@ -624,22 +627,23 @@ shape = SubResource("CapsuleShape2D_h3cwy")
 [node name="Petrol" type="Node2D" parent="game"]
 position = Vector2(353, 661)
 
-[node name="bubble2" type="AnimatedSprite2D" parent="game/Petrol"]
+[node name="bubble" type="AnimatedSprite2D" parent="game/Petrol"]
 self_modulate = Color(1, 1, 1, 0.784314)
 position = Vector2(141, 250)
 scale = Vector2(0.22, 0.22)
 sprite_frames = ExtResource("7_ojkgs")
-script = ExtResource("5_36yos")
+script = ExtResource("20_okhip")
+meeples = 7
 
-[node name="icon" type="Sprite2D" parent="game/Petrol/bubble2"]
+[node name="icon" type="Sprite2D" parent="game/Petrol/bubble"]
 self_modulate = Color(1, 1, 1, 0.588235)
 position = Vector2(-20, 58.3333)
 scale = Vector2(2, 2)
 texture = ExtResource("10_al6hs")
 
-[node name="Area2D" type="Area2D" parent="game/Petrol/bubble2"]
+[node name="Area2D" type="Area2D" parent="game/Petrol/bubble"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Petrol/bubble2/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Petrol/bubble/Area2D"]
 position = Vector2(22.7273, 68.1818)
 scale = Vector2(60, 60)
 shape = SubResource("CircleShape2D_uujfp")
@@ -680,7 +684,7 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("8_t7wqd")
 script = ExtResource("3_jstp7")
 party = 11
-attributes = Array[int]([6, 1, 7])
+attributes = Array[int]([6, 1, 7, 2])
 
 [node name="Area2D" type="Area2D" parent="game/Petrol/Person3"]
 scale = Vector2(0.999999, 0.999999)
@@ -757,7 +761,8 @@ self_modulate = Color(1, 1, 1, 0.784314)
 position = Vector2(229, 158)
 scale = Vector2(0.22, 0.22)
 sprite_frames = ExtResource("18_pxn4y")
-script = ExtResource("5_36yos")
+script = ExtResource("20_okhip")
+meeples = 6
 
 [node name="icon" type="Sprite2D" parent="game/Orange/bubble"]
 self_modulate = Color(1, 1, 1, 0.588235)
