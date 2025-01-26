@@ -31,8 +31,8 @@ const argument_icons = {
 	'family': "res://assets/expose/icons/family_kind.png",
 	'war': "res://assets/expose/icons/war.png",
 	'climate': "res://assets/expose/icons/temperature_climate.png",
-	'child': "res://assets/expose/icons/child.png",
-	'cake': "res://assets/expose/icons/throw_cake.png",
+	'flag': "res://assets/expose/icons/flagge.png",
+	'cake': "res://assets/give_them_cake/cursor.png",
 	'oil': "res://assets/expose/icons/oil-barrel.png"
 }
 
@@ -46,14 +46,14 @@ const dialogTree = [
 	{ #2
 		'Q': [party_icons.cross, party_icons.money, party_icons.climate],
 		'a1': { 'next': 3, 'icon': argument_icons.alleinerziehend},
-		'a2': { 'next': 2, 'icon': argument_icons.child},
+		'a2': { 'next': 2, 'icon': argument_icons.flag},
 		'a3': { 'next': 1, 'icon': argument_icons.wedding}
 	},
 	{ #3
 		'Q': [party_icons.communist, party_icons.money, party_icons.wildfire],
 		'a1': { 'next': 1, 'icon': argument_icons.climate},
-		'a2': { 'next': 2, 'icon': argument_icons.child},
-		'a3': { 'next': 4, 'icon': argument_icons.wheelchair}
+		'a2': { 'next': 4, 'icon': argument_icons.flag},
+		'a3': { 'next': 2, 'icon': argument_icons.wheelchair}
 	},
 	{ #4
 		'Q': [party_icons.cross, party_icons.communist ,party_icons.wildfire],
@@ -92,9 +92,9 @@ func _ready():
 	a2.f = _on_a_2_pressed
 	a3 = $scene/Arguments/a3
 	a3.f = _on_a_3_pressed
-	q1 = $scene/SpeechBubble/Q/q1
-	q2 = $scene/SpeechBubble/Q/q2
-	q3 = $scene/SpeechBubble/Q/q3
+	q1 = $SpeechBubble/Q/q1
+	q2 = $SpeechBubble/Q/q2
+	q3 = $SpeechBubble/Q/q3
 	_init_q(1)
 
 func _init_q(nr):
@@ -102,17 +102,17 @@ func _init_q(nr):
 		complete()
 		return
 	if nr >= 7:
-		$scene/End.visible = true
+		$End.visible = true
 	else:
-		$scene/End.visible = false
+		$End.visible = false
 	if nr >= 5:
-		$scene/Face.visible = true
+		$Face.visible = true
 	else:
-		$scene/Face.visible = false
+		$Face.visible = false
 	if nr >= 4:
-		$scene/Arm.visible = true
+		$Arm.visible = true
 	else:
-		$scene/Arm.visible = false
+		$Arm.visible = false
 	nr -= 1 # index ist 0 based
 	current_level = nr
 	q1.texture = load(dialogTree[nr].Q[0])
