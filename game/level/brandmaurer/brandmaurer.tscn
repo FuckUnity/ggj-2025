@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bt8qkdevwpkn4"]
+[gd_scene load_steps=22 format=3 uid="uid://bt8qkdevwpkn4"]
 
 [ext_resource type="Script" path="res://level/brandmaurer/brandmaurer.gd" id="1_bmxlc"]
 [ext_resource type="Script" path="res://level/brandmaurer/controller.gd" id="2_7uuj0"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://csek321fkaqal" path="res://assets/brandmauer/merz2.jpg" id="9_6fm16"]
 [ext_resource type="Texture2D" uid="uid://vqot4qnw5b44" path="res://assets/brandmauer/merz3.jpg" id="10_ikeem"]
 [ext_resource type="Texture2D" uid="uid://ceanepp6lg2x7" path="res://assets/brandmauer/merz4.jpg" id="11_cm448"]
+[ext_resource type="AudioStream" uid="uid://cbhy4yhbbv3wf" path="res://audio/audio_hero_Playroom_SIPML_K-0349.mp3" id="13_j1pny"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_kdeck"]
 
@@ -108,3 +109,7 @@ textures = Array[Texture2D]([ExtResource("6_t5kjc"), ExtResource("9_6fm16"), Ext
 
 [node name="Brick" parent="." instance=ExtResource("2_a35ou")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.57164, 0.543014, -1.18746)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_j1pny")
+autoplay = true
