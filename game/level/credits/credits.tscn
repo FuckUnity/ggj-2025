@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dvehssf85u3rp"]
+[gd_scene load_steps=7 format=3 uid="uid://dvehssf85u3rp"]
 
 [ext_resource type="Texture2D" uid="uid://bfahy8003euh2" path="res://assets/credits/bg.png" id="1_0r1mj"]
 [ext_resource type="Script" path="res://level/credits/credits.gd" id="1_2qexj"]
 [ext_resource type="FontFile" uid="uid://c5e6jd020r2fe" path="res://fonts/shiny-marker/Shiny Marker Regular.ttf" id="2_bj3pe"]
+[ext_resource type="AudioStream" uid="uid://cad4ef6jlcbnl" path="res://audio/music_zapsplat_autumntime.mp3" id="4_jkq55"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8u0ee"]
 font = ExtResource("2_bj3pe")
@@ -50,3 +51,7 @@ https://creativecommons.org/licenses/by/3.0/
 https://creativecommons.org/publicdomain/zero/1.0/
 "
 label_settings = SubResource("LabelSettings_erkpf")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_jkq55")
+autoplay = true
