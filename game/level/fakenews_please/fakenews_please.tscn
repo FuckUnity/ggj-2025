@@ -250,4 +250,5 @@ failure_message = "The image is AI generated. Additional body parts were early s
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("19_oiov1")
+volume_db = 9.905
 autoplay = true
