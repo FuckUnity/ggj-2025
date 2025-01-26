@@ -102,17 +102,29 @@ func _init_q(nr):
 		complete()
 		return
 	if nr >= 7:
-		$End.visible = true
+		$Start7.visible = true
 	else:
-		$End.visible = false
+		$Start7.visible = false
+	if nr >= 6:
+		$Start6.visible = true
+	else:
+		$Start6.visible = false
 	if nr >= 5:
-		$Face.visible = true
+		$Start5.visible = true
 	else:
-		$Face.visible = false
+		$Start5.visible = false
 	if nr >= 4:
-		$Arm.visible = true
+		$Start4.visible = true
 	else:
-		$Arm.visible = false
+		$Start4.visible = false
+	if nr >= 3:
+		$Start3.visible = true
+	else:
+		$Start3.visible = false
+	if nr >= 2:
+		$Start2.visible = true
+	else:
+		$Start2.visible = false
 	nr -= 1 # index ist 0 based
 	current_level = nr
 	q1.texture = load(dialogTree[nr].Q[0])
