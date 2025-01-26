@@ -6,7 +6,7 @@ class_name MerzSpawner extends Node3D
 
 func _ready() -> void:
 	var tween = create_tween()
-	tween.tween_interval(randf() * 10)
+	tween.tween_interval(10 + randf() * 10)
 	tween.tween_callback(spawn_merz)
 
 func spawn_merz():

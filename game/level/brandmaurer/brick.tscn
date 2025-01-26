@@ -20,6 +20,8 @@ transform = Transform3D(0.161503, 0, 0, 0, 0.161503, 0, 0, 0, 0.161503, 0, 0, 0)
 shape = SubResource("BoxShape3D_b3dsy")
 
 [node name="Brick1x1" type="MeshInstance3D" parent="CollisionShape3D"]
+cast_shadow = 2
+gi_mode = 2
 mesh = ExtResource("1_dwg3k")
 skeleton = NodePath("../../..")
 surface_material_override/0 = ExtResource("2_pwuu4")
