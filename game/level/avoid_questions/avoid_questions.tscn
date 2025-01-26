@@ -10,8 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://w4ned50aq8ul" path="res://assets/rainbow/meeple/orange.png" id="8_quvf6"]
 [ext_resource type="Texture2D" uid="uid://cnd83nvl8ci6n" path="res://level/avoid_questions/sprites/p1.png" id="9_ekndb"]
 [ext_resource type="Texture2D" uid="uid://cmvn8oa0gt21v" path="res://level/avoid_questions/sprites/p2.png" id="10_b4x7h"]
-[ext_resource type="FontFile" uid="uid://c5e6jd020r2fe" path="res://level/coffee/fonts/shiny-marker/Shiny Marker Regular.ttf" id="11_gubvg"]
-[ext_resource type="Texture2D" uid="uid://bx00tp7k6h4n5" path="res://level/coffee/icons/speech_bubble.png" id="13_hi145"]
+[ext_resource type="FontFile" uid="uid://c5e6jd020r2fe" path="res://fonts/shiny-marker/Shiny Marker Regular.ttf" id="11_gubvg"]
+[ext_resource type="Texture2D" uid="uid://bx00tp7k6h4n5" path="res://assets/_main/speech_bubble.png" id="13_hi145"]
 
 [sub_resource type="Gradient" id="Gradient_kxm38"]
 offsets = PackedFloat32Array(0.19697, 1)
