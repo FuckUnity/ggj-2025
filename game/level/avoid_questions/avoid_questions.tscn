@@ -1,8 +1,9 @@
-[gd_scene load_steps=25 format=3 uid="uid://x2csr3orue5p"]
+[gd_scene load_steps=26 format=3 uid="uid://x2csr3orue5p"]
 
 [ext_resource type="Script" path="res://level/avoid_questions/avoid_questions.gd" id="1_lylxr"]
-[ext_resource type="PackedScene" uid="uid://crsdsuowd564w" path="res://level/avoid_questions/olaf.tscn" id="2_ejlqe"]
+[ext_resource type="PackedScene" uid="uid://crsdsuowd564w" path="res://level/avoid_questions/olaf/olaf.tscn" id="2_ejlqe"]
 [ext_resource type="Texture2D" uid="uid://b3sre1k2w3j2m" path="res://assets/rainbow/meeple/blue.png" id="4_n6ii1"]
+[ext_resource type="PackedScene" uid="uid://dv0h4i8fnnh57" path="res://level/avoid_questions/reporter/reporter.tscn" id="4_pwjn2"]
 [ext_resource type="Texture2D" uid="uid://bsa5x4s0snyo8" path="res://assets/rainbow/meeple/pink.png" id="5_lyixl"]
 [ext_resource type="Texture2D" uid="uid://b4shjx3r655oj" path="res://assets/rainbow/meeple/purple.png" id="6_p2xlq"]
 [ext_resource type="Texture2D" uid="uid://dp5v7tcjg3qlt" path="res://assets/rainbow/meeple/teal.png" id="7_vosj1"]
@@ -11,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cnd83nvl8ci6n" path="res://level/avoid_questions/sprites/p1.png" id="9_ekndb"]
 [ext_resource type="Texture2D" uid="uid://cmvn8oa0gt21v" path="res://level/avoid_questions/sprites/p2.png" id="10_b4x7h"]
 [ext_resource type="FontFile" uid="uid://c5e6jd020r2fe" path="res://fonts/shiny-marker/Shiny Marker Regular.ttf" id="11_gubvg"]
-[ext_resource type="Texture2D" uid="uid://bx00tp7k6h4n5" path="res://assets/_main/speech_bubble.png" id="13_hi145"]
+[ext_resource type="Texture2D" uid="uid://bx00tp7k6h4n5" path="res://assets/expose/speech_bubble.png" id="13_hi145"]
 
 [sub_resource type="Gradient" id="Gradient_kxm38"]
 offsets = PackedFloat32Array(0.19697, 1)
@@ -89,82 +90,96 @@ region_rect = Rect2(605.964, 380.483, 1535.58, 811.753)
 position = Vector2(750, 766)
 JUMP_VELOCITY = -850.0
 
-[node name="plant_dead_6" type="Area2D" parent="."]
+[node name="reporter1" type="Area2D" parent="."]
 position = Vector2(2709, 660)
 
-[node name="Sprite2D" type="Sprite2D" parent="plant_dead_6"]
+[node name="Sprite2D" type="Sprite2D" parent="reporter1"]
 position = Vector2(4, 18)
 texture = ExtResource("4_n6ii1")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="plant_dead_6"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="reporter1"]
 position = Vector2(5, 52)
 shape = SubResource("CapsuleShape2D_et8y8")
 
-[node name="plant_dead_10" type="Area2D" parent="."]
-position = Vector2(7091, 682)
+[node name="Reporter" parent="reporter1" instance=ExtResource("4_pwjn2")]
 
-[node name="Sprite2D" type="Sprite2D" parent="plant_dead_10"]
+[node name="reporter2" type="Area2D" parent="."]
+position = Vector2(3914, 719)
+
+[node name="Sprite2D" type="Sprite2D" parent="reporter2"]
 position = Vector2(4, 18)
-texture = ExtResource("5_lyixl")
+texture = ExtResource("8_quvf6")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="plant_dead_10"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="reporter2"]
 position = Vector2(5, 52)
 shape = SubResource("CapsuleShape2D_et8y8")
 
-[node name="plant_dead_5" type="Area2D" parent="."]
-position = Vector2(9449, 712)
+[node name="Reporter" parent="reporter2" instance=ExtResource("4_pwjn2")]
 
-[node name="Sprite2D" type="Sprite2D" parent="plant_dead_5"]
-position = Vector2(4, 18)
-texture = ExtResource("6_p2xlq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="plant_dead_5"]
-position = Vector2(5, 52)
-shape = SubResource("CapsuleShape2D_et8y8")
-
-[node name="plant_dead_7" type="Area2D" parent="."]
+[node name="reporter3" type="Area2D" parent="."]
 position = Vector2(5122, 691)
 
-[node name="Sprite2D" type="Sprite2D" parent="plant_dead_7"]
+[node name="Sprite2D" type="Sprite2D" parent="reporter3"]
 position = Vector2(4, 18)
 texture = ExtResource("7_vosj1")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="plant_dead_7"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="reporter3"]
 position = Vector2(5, 52)
 shape = SubResource("CapsuleShape2D_et8y8")
 
-[node name="plant_dead_4" type="Area2D" parent="."]
+[node name="Reporter" parent="reporter3" instance=ExtResource("4_pwjn2")]
+
+[node name="reporter4" type="Area2D" parent="."]
 position = Vector2(6728, 748)
 
-[node name="Sprite2D" type="Sprite2D" parent="plant_dead_4"]
+[node name="Sprite2D" type="Sprite2D" parent="reporter4"]
 position = Vector2(4, 18)
 texture = ExtResource("4_n6ii1")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="plant_dead_4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="reporter4"]
 position = Vector2(5, 52)
 shape = SubResource("CapsuleShape2D_et8y8")
 
-[node name="plant_dead_8" type="Area2D" parent="."]
-position = Vector2(3914, 719)
+[node name="Reporter" parent="reporter4" instance=ExtResource("4_pwjn2")]
 
-[node name="Sprite2D" type="Sprite2D" parent="plant_dead_8"]
+[node name="reporter5" type="Area2D" parent="."]
+position = Vector2(7091, 682)
+
+[node name="Sprite2D" type="Sprite2D" parent="reporter5"]
 position = Vector2(4, 18)
-texture = ExtResource("8_quvf6")
+texture = ExtResource("5_lyixl")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="plant_dead_8"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="reporter5"]
 position = Vector2(5, 52)
 shape = SubResource("CapsuleShape2D_et8y8")
 
-[node name="plant_dead_9" type="Area2D" parent="."]
+[node name="Reporter" parent="reporter5" instance=ExtResource("4_pwjn2")]
+
+[node name="reporter6" type="Area2D" parent="."]
 position = Vector2(9023, 742)
 
-[node name="Sprite2D" type="Sprite2D" parent="plant_dead_9"]
+[node name="Sprite2D" type="Sprite2D" parent="reporter6"]
 position = Vector2(4, 18)
 texture = ExtResource("8_quvf6")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="plant_dead_9"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="reporter6"]
 position = Vector2(5, 52)
 shape = SubResource("CapsuleShape2D_et8y8")
+
+[node name="Reporter" parent="reporter6" instance=ExtResource("4_pwjn2")]
+
+[node name="reporter7" type="Area2D" parent="."]
+position = Vector2(9449, 712)
+
+[node name="Sprite2D" type="Sprite2D" parent="reporter7"]
+position = Vector2(4, 18)
+texture = ExtResource("6_p2xlq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="reporter7"]
+position = Vector2(5, 52)
+shape = SubResource("CapsuleShape2D_et8y8")
+
+[node name="Reporter" parent="reporter7" instance=ExtResource("4_pwjn2")]
 
 [node name="plant3" type="Area2D" parent="."]
 position = Vector2(1258, 693)
@@ -288,11 +303,11 @@ text = "Vertrauen?"
 shape = SubResource("RectangleShape2D_n08a0")
 
 [connection signal="completed" from="Olaf" to="." method="complete"]
-[connection signal="body_entered" from="plant_dead_6" to="Olaf" method="_on_plant_dead_area_entered"]
-[connection signal="body_entered" from="plant_dead_10" to="Olaf" method="_on_plant_dead_area_entered"]
-[connection signal="body_entered" from="plant_dead_5" to="Olaf" method="_on_plant_dead_area_entered"]
-[connection signal="body_entered" from="plant_dead_7" to="Olaf" method="_on_plant_dead_area_entered"]
-[connection signal="body_entered" from="plant_dead_4" to="Olaf" method="_on_plant_dead_area_entered"]
-[connection signal="body_entered" from="plant_dead_8" to="Olaf" method="_on_plant_dead_area_entered"]
-[connection signal="body_entered" from="plant_dead_9" to="Olaf" method="_on_plant_dead_area_entered"]
+[connection signal="body_entered" from="reporter1" to="Olaf" method="_on_plant_dead_area_entered"]
+[connection signal="body_entered" from="reporter2" to="Olaf" method="_on_plant_dead_area_entered"]
+[connection signal="body_entered" from="reporter3" to="Olaf" method="_on_plant_dead_area_entered"]
+[connection signal="body_entered" from="reporter4" to="Olaf" method="_on_plant_dead_area_entered"]
+[connection signal="body_entered" from="reporter5" to="Olaf" method="_on_plant_dead_area_entered"]
+[connection signal="body_entered" from="reporter6" to="Olaf" method="_on_plant_dead_area_entered"]
+[connection signal="body_entered" from="reporter7" to="Olaf" method="_on_plant_dead_area_entered"]
 [connection signal="body_entered" from="finish" to="Olaf" method="_on_finish_entered"]

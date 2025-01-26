@@ -19,11 +19,13 @@ func _ready():
 	# Input.set_custom_mouse_cursor(cursor_paw, 0, Vector2(32, 32))
 	
 	buttons = [
-		{ "button": $"Control/AspectRatioContainer/Control/ButtonBubble00",  "level": 0 },
-		{ "button": $"Control/AspectRatioContainer/Control/ButtonBubble01",  "level": 1 },
-		{ "button": $"Control/AspectRatioContainer/Control/ButtonBubble02",  "level": 2 },
-		{ "button": $"Control/AspectRatioContainer/Control/ButtonBubble03",  "level": 3 },
-		{ "button": $"Control/AspectRatioContainer/Control/ButtonBubble04",  "level": 4 },
+		{ "button": $"Control/AspectRatioContainer/Control/ButtonCredits",    "level": 0 },
+		{ "button": $"Control/AspectRatioContainer/Control/ButtonBubble00",   "level": 1 },
+		{ "button": $"Control/AspectRatioContainer/Control/ButtonBubble01",   "level": 2 },
+		{ "button": $"Control/AspectRatioContainer/Control/ButtonBubble02",   "level": 3 },
+		{ "button": $"Control/AspectRatioContainer/Control/ButtonBubble03",   "level": 4 },
+		{ "button": $"Control/AspectRatioContainer/Control/ButtonBubble04",   "level": 5 },
+		{ "button": $"Control/AspectRatioContainer/Control/ButtonMicrophone", "level": 6 },
 	]
 	
 	for b in buttons:
