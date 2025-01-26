@@ -101,38 +101,23 @@ func _init_q(nr):
 	if nr == 8:
 		complete()
 		return
-	if nr >= 7:
-		$Start7.visible = true
-	else:
-		$Start7.visible = false
-	if nr >= 6:
-		$Start6.visible = true
-	else:
-		$Start6.visible = false
-	if nr >= 5:
-		$Start5.visible = true
-	else:
-		$Start5.visible = false
-	if nr >= 4:
-		$Start4.visible = true
-	else:
-		$Start4.visible = false
-	if nr >= 3:
-		$Start3.visible = true
-	else:
-		$Start3.visible = false
-	if nr >= 2:
-		$Start2.visible = true
-	else:
-		$Start2.visible = false
-	nr -= 1 # index ist 0 based
-	current_level = nr
-	q1.texture = load(dialogTree[nr].Q[0])
-	q2.texture = load(dialogTree[nr].Q[1])
-	q3.texture = load(dialogTree[nr].Q[2])
-	a1.texture = load(dialogTree[nr].a1.icon)
-	a2.texture = load(dialogTree[nr].a2.icon)
-	a3.texture = load(dialogTree[nr].a3.icon)
+	match nr:
+		1: $Start.texture = load("res://assets/stage/IMG_0164.png")
+		2: $Start.texture = load("res://assets/stage/IMG_0165.png")
+		3: $Start.texture = load("res://assets/stage/IMG_0170.png")
+		4: $Start.texture = load("res://assets/stage/IMG_0166.png")
+		5: $Start.texture = load("res://assets/stage/IMG_0167.png")
+		6: $Start.texture = load("res://assets/stage/IMG_0168.png")
+		7: $Start.texture = load("res://assets/stage/IMG_0169.png")
+		_: $Start.texture = load("res://assets/stage/IMG_0164.png")
+	
+	current_level = nr - 1 # index = nr -1
+	q1.texture = load(dialogTree[current_level].Q[0])
+	q2.texture = load(dialogTree[current_level].Q[1])
+	q3.texture = load(dialogTree[current_level].Q[2])
+	a1.texture = load(dialogTree[current_level].a1.icon)
+	a2.texture = load(dialogTree[current_level].a2.icon)
+	a3.texture = load(dialogTree[current_level].a3.icon)
 	
 
 func _on_a_1_pressed():

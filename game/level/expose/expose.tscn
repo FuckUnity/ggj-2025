@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://be7ddha5a1yoa"]
+[gd_scene load_steps=16 format=3 uid="uid://be7ddha5a1yoa"]
 
 [ext_resource type="Script" path="res://level/expose/expose.gd" id="1_ubmwc"]
 [ext_resource type="Texture2D" uid="uid://dktk1cih7iqli" path="res://assets/stage/layer_00_bg.png" id="2_mxnah"]
@@ -8,13 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://bqslba55e18gv" path="res://assets/stage/bubble_02.png" id="4_m4r1w"]
 [ext_resource type="Texture2D" uid="uid://b88rygfs35f1m" path="res://assets/expose/icons/cross.png" id="5_k0hkt"]
 [ext_resource type="Texture2D" uid="uid://ekxwgpqhllcw" path="res://assets/expose/icons/communist.png" id="6_tippm"]
-[ext_resource type="Texture2D" uid="uid://c75u15rvm1o1w" path="res://assets/stage/layer_05_person.png" id="8_wfyr1"]
-[ext_resource type="Texture2D" uid="uid://dbruwl2jg4c5c" path="res://assets/stage/IMG_0165.png" id="9_i8hcs"]
-[ext_resource type="Texture2D" uid="uid://5nxhsma71ros" path="res://assets/stage/IMG_0166.png" id="10_4it2u"]
-[ext_resource type="Texture2D" uid="uid://d17g50cu6gf3b" path="res://assets/stage/IMG_0167.png" id="11_lglm2"]
-[ext_resource type="Texture2D" uid="uid://br8qxvenhsu4v" path="res://assets/stage/IMG_0168.png" id="12_61dj1"]
+[ext_resource type="Texture2D" uid="uid://de05bnwkfn2ps" path="res://assets/stage/IMG_0164.png" id="8_kjou2"]
 [ext_resource type="Texture2D" uid="uid://cadyhda27aplb" path="res://assets/stage/layer_06_podium.png" id="12_62dxx"]
-[ext_resource type="Texture2D" uid="uid://bxkabci7ekf7l" path="res://assets/stage/IMG_0169.png" id="13_iov5d"]
 [ext_resource type="Texture2D" uid="uid://bsul0hlup17k8" path="res://assets/stage/layer_10_crowd.png" id="13_xq3on"]
 [ext_resource type="Texture2D" uid="uid://cgj6grpyavywa" path="res://assets/stage/layer_20_bubble_01.png" id="14_s1vnr"]
 [ext_resource type="Texture2D" uid="uid://c64e2lcvg31k2" path="res://assets/stage/layer_20_bubble_03.png" id="16_yyvl8"]
@@ -60,37 +55,7 @@ texture = ExtResource("5_k0hkt")
 [node name="Start" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("8_wfyr1")
-
-[node name="Start2" type="Sprite2D" parent="."]
-position = Vector2(960, 540)
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("9_i8hcs")
-
-[node name="Start3" type="Sprite2D" parent="."]
-position = Vector2(960, 540)
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("10_4it2u")
-
-[node name="Start4" type="Sprite2D" parent="."]
-position = Vector2(960, 540)
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("11_lglm2")
-
-[node name="Start5" type="Sprite2D" parent="."]
-position = Vector2(960, 540)
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("12_61dj1")
-
-[node name="Start6" type="Sprite2D" parent="."]
-position = Vector2(960, 540)
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("8_wfyr1")
-
-[node name="Start7" type="Sprite2D" parent="."]
-position = Vector2(960, 540)
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("13_iov5d")
+texture = ExtResource("8_kjou2")
 
 [node name="Layer06Podium" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
