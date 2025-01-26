@@ -4,6 +4,7 @@ extends level_base
 
 const speeker_01 = preload("res://assets/stage/speaker_01.png")
 const speeker_02 = preload("res://assets/stage/speaker_02.png")
+const cursor_pop = preload("res://assets/_main/cursorpop.png")
 
 
 @export var shader_disabled: ShaderMaterial
@@ -29,7 +30,10 @@ func _ready():
 		_init_button(b)
 
 func _init_button(b):
-	b.button.pressed.connect(func(): if b.level != null and _can_level_be_opened(b.level): game._open_level(b.level))
+	b.button.pressed.connect(func(): 
+		if b.level != null and _can_level_be_opened(b.level):
+			game._open_level(b.level)
+	)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):

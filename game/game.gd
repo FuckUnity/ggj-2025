@@ -2,6 +2,7 @@ class_name Game extends Node
 
 const Assets = preload("res://logic/Assets.gd")
 const GameState = preload("res://logic/GameState.gd")
+const cursor = preload("res://assets/_main/cursor.png")
 
 var assets: Assets
 var state: GameState
@@ -36,7 +37,7 @@ func _open_level(level: int):
 	if !state.is_level_open_allowed(level):
 		return;
 	
-	Input.set_custom_mouse_cursor(null)
+	Input.set_custom_mouse_cursor(cursor)
 	
 	if state.current_level == -1 and state.current_level_ref:
 		remove_child(state.current_level_ref)
