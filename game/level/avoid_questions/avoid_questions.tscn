@@ -1,7 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://x2csr3orue5p"]
+[gd_scene load_steps=27 format=3 uid="uid://x2csr3orue5p"]
 
 [ext_resource type="Script" path="res://level/avoid_questions/avoid_questions.gd" id="1_lylxr"]
 [ext_resource type="PackedScene" uid="uid://crsdsuowd564w" path="res://level/avoid_questions/olaf/olaf.tscn" id="2_ejlqe"]
+[ext_resource type="Texture2D" uid="uid://d36w06cd6j1xb" path="res://assets/avoid_questions/IMG_0182.png" id="2_j6q2d"]
 [ext_resource type="Texture2D" uid="uid://b3sre1k2w3j2m" path="res://assets/rainbow/meeple/blue.png" id="4_n6ii1"]
 [ext_resource type="PackedScene" uid="uid://dv0h4i8fnnh57" path="res://level/avoid_questions/reporter/reporter.tscn" id="4_pwjn2"]
 [ext_resource type="Texture2D" uid="uid://bsa5x4s0snyo8" path="res://assets/rainbow/meeple/pink.png" id="5_lyixl"]
@@ -27,10 +28,12 @@ fill_to = Vector2(0.0534188, 0.649573)
 size = Vector2(1.00578, 74.0143)
 
 [sub_resource type="Gradient" id="Gradient_q3lrf"]
+colors = PackedColorArray(0, 0, 0, 1, 0.372549, 0.372549, 0.372549, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_m2e3g"]
 gradient = SubResource("Gradient_q3lrf")
-fill_from = Vector2(0.337607, 0.403846)
+fill_from = Vector2(0.750583, 0.538462)
+fill_to = Vector2(0.734266, 0.97669)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_et8y8"]
 radius = 115.81
@@ -182,6 +185,7 @@ shape = SubResource("CapsuleShape2D_et8y8")
 [node name="Reporter" parent="reporter7" instance=ExtResource("4_pwjn2")]
 
 [node name="plant3" type="Area2D" parent="."]
+visible = false
 position = Vector2(1258, 693)
 
 [node name="Sprite2D" type="Sprite2D" parent="plant3"]
@@ -193,6 +197,7 @@ scale = Vector2(8.55217, 19.6398)
 shape = SubResource("RectangleShape2D_y6dd6")
 
 [node name="plant2" type="Area2D" parent="."]
+visible = false
 position = Vector2(5333, 485)
 
 [node name="Sprite2D" type="Sprite2D" parent="plant2"]
@@ -205,6 +210,7 @@ scale = Vector2(22.5176, 48.5478)
 shape = SubResource("CircleShape2D_mi03a")
 
 [node name="plant7" type="Area2D" parent="."]
+visible = false
 position = Vector2(7483, 508)
 
 [node name="Sprite2D" type="Sprite2D" parent="plant7"]
@@ -217,6 +223,7 @@ scale = Vector2(22.5176, 48.5478)
 shape = SubResource("CircleShape2D_4ww1w")
 
 [node name="plant5" type="Area2D" parent="."]
+visible = false
 position = Vector2(2467, 532)
 
 [node name="Sprite2D" type="Sprite2D" parent="plant5"]
@@ -229,6 +236,7 @@ scale = Vector2(22.5176, 48.5478)
 shape = SubResource("CircleShape2D_7mnmf")
 
 [node name="plant4" type="Area2D" parent="."]
+visible = false
 position = Vector2(5710, 564)
 
 [node name="Sprite2D" type="Sprite2D" parent="plant4"]
@@ -240,6 +248,7 @@ scale = Vector2(10.7308, 32.2731)
 shape = SubResource("RectangleShape2D_y6dd6")
 
 [node name="plant" type="Area2D" parent="."]
+visible = false
 position = Vector2(3779, 671)
 
 [node name="Sprite2D" type="Sprite2D" parent="plant"]
@@ -250,6 +259,21 @@ texture = ExtResource("10_b4x7h")
 scale = Vector2(10.7308, 32.2731)
 shape = SubResource("RectangleShape2D_y6dd6")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 262.0
+offset_top = -121.0
+offset_right = 3581.0
+offset_bottom = 1612.0
+texture = ExtResource("2_j6q2d")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 5534.0
+offset_top = -39.0
+offset_right = 8853.0
+offset_bottom = 1694.0
+texture = ExtResource("2_j6q2d")
+flip_h = true
+
 [node name="Label" type="Label" parent="."]
 offset_left = 186.0
 offset_top = 903.0
@@ -259,26 +283,26 @@ theme = SubResource("Theme_ti2vq")
 text = "Don't answer any Reporter"
 
 [node name="Label 2022" type="Label" parent="."]
-offset_left = 2982.0
-offset_top = 977.0
-offset_right = 3270.0
-offset_bottom = 1137.0
+offset_left = 3276.0
+offset_top = 880.0
+offset_right = 3564.0
+offset_bottom = 1040.0
 theme = SubResource("Theme_ti2vq")
 text = "2022"
 
 [node name="Label 2023" type="Label" parent="."]
-offset_left = 5937.0
-offset_top = 960.0
-offset_right = 6225.0
-offset_bottom = 1120.0
+offset_left = 6187.0
+offset_top = 875.0
+offset_right = 6475.0
+offset_bottom = 1035.0
 theme = SubResource("Theme_ti2vq")
 text = "2023"
 
 [node name="Label 2024" type="Label" parent="."]
-offset_left = 9176.0
-offset_top = 953.0
-offset_right = 9464.0
-offset_bottom = 1113.0
+offset_left = 9144.0
+offset_top = 872.0
+offset_right = 9432.0
+offset_bottom = 1032.0
 theme = SubResource("Theme_ti2vq")
 text = "2024"
 
