@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://xqmj2pm06rq7"]
+[gd_scene load_steps=48 format=3 uid="uid://xqmj2pm06rq7"]
 
 [ext_resource type="Script" path="res://level/rainbow_sort/rainbow.gd" id="1_d2fdv"]
 [ext_resource type="Script" path="res://level/rainbow_sort/game.gd" id="2_7wg4w"]
@@ -69,6 +69,12 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ykhdu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uujfp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h3cwy"]
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_bruwf"]
 animations = [{
 "frames": [{
@@ -118,6 +124,13 @@ position = Vector2(-20, 58.3333)
 scale = Vector2(2, 2)
 texture = ExtResource("26_m3rop")
 
+[node name="Area2D" type="Area2D" parent="game/lone_parent/bubble"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/lone_parent/bubble/Area2D"]
+position = Vector2(13.6364, 50)
+scale = Vector2(60, 60)
+shape = SubResource("CircleShape2D_ykhdu")
+
 [node name="wheelchair" type="Node2D" parent="game"]
 position = Vector2(970, 610)
 
@@ -134,6 +147,13 @@ self_modulate = Color(1, 1, 1, 0.588235)
 position = Vector2(-20, 58.3333)
 scale = Vector2(2, 2)
 texture = ExtResource("30_wpco5")
+
+[node name="Area2D" type="Area2D" parent="game/wheelchair/bubble"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/wheelchair/bubble/Area2D"]
+position = Vector2(22.7273, 68.1818)
+scale = Vector2(60, 60)
+shape = SubResource("CircleShape2D_uujfp")
 
 [node name="guitar" type="Node2D" parent="game"]
 position = Vector2(1350, 245)
@@ -152,6 +172,13 @@ position = Vector2(-20, 58.3333)
 scale = Vector2(2, 2)
 texture = ExtResource("31_urdsr")
 
+[node name="Area2D" type="Area2D" parent="game/guitar/bubble"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/guitar/bubble/Area2D"]
+position = Vector2(22.7273, 68.1818)
+scale = Vector2(60, 60)
+shape = SubResource("CircleShape2D_uujfp")
+
 [node name="family" type="Node2D" parent="game"]
 position = Vector2(1650, 300)
 
@@ -168,6 +195,13 @@ self_modulate = Color(1, 1, 1, 0.588235)
 position = Vector2(-20, 58.3333)
 scale = Vector2(2, 2)
 texture = ExtResource("32_3fe7m")
+
+[node name="Area2D" type="Area2D" parent="game/family/bubble"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/family/bubble/Area2D"]
+position = Vector2(22.7273, 68.1818)
+scale = Vector2(60, 60)
+shape = SubResource("CircleShape2D_uujfp")
 
 [node name="pets" type="Node2D" parent="game"]
 position = Vector2(1720, 610)
@@ -186,6 +220,13 @@ position = Vector2(-20, 58.3333)
 scale = Vector2(2, 2)
 texture = ExtResource("16_yqcjw")
 
+[node name="Area2D" type="Area2D" parent="game/pets/bubble"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/pets/bubble/Area2D"]
+position = Vector2(22.7273, 68.1818)
+scale = Vector2(60, 60)
+shape = SubResource("CircleShape2D_uujfp")
+
 [node name="poor" type="Node2D" parent="game"]
 position = Vector2(1050, 920)
 
@@ -202,6 +243,13 @@ self_modulate = Color(1, 1, 1, 0.588235)
 position = Vector2(-20, 58.3333)
 scale = Vector2(2, 2)
 texture = ExtResource("34_og2l1")
+
+[node name="Area2D" type="Area2D" parent="game/poor/bubble"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/poor/bubble/Area2D"]
+position = Vector2(22.7273, 68.1818)
+scale = Vector2(60, 60)
+shape = SubResource("CircleShape2D_uujfp")
 
 [node name="glasses" type="Node2D" parent="game"]
 position = Vector2(1350, 955)
@@ -220,6 +268,13 @@ position = Vector2(-20, 58.3333)
 scale = Vector2(2, 2)
 texture = ExtResource("35_xeth6")
 
+[node name="Area2D" type="Area2D" parent="game/glasses/bubble"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/glasses/bubble/Area2D"]
+position = Vector2(22.7273, 68.1818)
+scale = Vector2(60, 60)
+shape = SubResource("CircleShape2D_uujfp")
+
 [node name="war" type="Node2D" parent="game"]
 position = Vector2(1650, 920)
 
@@ -237,6 +292,13 @@ position = Vector2(-20, 58.3333)
 scale = Vector2(2, 2)
 texture = ExtResource("36_0yrj8")
 
+[node name="Area2D" type="Area2D" parent="game/war/bubble"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/war/bubble/Area2D"]
+position = Vector2(22.7273, 68.1818)
+scale = Vector2(60, 60)
+shape = SubResource("CircleShape2D_uujfp")
+
 [node name="Lila" type="Node2D" parent="game"]
 position = Vector2(58, -7)
 
@@ -253,40 +315,86 @@ position = Vector2(-20, 58.3333)
 scale = Vector2(2, 2)
 texture = ExtResource("4_5crxd")
 
+[node name="Area2D" type="Area2D" parent="game/Lila/bubble"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Lila/bubble/Area2D"]
+position = Vector2(22.7273, 68.1818)
+scale = Vector2(60, 60)
+shape = SubResource("CircleShape2D_uujfp")
+
 [node name="Person" type="Sprite2D" parent="game/Lila"]
 position = Vector2(154, 228)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("11_rd1un")
 script = ExtResource("3_jstp7")
+party = 8
 attributes = Array[int]([0, 1, 7])
+
+[node name="Area2D" type="Area2D" parent="game/Lila/Person"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Lila/Person/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
 
 [node name="Person2" type="Sprite2D" parent="game/Lila"]
 position = Vector2(188, 208)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("11_rd1un")
 script = ExtResource("3_jstp7")
+party = 8
 attributes = Array[int]([2, 4, 5, 6])
+
+[node name="Area2D" type="Area2D" parent="game/Lila/Person2"]
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Lila/Person2/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
 
 [node name="Person3" type="Sprite2D" parent="game/Lila"]
 position = Vector2(106.5, 164.5)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("11_rd1un")
 script = ExtResource("3_jstp7")
+party = 8
 attributes = Array[int]([3, 7, 4])
+
+[node name="Area2D" type="Area2D" parent="game/Lila/Person3"]
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Lila/Person3/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
 
 [node name="Person4" type="Sprite2D" parent="game/Lila"]
 position = Vector2(140.5, 144.5)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("11_rd1un")
 script = ExtResource("3_jstp7")
+party = 8
 attributes = Array[int]([3, 6])
+
+[node name="Area2D" type="Area2D" parent="game/Lila/Person4"]
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Lila/Person4/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
 
 [node name="Person5" type="Sprite2D" parent="game/Lila"]
 position = Vector2(161, 87)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("11_rd1un")
 script = ExtResource("3_jstp7")
+party = 8
 attributes = Array[int]([5, 4])
+
+[node name="Area2D" type="Area2D" parent="game/Lila/Person5"]
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Lila/Person5/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
 
 [node name="Pink" type="Node2D" parent="game"]
 position = Vector2(-19, 280)
@@ -304,47 +412,102 @@ position = Vector2(-20, 58.3333)
 scale = Vector2(2, 2)
 texture = ExtResource("7_6w01r")
 
+[node name="Area2D" type="Area2D" parent="game/Pink/bubble"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Pink/bubble/Area2D"]
+position = Vector2(22.7273, 68.1818)
+scale = Vector2(60, 60)
+shape = SubResource("CircleShape2D_uujfp")
+
 [node name="Person" type="Sprite2D" parent="game/Pink"]
 position = Vector2(154, 228)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_7key3")
 script = ExtResource("3_jstp7")
+party = 9
 attributes = Array[int]([0, 1])
+
+[node name="Area2D" type="Area2D" parent="game/Pink/Person"]
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Pink/Person/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
 
 [node name="Person2" type="Sprite2D" parent="game/Pink"]
 position = Vector2(188, 208)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_7key3")
 script = ExtResource("3_jstp7")
+party = 9
 attributes = Array[int]([0, 2, 7])
+
+[node name="Area2D" type="Area2D" parent="game/Pink/Person2"]
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Pink/Person2/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
 
 [node name="Person3" type="Sprite2D" parent="game/Pink"]
 position = Vector2(106.5, 164.5)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_7key3")
 script = ExtResource("3_jstp7")
+party = 9
 attributes = Array[int]([5, 2, 4])
+
+[node name="Area2D" type="Area2D" parent="game/Pink/Person3"]
+scale = Vector2(0.999999, 0.999999)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Pink/Person3/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
 
 [node name="Person4" type="Sprite2D" parent="game/Pink"]
 position = Vector2(140.5, 144.5)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_7key3")
 script = ExtResource("3_jstp7")
+party = 9
 attributes = Array[int]([3, 4])
+
+[node name="Area2D" type="Area2D" parent="game/Pink/Person4"]
+scale = Vector2(0.999999, 0.999999)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Pink/Person4/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
 
 [node name="Person5" type="Sprite2D" parent="game/Pink"]
 position = Vector2(232, 210)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_7key3")
 script = ExtResource("3_jstp7")
+party = 9
 attributes = Array[int]([3, 6])
+
+[node name="Area2D" type="Area2D" parent="game/Pink/Person5"]
+scale = Vector2(0.999999, 0.999999)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Pink/Person5/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
 
 [node name="Person6" type="Sprite2D" parent="game/Pink"]
 position = Vector2(175, 125)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_7key3")
 script = ExtResource("3_jstp7")
+party = 9
 attributes = Array[int]([7, 2, 4, 5])
+
+[node name="Area2D" type="Area2D" parent="game/Pink/Person6"]
+scale = Vector2(0.999999, 0.999999)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Pink/Person6/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
 
 [node name="Teal" type="Node2D" parent="game"]
 position = Vector2(28, 604)
@@ -362,40 +525,87 @@ position = Vector2(-20, 58.3333)
 scale = Vector2(2, 2)
 texture = ExtResource("16_c5c3h")
 
+[node name="Area2D" type="Area2D" parent="game/Teal/bubble"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Teal/bubble/Area2D"]
+position = Vector2(22.7273, 68.1818)
+scale = Vector2(60, 60)
+shape = SubResource("CircleShape2D_uujfp")
+
 [node name="Person" type="Sprite2D" parent="game/Teal"]
 position = Vector2(154, 228)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("9_sg8ur")
 script = ExtResource("3_jstp7")
+party = 10
 attributes = Array[int]([3, 1, 2, 4])
+
+[node name="Area2D" type="Area2D" parent="game/Teal/Person"]
+scale = Vector2(0.999999, 0.999999)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Teal/Person/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
 
 [node name="Person2" type="Sprite2D" parent="game/Teal"]
 position = Vector2(188, 208)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("9_sg8ur")
 script = ExtResource("3_jstp7")
+party = 10
 attributes = Array[int]([3, 7, 5, 6])
+
+[node name="Area2D" type="Area2D" parent="game/Teal/Person2"]
+scale = Vector2(0.999999, 0.999999)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Teal/Person2/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
 
 [node name="Person3" type="Sprite2D" parent="game/Teal"]
 position = Vector2(106.5, 164.5)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("9_sg8ur")
 script = ExtResource("3_jstp7")
+party = 10
 attributes = Array[int]([0, 2, 7])
+
+[node name="Area2D" type="Area2D" parent="game/Teal/Person3"]
+scale = Vector2(0.999999, 0.999999)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Teal/Person3/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
 
 [node name="Person4" type="Sprite2D" parent="game/Teal"]
 position = Vector2(140.5, 144.5)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("9_sg8ur")
 script = ExtResource("3_jstp7")
+party = 10
 attributes = Array[int]([3, 5, 4])
+
+[node name="Area2D" type="Area2D" parent="game/Teal/Person4"]
+scale = Vector2(0.999999, 0.999999)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Teal/Person4/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
 
 [node name="Person5" type="Sprite2D" parent="game/Teal"]
 position = Vector2(73, 224)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("9_sg8ur")
 script = ExtResource("3_jstp7")
+party = 10
 attributes = Array[int]([3, 4])
+
+[node name="Area2D" type="Area2D" parent="game/Teal/Person5"]
+scale = Vector2(0.999999, 0.999999)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Teal/Person5/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
 
 [node name="Petrol" type="Node2D" parent="game"]
 position = Vector2(353, 661)
@@ -413,61 +623,124 @@ position = Vector2(-20, 58.3333)
 scale = Vector2(2, 2)
 texture = ExtResource("10_al6hs")
 
+[node name="Area2D" type="Area2D" parent="game/Petrol/bubble2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Petrol/bubble2/Area2D"]
+position = Vector2(22.7273, 68.1818)
+scale = Vector2(60, 60)
+shape = SubResource("CircleShape2D_uujfp")
+
 [node name="Person" type="Sprite2D" parent="game/Petrol"]
 position = Vector2(122.7, 328.5)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("8_t7wqd")
 script = ExtResource("3_jstp7")
+party = 11
 attributes = Array[int]([6, 4])
+
+[node name="Area2D" type="Area2D" parent="game/Petrol/Person"]
+scale = Vector2(0.999999, 0.999999)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Petrol/Person/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
 
 [node name="Person2" type="Sprite2D" parent="game/Petrol"]
 position = Vector2(172, 319)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("8_t7wqd")
 script = ExtResource("3_jstp7")
+party = 11
 attributes = Array[int]([3, 7, 1])
+
+[node name="Area2D" type="Area2D" parent="game/Petrol/Person2"]
+scale = Vector2(0.999999, 0.999999)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Petrol/Person2/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
 
 [node name="Person3" type="Sprite2D" parent="game/Petrol"]
 position = Vector2(75.2, 265)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("8_t7wqd")
 script = ExtResource("3_jstp7")
+party = 11
 attributes = Array[int]([6, 1, 7])
+
+[node name="Area2D" type="Area2D" parent="game/Petrol/Person3"]
+scale = Vector2(0.999999, 0.999999)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Petrol/Person3/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
 
 [node name="Person4" type="Sprite2D" parent="game/Petrol"]
 position = Vector2(103, 198)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("8_t7wqd")
 script = ExtResource("3_jstp7")
+party = 11
 attributes = Array[int]([7, 3])
+
+[node name="Area2D" type="Area2D" parent="game/Petrol/Person4"]
+scale = Vector2(0.999999, 0.999999)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Petrol/Person4/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
 
 [node name="Person5" type="Sprite2D" parent="game/Petrol"]
 position = Vector2(142, 201)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("8_t7wqd")
 script = ExtResource("3_jstp7")
+party = 11
 attributes = Array[int]([0, 2, 3])
+
+[node name="Area2D" type="Area2D" parent="game/Petrol/Person5"]
+scale = Vector2(0.999999, 0.999999)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Petrol/Person5/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
 
 [node name="Person6" type="Sprite2D" parent="game/Petrol"]
 position = Vector2(215, 297)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("8_t7wqd")
 script = ExtResource("3_jstp7")
+party = 11
 attributes = Array[int]([4, 1, 3])
+
+[node name="Area2D" type="Area2D" parent="game/Petrol/Person6"]
+scale = Vector2(0.999998, 0.999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Petrol/Person6/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
 
 [node name="Person7" type="Sprite2D" parent="game/Petrol"]
 position = Vector2(123, 267)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("8_t7wqd")
 script = ExtResource("3_jstp7")
+party = 11
 attributes = Array[int]([5, 6, 3, 0])
 
+[node name="Area2D" type="Area2D" parent="game/Petrol/Person7"]
+scale = Vector2(0.999998, 0.999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Petrol/Person7/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
+
 [node name="Orange" type="Node2D" parent="game"]
-position = Vector2(375, -31)
+position = Vector2(335, -31)
 
 [node name="bubble" type="AnimatedSprite2D" parent="game/Orange"]
 self_modulate = Color(1, 1, 1, 0.784314)
-position = Vector2(167, 147)
+position = Vector2(229, 158)
 scale = Vector2(0.22, 0.22)
 sprite_frames = ExtResource("18_pxn4y")
 script = ExtResource("5_36yos")
@@ -478,47 +751,102 @@ position = Vector2(-20, 58.3333)
 scale = Vector2(2, 2)
 texture = ExtResource("12_sy1oy")
 
+[node name="Area2D" type="Area2D" parent="game/Orange/bubble"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Orange/bubble/Area2D"]
+position = Vector2(22.7273, 68.1818)
+scale = Vector2(60, 60)
+shape = SubResource("CircleShape2D_uujfp")
+
 [node name="Person" type="Sprite2D" parent="game/Orange"]
-position = Vector2(154, 228)
+position = Vector2(223.7, 237)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("13_c4me8")
 script = ExtResource("3_jstp7")
+party = 12
 attributes = Array[int]([4])
 
+[node name="Area2D" type="Area2D" parent="game/Orange/Person"]
+scale = Vector2(0.999998, 0.999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Orange/Person/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
+
 [node name="Person2" type="Sprite2D" parent="game/Orange"]
-position = Vector2(188, 208)
+position = Vector2(257.7, 217)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("13_c4me8")
 script = ExtResource("3_jstp7")
+party = 12
 attributes = Array[int]([2])
 
+[node name="Area2D" type="Area2D" parent="game/Orange/Person2"]
+scale = Vector2(0.999998, 0.999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Orange/Person2/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
+
 [node name="Person3" type="Sprite2D" parent="game/Orange"]
-position = Vector2(106.5, 164.5)
+position = Vector2(176.2, 173.5)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("13_c4me8")
 script = ExtResource("3_jstp7")
+party = 12
 attributes = Array[int]([3])
 
+[node name="Area2D" type="Area2D" parent="game/Orange/Person3"]
+scale = Vector2(0.999998, 0.999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Orange/Person3/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
+
 [node name="Person4" type="Sprite2D" parent="game/Orange"]
-position = Vector2(140.5, 144.5)
+position = Vector2(210.2, 153.5)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("13_c4me8")
 script = ExtResource("3_jstp7")
+party = 12
 attributes = Array[int]([0])
+
+[node name="Area2D" type="Area2D" parent="game/Orange/Person4"]
+scale = Vector2(0.999998, 0.999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Orange/Person4/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
 
 [node name="Person5" type="Sprite2D" parent="game/Orange"]
-position = Vector2(145.2, 96)
+position = Vector2(214.9, 105)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("13_c4me8")
 script = ExtResource("3_jstp7")
+party = 12
 attributes = Array[int]([5])
 
+[node name="Area2D" type="Area2D" parent="game/Orange/Person5"]
+scale = Vector2(0.999998, 0.999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Orange/Person5/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
+
 [node name="Person6" type="Sprite2D" parent="game/Orange"]
-position = Vector2(214, 156)
+position = Vector2(283.7, 165)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("13_c4me8")
 script = ExtResource("3_jstp7")
+party = 12
 attributes = Array[int]([0])
+
+[node name="Area2D" type="Area2D" parent="game/Orange/Person6"]
+scale = Vector2(0.999998, 0.999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/Orange/Person6/Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_h3cwy")
 
 [node name="HelpButton" type="Sprite2D" parent="game"]
 position = Vector2(41, 41.875)

@@ -16,6 +16,12 @@ enum Attributes {
 	Orange			#12
 }
 
+var places = {
+	'lone': ""
+}
+
+@export var party : Attributes
+
 @export var attributes : Array[Attributes]
 
 var initial_position : Vector2
