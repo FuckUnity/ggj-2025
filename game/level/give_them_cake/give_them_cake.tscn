@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b88wdcxmke5r4"]
+[gd_scene load_steps=22 format=3 uid="uid://b88wdcxmke5r4"]
 
 [ext_resource type="Script" path="res://level/give_them_cake/give_them_cake.gd" id="1_r1qa1"]
 [ext_resource type="Shader" path="res://shaders/blur.gdshader" id="2_bh1rm"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dliwok6ph5y2a" path="res://assets/give_them_cake/kuchen2.png" id="7_ci6a1"]
 [ext_resource type="Texture2D" uid="uid://bsul0hlup17k8" path="res://assets/stage/layer_10_crowd.png" id="7_r7vc4"]
 [ext_resource type="Texture2D" uid="uid://dpkem80544t7t" path="res://assets/give_them_cake/kuchen1.png" id="8_sym2n"]
+[ext_resource type="AudioStream" uid="uid://d4fw2fn5xtrfa" path="res://audio/music_zapsplat_crazy_clowns.mp3" id="13_68q4u"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3mv8h"]
 shader = ExtResource("2_bh1rm")
@@ -186,3 +187,7 @@ sprite_frames = SubResource("SpriteFrames_28b0v")
 [node name="BirdHolder" type="Node2D" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_68q4u")
+autoplay = true

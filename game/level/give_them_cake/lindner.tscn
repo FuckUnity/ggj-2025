@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://dbjflm7idxskb"]
+[gd_scene load_steps=10 format=3 uid="uid://dbjflm7idxskb"]
 
 [ext_resource type="Script" path="res://level/give_them_cake/lindner.gd" id="1_qhu6s"]
 [ext_resource type="Shader" path="res://shaders/outline.gdshader" id="2_8rarn"]
 [ext_resource type="Texture2D" uid="uid://cl6yiu0465om5" path="res://assets/give_them_cake/lindner_01.png" id="2_h2ynl"]
 [ext_resource type="Texture2D" uid="uid://be5vpoosya0qy" path="res://assets/give_them_cake/lindner_02.png" id="3_wqkix"]
 [ext_resource type="Texture2D" uid="uid://b0nj3yi6b5ao2" path="res://assets/give_them_cake/lindner_03.png" id="4_5bnhu"]
+[ext_resource type="Texture2D" uid="uid://l36rvqpw58d0" path="res://assets/give_them_cake/kuchen5.png" id="6_suy4g"]
+[ext_resource type="AudioStream" uid="uid://dlkljakp1ogio" path="res://audio/slime-splat-1-219248.mp3" id="7_jamqm"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_sntbk"]
 shader = ExtResource("2_8rarn")
@@ -31,12 +33,24 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Lindner" type="Node2D"]
+[node name="Lindner" type="Node2D" node_paths=PackedStringArray("cake_splat", "splat_audio")]
 script = ExtResource("1_qhu6s")
+cake_splat = NodePath("AnimatedSprite2D/cake")
+splat_audio = NodePath("splat")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_sntbk")
 position = Vector2(-1, 0)
 scale = Vector2(0.267798, 0.267798)
 sprite_frames = SubResource("SpriteFrames_1hn3f")
-frame_progress = 0.569646
+frame = 2
+frame_progress = 0.841545
+
+[node name="cake" type="Sprite2D" parent="AnimatedSprite2D"]
+visible = false
+position = Vector2(18.6708, -26.1391)
+scale = Vector2(0.316489, 0.316489)
+texture = ExtResource("6_suy4g")
+
+[node name="splat" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_jamqm")

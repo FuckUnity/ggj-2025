@@ -2,6 +2,9 @@ class_name Lindner extends Node2D
 
 enum State { INIT, FLYING, KILLED, FREE, DELETABLE }
 
+@export var cake_splat: Sprite2D
+@export var splat_audio: AudioStreamPlayer
+
 # left to right
 var movement: Vector2
 var state: State = State.INIT
@@ -21,6 +24,8 @@ func _physics_process(delta):
 func killed():
 	state = State.KILLED
 	movement = Vector2(0.0, 600.0)
+	cake_splat.visible = true
+	splat_audio.play()
 
 # Hitpints 0 = Not Hit
 #          3 = Bulls Eye 
