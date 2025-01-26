@@ -1,13 +1,12 @@
-[gd_scene load_steps=29 format=3 uid="uid://cv2xgcfitlne7"]
+[gd_scene load_steps=30 format=3 uid="uid://cv2xgcfitlne7"]
 
 [ext_resource type="Script" path="res://level/fakenews_please/fakenews_please.gd" id="1_2e40f"]
-[ext_resource type="Texture2D" uid="uid://cnjmx83eom82y" path="res://level/fakenews_please/paper.jpg" id="2_ewlqc"]
 [ext_resource type="Texture2D" uid="uid://cr5k7swqkui0v" path="res://assets/fakenews_please/IMG_0124.jpeg" id="2_q5xr0"]
-[ext_resource type="Script" path="res://level/fakenews_please/guidelines.gd" id="3_5dyak"]
 [ext_resource type="Texture2D" uid="uid://d08idec8pnkh3" path="res://assets/fakenews_please/stamp_fake.png" id="6_dlulk"]
 [ext_resource type="Script" path="res://level/fakenews_please/stamp.gd" id="6_oorjg"]
 [ext_resource type="Texture2D" uid="uid://bn7ry7yjj1lqn" path="res://level/fakenews_please/speechbubble.png" id="7_eox1u"]
 [ext_resource type="Texture2D" uid="uid://coqgawcqfs67s" path="res://assets/fakenews_please/stamp_fake_down.png" id="8_6hvg6"]
+[ext_resource type="Texture2D" uid="uid://cdo27joxccmgj" path="res://assets/fakenews_please/customer_1.png" id="8_778jc"]
 [ext_resource type="Texture2D" uid="uid://bqcs4nn4gw5n2" path="res://assets/fakenews_please/Openbook.png" id="10_2ytn3"]
 [ext_resource type="Texture2D" uid="uid://dya6tau5v10vh" path="res://assets/fakenews_please/stamp_real.png" id="10_3viky"]
 [ext_resource type="Texture2D" uid="uid://clucqba7g1ilc" path="res://assets/fakenews_please/stamp_fake_decal.png" id="10_xruff"]
@@ -18,9 +17,11 @@
 [ext_resource type="Script" path="res://level/fakenews_please/customer.gd" id="14_r88dh"]
 [ext_resource type="Texture2D" uid="uid://cd0ul7fvfw7du" path="res://assets/fakenews_please/steam_2.png" id="15_7nd5a"]
 [ext_resource type="Texture2D" uid="uid://d33tt1sa20rxs" path="res://assets/fakenews_please/steam_3.png" id="16_6sumv"]
-[ext_resource type="Texture2D" uid="uid://h1jii40u3aq" path="res://assets/fakenews_please/customer.png" id="19_m6hbt"]
+[ext_resource type="Texture2D" uid="uid://dpvoijyn0tpmd" path="res://assets/fakenews_please/IMG_0172.png" id="19_llv06"]
 [ext_resource type="AudioStream" uid="uid://dilqt44eu3x6u" path="res://audio/Dark City.Wav" id="19_oiov1"]
-[ext_resource type="Texture2D" uid="uid://d0o5cm2duj7qw" path="res://assets/fakenews_please/papsti.png" id="20_nkqls"]
+[ext_resource type="Texture2D" uid="uid://desrpepno8x8p" path="res://assets/fakenews_please/IMG_0173.png" id="20_0cibi"]
+[ext_resource type="Texture2D" uid="uid://b47076oaxxymo" path="res://assets/fakenews_please/customer_2.png" id="21_3vt2e"]
+[ext_resource type="Texture2D" uid="uid://jit6gpv363m6" path="res://assets/fakenews_please/IMG_0174.png" id="22_fbskf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2mayo"]
 animations = [{
@@ -63,16 +64,16 @@ size = Vector2(1435.14, 1032.43)
 
 [sub_resource type="Theme" id="Theme_w8drq"]
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
-RichTextLabel/font_sizes/normal_font_size = 33
+RichTextLabel/font_sizes/normal_font_size = 44
 
 [node name="FakenewsPlease" type="Node2D" node_paths=PackedStringArray("customers", "customer_sprite", "response_label", "response_confirm")]
 script = ExtResource("1_2e40f")
-paper_spawn_pos = Vector2(328, 703)
-customers = [NodePath("CustomerPrefabs/1"), NodePath("CustomerPrefabs/2")]
+paper_spawn_pos = Vector2(328, 900)
+customers = [NodePath("CustomerPrefabs/2"), NodePath("CustomerPrefabs/1"), NodePath("CustomerPrefabs/3")]
 paper_prefab = ExtResource("14_ji504")
 customer_sprite = NodePath("CanvasLayer/CustomerClipping/Customer")
-customer_start = Vector2(0, -290)
-customer_end = Vector2(0, 85)
+customer_start = Vector2(0, -223.883)
+customer_end = Vector2(0, -3.153)
 response_label = NodePath("CanvasLayer/Response/responselabel")
 response_confirm = NodePath("CanvasLayer/Response/Confirm")
 
@@ -88,21 +89,24 @@ texture = ExtResource("2_q5xr0")
 expand_mode = 2
 
 [node name="smoke" type="AnimatedSprite2D" parent="CanvasLayer/Background"]
-position = Vector2(785, 469)
+position = Vector2(923, 525)
 sprite_frames = SubResource("SpriteFrames_2mayo")
 autoplay = "default"
-frame_progress = 0.520588
+frame_progress = 0.246598
 
 [node name="Response" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(592, 202)
+clip_children = 2
+position = Vector2(593, 213)
+scale = Vector2(1.34, 1.34)
 texture = ExtResource("7_eox1u")
 flip_h = true
 
 [node name="responselabel" type="RichTextLabel" parent="CanvasLayer/Response"]
-offset_left = -211.0
-offset_top = -134.0
-offset_right = 217.0
-offset_bottom = 73.0
+offset_left = -212.0
+offset_top = -138.0
+offset_right = 320.0
+offset_bottom = 163.0
+scale = Vector2(0.7, 0.7)
 theme = SubResource("Theme_6dxcb")
 text = "n
 n
@@ -110,30 +114,31 @@ n
 n"
 
 [node name="Confirm" type="Button" parent="CanvasLayer/Response"]
-offset_left = 115.0
-offset_top = 15.0
-offset_right = 198.0
-offset_bottom = 63.0
+offset_left = 153.731
+offset_top = 35.0746
+offset_right = 236.731
+offset_bottom = 83.0746
+scale = Vector2(0.792449, 0.792449)
 theme = SubResource("Theme_mc4na")
 text = "Ok"
 
 [node name="CustomerClipping" type="Sprite2D" parent="CanvasLayer"]
 clip_children = 1
-position = Vector2(152, 319)
+position = Vector2(152, 357)
+scale = Vector2(1.30539, 1.90278)
 texture = SubResource("PlaceholderTexture2D_1oq2j")
 centered = false
 
 [node name="Customer" type="Sprite2D" parent="CanvasLayer/CustomerClipping"]
-position = Vector2(-9, -290)
-scale = Vector2(1.56522, 1.54802)
-texture = ExtResource("19_m6hbt")
+position = Vector2(56.6881, -223.883)
+scale = Vector2(0.744606, 0.523387)
+texture = ExtResource("8_778jc")
 centered = false
 
 [node name="Guidelines" type="CharacterBody2D" parent="CanvasLayer"]
-position = Vector2(1358, 741)
-scale = Vector2(0.37, 0.37)
+position = Vector2(1340, 799)
+scale = Vector2(0.534548, 0.534548)
 input_pickable = true
-script = ExtResource("3_5dyak")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Guidelines"]
@@ -146,15 +151,10 @@ scale = Vector2(0.703886, 0.722933)
 texture = ExtResource("10_2ytn3")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Guidelines"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -541.0
-offset_top = -527.0
-offset_right = -6.0
+offset_left = -592.0
+offset_top = -457.0
+offset_right = 24.0
 offset_bottom = 422.0
-grow_horizontal = 2
-grow_vertical = 2
 mouse_filter = 2
 theme = SubResource("Theme_w8drq")
 bbcode_enabled = true
@@ -166,13 +166,29 @@ Publications known for writing fake news
   - Runner
   - Information Battles
   - Image
+"
 
-Guidelines to spot misinformation
+[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer/Guidelines"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 78.0
+offset_top = -376.0
+offset_right = 668.0
+offset_bottom = 427.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_w8drq")
+bbcode_enabled = true
+text = "[font_size=43]How to spot misinformation[/font_size]
+
   - Articles must have a source
   - Sources must be current
   - Quotes must provide context
   - Images must fit the facts provided
-  - Articles shouldn't have grammatical errors"
+  - Articles shouldn't have grammatical errors
+  - Pictures might be AI generated, so watch out"
 
 [node name="Papers" type="Node" parent="CanvasLayer"]
 
@@ -181,42 +197,52 @@ Guidelines to spot misinformation
 [node name="Fake" type="Node" parent="CanvasLayer/Stamps"]
 
 [node name="FAKE" type="Sprite2D" parent="CanvasLayer/Stamps/Fake" node_paths=PackedStringArray("papers_root")]
-position = Vector2(1493, 431)
+position = Vector2(1808, 407)
 texture = ExtResource("6_dlulk")
 script = ExtResource("6_oorjg")
 unpressed_texture = ExtResource("6_dlulk")
 pressed_texture = ExtResource("8_6hvg6")
 decal_texture = ExtResource("10_xruff")
 papers_root = NodePath("../../../Papers")
+stamp_state = 2
 
 [node name="Checked" type="Node" parent="CanvasLayer/Stamps"]
 
 [node name="CHECKED" type="Sprite2D" parent="CanvasLayer/Stamps/Checked" node_paths=PackedStringArray("papers_root")]
-position = Vector2(1316, 435)
+position = Vector2(1622, 413)
 texture = ExtResource("10_3viky")
 script = ExtResource("6_oorjg")
 unpressed_texture = ExtResource("10_3viky")
 pressed_texture = ExtResource("11_toc38")
 decal_texture = ExtResource("13_tu3uw")
 papers_root = NodePath("../../../Papers")
+stamp_state = 1
 
 [node name="CustomerPrefabs" type="Node" parent="."]
-
-[node name="1" type="Node" parent="CustomerPrefabs"]
-script = ExtResource("14_r88dh")
-customer_name = "test1"
-paper_texture = ExtResource("2_ewlqc")
-person_texture = ExtResource("19_m6hbt")
-is_fake = 2
-failure_message = "Sadly this article is filled with misinformation and hate :("
 
 [node name="2" type="Node" parent="CustomerPrefabs"]
 script = ExtResource("14_r88dh")
 customer_name = "test1"
-paper_texture = ExtResource("20_nkqls")
-person_texture = ExtResource("19_m6hbt")
+paper_texture = ExtResource("20_0cibi")
+person_texture = ExtResource("8_778jc")
 is_fake = 2
-failure_message = "How would anyone believe this, AI is rotting our brains"
+failure_message = "This article cites its own website which does not count as a source"
+
+[node name="1" type="Node" parent="CustomerPrefabs"]
+script = ExtResource("14_r88dh")
+customer_name = "test1"
+paper_texture = ExtResource("19_llv06")
+person_texture = ExtResource("21_3vt2e")
+is_fake = 1
+failure_message = "Nope, this is actually true"
+
+[node name="3" type="Node" parent="CustomerPrefabs"]
+script = ExtResource("14_r88dh")
+customer_name = "test1"
+paper_texture = ExtResource("22_fbskf")
+person_texture = ExtResource("8_778jc")
+is_fake = 2
+failure_message = "The image is AI generated. Additional body parts were early signs for AI generated pictures, modern generators dont have such flaws. So becareful"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("19_oiov1")

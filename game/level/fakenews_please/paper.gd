@@ -9,13 +9,16 @@ var customer: Customer
 
 func init(customer: Customer):
 	self.customer = customer
-	paper_state = customer.is_fake
 	$"Sprite2D".texture = customer.paper_texture
 
 func get_global_rect():
 	return _get_global_rect($"Sprite2D")
 
 func _on_drag_end():
+	if paper_state != PaperState.NONE:
+		drop_off_if_on_customer()
+
+func drop_off_if_on_customer():
 	var drop_off_point = $"../../CustomerClipping" as Sprite2D
 	var drop_off_rect = _get_global_rect(drop_off_point)
 	var paper_rect = _get_global_rect($"Sprite2D")

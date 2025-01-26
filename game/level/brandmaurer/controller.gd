@@ -32,13 +32,21 @@ func _input(event: InputEvent) -> void:
 			drag_start_object_pos = raycast_result.collider.position
 			drag_target = raycast_result.collider
 			drag_target.freeze = true
+			drag_target.physics_material_override = drag_target.physics_material_override.duplicate(true)
+			drag_target.physics_material_override.bounce = 1
+			drag_target.physics_material_override.friction = 0
+
 
 	if drag_target != null and event is InputEventMouseButton and !event.is_pressed():
 		drag_start_object_pos = Vector3()
-		drag_target.freeze = false
+		drag_target.freeze = false	
+		drag_target.physics_material_override.bounce = 0.2
+		drag_target.physics_material_override.friction = 0.7
 		drag_target = null
 
 	if drag_target != null and event is InputEventMouseMotion:
 		var movement_plane = Plane(global_position * Vector3.FORWARD, brick_spawn.position)
 		var move_to = movement_plane.intersects_ray(from, to)
-		drag_target.move_and_collide(move_to - drag_target.position)
+		drag_target.move_and_collide(move_to - drag_target.position, false, 0.1)
+		drag_target.rotation = Vector3.ZERO
+		
