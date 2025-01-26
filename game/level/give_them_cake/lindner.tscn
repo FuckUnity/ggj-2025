@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cl6yiu0465om5" path="res://assets/give_them_cake/lindner_01.png" id="2_h2ynl"]
 [ext_resource type="Texture2D" uid="uid://be5vpoosya0qy" path="res://assets/give_them_cake/lindner_02.png" id="3_wqkix"]
 [ext_resource type="Texture2D" uid="uid://b0nj3yi6b5ao2" path="res://assets/give_them_cake/lindner_03.png" id="4_5bnhu"]
-[ext_resource type="Texture2D" uid="uid://l36rvqpw58d0" path="res://assets/give_them_cake/kuchen5.png" id="6_suy4g"]
+[ext_resource type="Texture2D" uid="uid://bru4kmp1ho58f" path="res://assets/give_them_cake/kuchensplat.png" id="6_y2rpr"]
 [ext_resource type="AudioStream" uid="uid://dlkljakp1ogio" path="res://audio/slime-splat-1-219248.mp3" id="7_jamqm"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_sntbk"]
@@ -48,9 +48,10 @@ frame_progress = 0.841545
 
 [node name="cake" type="Sprite2D" parent="AnimatedSprite2D"]
 visible = false
-position = Vector2(18.6708, -26.1391)
-scale = Vector2(0.316489, 0.316489)
-texture = ExtResource("6_suy4g")
+position = Vector2(-67.2148, -7.46832)
+rotation = -0.863938
+scale = Vector2(0.48434, 0.48434)
+texture = ExtResource("6_y2rpr")
 
 [node name="splat" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_jamqm")
