@@ -1,0 +1,278 @@
+[gd_scene load_steps=24 format=3 uid="uid://x2csr3orue5p"]
+
+[ext_resource type="Script" path="res://level/avoid_questions/avoid_questions.gd" id="1_lylxr"]
+[ext_resource type="PackedScene" uid="uid://crsdsuowd564w" path="res://level/avoid_questions/olaf.tscn" id="2_ejlqe"]
+[ext_resource type="Texture2D" uid="uid://b3sre1k2w3j2m" path="res://assets/rainbow/meeple/blue.png" id="4_n6ii1"]
+[ext_resource type="Texture2D" uid="uid://dyqi04i7kat5n" path="res://assets/room_windows_border.png" id="4_sobkn"]
+[ext_resource type="Texture2D" uid="uid://bsa5x4s0snyo8" path="res://assets/rainbow/meeple/pink.png" id="5_lyixl"]
+[ext_resource type="Texture2D" uid="uid://b4shjx3r655oj" path="res://assets/rainbow/meeple/purple.png" id="6_p2xlq"]
+[ext_resource type="Texture2D" uid="uid://dp5v7tcjg3qlt" path="res://assets/rainbow/meeple/green.png" id="7_vosj1"]
+[ext_resource type="Texture2D" uid="uid://dd5e0hoxi5t20" path="res://level/plants/sprites/p3.png" id="8_7b16y"]
+[ext_resource type="Texture2D" uid="uid://w4ned50aq8ul" path="res://assets/rainbow/meeple/orange.png" id="8_quvf6"]
+[ext_resource type="Texture2D" uid="uid://cnd83nvl8ci6n" path="res://level/plants/sprites/p1.png" id="9_ekndb"]
+[ext_resource type="Texture2D" uid="uid://cmvn8oa0gt21v" path="res://level/plants/sprites/p2.png" id="10_b4x7h"]
+[ext_resource type="FontFile" uid="uid://c5e6jd020r2fe" path="res://level/coffee/fonts/shiny-marker/Shiny Marker Regular.ttf" id="11_gubvg"]
+[ext_resource type="Texture2D" uid="uid://bx00tp7k6h4n5" path="res://assets/expose/speech_bubble.png" id="13_hi145"]
+
+[sub_resource type="Gradient" id="Gradient_kxm38"]
+colors = PackedColorArray(0, 3.36915e-07, 0.428186, 1, 1, 0.663547, 0.598011, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_26x4w"]
+gradient = SubResource("Gradient_kxm38")
+fill_from = Vector2(0.717949, 0.0769231)
+fill_to = Vector2(0.0534188, 0.649573)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sm5ut"]
+size = Vector2(0.754787, 74.0143)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_et8y8"]
+radius = 115.81
+height = 445.12
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y6dd6"]
+size = Vector2(29.1204, 28.746)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mi03a"]
+radius = 9.3015
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4ww1w"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7mnmf"]
+
+[sub_resource type="Theme" id="Theme_ti2vq"]
+default_font = ExtResource("11_gubvg")
+default_font_size = 125
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n08a0"]
+size = Vector2(600, 450)
+
+[node name="AvoidQuestions" type="Node2D"]
+script = ExtResource("1_lylxr")
+
+[node name="floor" type="StaticBody2D" parent="."]
+position = Vector2(57, 948)
+
+[node name="Sprite2D2" type="Sprite2D" parent="floor"]
+position = Vector2(6254, -3695)
+scale = Vector2(244.25, 128.02)
+texture = SubResource("GradientTexture2D_26x4w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
+position = Vector2(4474, 264)
+scale = Vector2(13564.8, 9.60015)
+shape = SubResource("RectangleShape2D_sm5ut")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="floor"]
+position = Vector2(-476.5, -803)
+scale = Vector2(552.473, 40.3166)
+shape = SubResource("RectangleShape2D_sm5ut")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="floor"]
+position = Vector2(9793, -763)
+scale = Vector2(552.473, 40.3166)
+shape = SubResource("RectangleShape2D_sm5ut")
+
+[node name="Sprite2D" type="Sprite2D" parent="floor"]
+position = Vector2(4814, -2644)
+scale = Vector2(-6.55923, 7.97442)
+texture = ExtResource("4_sobkn")
+region_enabled = true
+region_rect = Rect2(605.964, 380.483, 1535.58, 811.753)
+
+[node name="Olaf" parent="." instance=ExtResource("2_ejlqe")]
+position = Vector2(750, 734)
+
+[node name="plant_dead_6" type="Area2D" parent="."]
+position = Vector2(2709, 610)
+
+[node name="Sprite2D" type="Sprite2D" parent="plant_dead_6"]
+position = Vector2(4, 18)
+texture = ExtResource("4_n6ii1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plant_dead_6"]
+position = Vector2(5, 52)
+shape = SubResource("CapsuleShape2D_et8y8")
+
+[node name="plant_dead_10" type="Area2D" parent="."]
+position = Vector2(7091, 517)
+
+[node name="Sprite2D" type="Sprite2D" parent="plant_dead_10"]
+position = Vector2(4, 18)
+texture = ExtResource("5_lyixl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plant_dead_10"]
+position = Vector2(5, 52)
+shape = SubResource("CapsuleShape2D_et8y8")
+
+[node name="plant_dead_5" type="Area2D" parent="."]
+position = Vector2(8749, 712)
+
+[node name="Sprite2D" type="Sprite2D" parent="plant_dead_5"]
+position = Vector2(4, 18)
+texture = ExtResource("6_p2xlq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plant_dead_5"]
+position = Vector2(5, 52)
+shape = SubResource("CapsuleShape2D_et8y8")
+
+[node name="plant_dead_7" type="Area2D" parent="."]
+position = Vector2(5122, 616)
+
+[node name="Sprite2D" type="Sprite2D" parent="plant_dead_7"]
+position = Vector2(4, 18)
+texture = ExtResource("7_vosj1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plant_dead_7"]
+position = Vector2(5, 52)
+shape = SubResource("CapsuleShape2D_et8y8")
+
+[node name="plant_dead_4" type="Area2D" parent="."]
+position = Vector2(6728, 748)
+
+[node name="Sprite2D" type="Sprite2D" parent="plant_dead_4"]
+position = Vector2(4, 18)
+texture = ExtResource("4_n6ii1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plant_dead_4"]
+position = Vector2(5, 52)
+shape = SubResource("CapsuleShape2D_et8y8")
+
+[node name="plant_dead_8" type="Area2D" parent="."]
+position = Vector2(3914, 719)
+
+[node name="Sprite2D" type="Sprite2D" parent="plant_dead_8"]
+position = Vector2(4, 18)
+texture = ExtResource("8_quvf6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plant_dead_8"]
+position = Vector2(5, 52)
+shape = SubResource("CapsuleShape2D_et8y8")
+
+[node name="plant_dead_9" type="Area2D" parent="."]
+position = Vector2(8623, 742)
+
+[node name="Sprite2D" type="Sprite2D" parent="plant_dead_9"]
+position = Vector2(4, 18)
+texture = ExtResource("8_quvf6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plant_dead_9"]
+position = Vector2(5, 52)
+shape = SubResource("CapsuleShape2D_et8y8")
+
+[node name="plant3" type="Area2D" parent="."]
+position = Vector2(1258, 692)
+
+[node name="Sprite2D" type="Sprite2D" parent="plant3"]
+position = Vector2(4, 18)
+texture = ExtResource("8_7b16y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plant3"]
+scale = Vector2(8.55217, 19.6398)
+shape = SubResource("RectangleShape2D_y6dd6")
+
+[node name="plant6" type="Area2D" parent="."]
+position = Vector2(8427, 646)
+
+[node name="Sprite2D" type="Sprite2D" parent="plant6"]
+position = Vector2(4, 18)
+texture = ExtResource("8_7b16y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plant6"]
+position = Vector2(-2013.52, 0)
+scale = Vector2(8.55217, 19.6398)
+shape = SubResource("RectangleShape2D_y6dd6")
+
+[node name="plant2" type="Area2D" parent="."]
+position = Vector2(5333, 485)
+
+[node name="Sprite2D" type="Sprite2D" parent="plant2"]
+position = Vector2(4, 18)
+texture = ExtResource("9_ekndb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plant2"]
+position = Vector2(11, 21)
+scale = Vector2(22.5176, 48.5478)
+shape = SubResource("CircleShape2D_mi03a")
+
+[node name="plant7" type="Area2D" parent="."]
+position = Vector2(7483, 508)
+
+[node name="Sprite2D" type="Sprite2D" parent="plant7"]
+position = Vector2(4, 18)
+texture = ExtResource("9_ekndb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plant7"]
+position = Vector2(7, 82)
+scale = Vector2(22.5176, 48.5478)
+shape = SubResource("CircleShape2D_4ww1w")
+
+[node name="plant5" type="Area2D" parent="."]
+position = Vector2(2467, 532)
+
+[node name="Sprite2D" type="Sprite2D" parent="plant5"]
+position = Vector2(4, 18)
+texture = ExtResource("9_ekndb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plant5"]
+position = Vector2(7, 73)
+scale = Vector2(22.5176, 48.5478)
+shape = SubResource("CircleShape2D_7mnmf")
+
+[node name="plant4" type="Area2D" parent="."]
+position = Vector2(5710, 564)
+
+[node name="Sprite2D" type="Sprite2D" parent="plant4"]
+position = Vector2(-5, -19)
+texture = ExtResource("10_b4x7h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plant4"]
+scale = Vector2(10.7308, 32.2731)
+shape = SubResource("RectangleShape2D_y6dd6")
+
+[node name="plant" type="Area2D" parent="."]
+position = Vector2(3779, 671)
+
+[node name="Sprite2D" type="Sprite2D" parent="plant"]
+position = Vector2(-5, -19)
+texture = ExtResource("10_b4x7h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plant"]
+scale = Vector2(10.7308, 32.2731)
+shape = SubResource("RectangleShape2D_y6dd6")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 186.0
+offset_top = 903.0
+offset_right = 1525.0
+offset_bottom = 1074.0
+theme = SubResource("Theme_ti2vq")
+text = "Don't answer any Reporter"
+
+[node name="finish" type="Area2D" parent="."]
+position = Vector2(9496, 30)
+
+[node name="Sprite2D" type="Sprite2D" parent="finish"]
+position = Vector2(34, -12)
+scale = Vector2(1.31055, 1)
+texture = ExtResource("13_hi145")
+
+[node name="Label" type="Label" parent="finish"]
+offset_left = -242.0
+offset_top = -94.0
+offset_right = 353.0
+offset_bottom = 34.0
+theme = SubResource("Theme_ti2vq")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Vertrauen?"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="finish"]
+shape = SubResource("RectangleShape2D_n08a0")
+
+[connection signal="body_entered" from="plant_dead_6" to="Olaf" method="_on_plant_dead_area_entered"]
+[connection signal="body_entered" from="plant_dead_10" to="Olaf" method="_on_plant_dead_area_entered"]
+[connection signal="body_entered" from="plant_dead_5" to="Olaf" method="_on_plant_dead_area_entered"]
+[connection signal="body_entered" from="plant_dead_7" to="Olaf" method="_on_plant_dead_area_entered"]
+[connection signal="body_entered" from="plant_dead_4" to="Olaf" method="_on_plant_dead_area_entered"]
+[connection signal="body_entered" from="plant_dead_8" to="Olaf" method="_on_plant_dead_area_entered"]
+[connection signal="body_entered" from="plant_dead_9" to="Olaf" method="_on_plant_dead_area_entered"]
+[connection signal="body_entered" from="finish" to="Olaf" method="_on_finish_entered"]

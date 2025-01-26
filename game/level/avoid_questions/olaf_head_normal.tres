@@ -1,0 +1,42 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://jv05j4pqh224"]
+
+[ext_resource type="Texture2D" uid="uid://b3r71sqo3ljww" path="res://assets/avoid_questions/olaf_01.png" id="1_qluf0"]
+[ext_resource type="Texture2D" uid="uid://t5yajrla72wd" path="res://assets/avoid_questions/olaf_00.png" id="2_jvmde"]
+[ext_resource type="Texture2D" uid="uid://b4j2biacn3kyx" path="res://assets/avoid_questions/olaf_02.png" id="3_qbbts"]
+
+[resource]
+resource_name = "Head"
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qluf0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jvmde")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jvmde")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_qluf0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qbbts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_qluf0")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 6.0
+}]

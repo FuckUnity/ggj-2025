@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://crsdsuowd564w"]
+
+[ext_resource type="Script" path="res://level/avoid_questions/olaf.gd" id="1_38p7u"]
+[ext_resource type="SpriteFrames" uid="uid://dja1gom1r60kc" path="res://level/avoid_questions/olaf_body.tres" id="2_e5c8t"]
+[ext_resource type="SpriteFrames" uid="uid://ctd416c7io1db" path="res://level/avoid_questions/olaf_head_eyepatch.tres" id="4_cbeqs"]
+[ext_resource type="Script" path="res://level/avoid_questions/jumpChargeIndicator.gd" id="5_o1v7l"]
+[ext_resource type="SpriteFrames" uid="uid://jv05j4pqh224" path="res://level/avoid_questions/olaf_head_normal.tres" id="6_0h142"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7q5th"]
+radius = 7.14286
+
+[node name="Olaf" type="CharacterBody2D" node_paths=PackedStringArray("body", "head_normal", "head_eyepatch")]
+script = ExtResource("1_38p7u")
+body = NodePath("AnimatedSpriteBody")
+head_normal = NodePath("AnimatedSpriteHeadNormal")
+head_eyepatch = NodePath("AnimatedSpriteHeadEyepatch")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, -18.5)
+scale = Vector2(7, 7)
+shape = SubResource("CapsuleShape2D_7q5th")
+
+[node name="AnimatedSpriteBody" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, 10)
+scale = Vector2(0.3, 0.3)
+sprite_frames = ExtResource("2_e5c8t")
+
+[node name="AnimatedSpriteHeadNormal" type="AnimatedSprite2D" parent="."]
+position = Vector2(6, -66)
+scale = Vector2(0.116416, 0.116416)
+sprite_frames = ExtResource("6_0h142")
+
+[node name="AnimatedSpriteHeadEyepatch" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(6, -66)
+scale = Vector2(0.116416, 0.116416)
+sprite_frames = ExtResource("4_cbeqs")
+
+[node name="JumpIndicator" type="Node2D" parent="."]
+position = Vector2(92, -10)
+scale = Vector2(0.116416, 0.116416)
+script = ExtResource("5_o1v7l")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-2, 10)
+limit_left = -99999
+limit_top = -99999
+limit_right = 99999
+limit_bottom = 99999
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_left_margin = 0.3
+drag_right_margin = 0.3
+editor_draw_limits = true
+editor_draw_drag_margin = true

@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://dja1gom1r60kc"]
+
+[ext_resource type="Texture2D" uid="uid://dlu1oubyuahyi" path="res://assets/avoid_questions/olaf_body_default.png" id="1_147uk"]
+[ext_resource type="Texture2D" uid="uid://fg026honsphq" path="res://assets/avoid_questions/olaf_body_00.png" id="2_j6wvu"]
+[ext_resource type="Texture2D" uid="uid://dk6wiephj5n4k" path="res://assets/avoid_questions/olaf_body_01.png" id="3_5g124"]
+[ext_resource type="Texture2D" uid="uid://c5x3a2q2385us" path="res://assets/avoid_questions/olaf_body_02.png" id="4_23x3a"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_147uk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_j6wvu")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_j6wvu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5g124")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_23x3a")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]

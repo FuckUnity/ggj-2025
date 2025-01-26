@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dyqi04i7kat5n" path="res://assets/room_windows_border.png" id="2_a0onp"]
 [ext_resource type="Texture2D" uid="uid://cjlba6uroqgsy" path="res://assets/room_windows_closed.png" id="2_dycii"]
 [ext_resource type="Script" path="res://level/plants/Player_plant.gd" id="2_r1b23"]
-[ext_resource type="Script" path="res://level/plants/jumpChargeIndicator.gd" id="8_77ul6"]
+[ext_resource type="Script" path="res://level/avoid_questions/jumpChargeIndicator.gd" id="8_77ul6"]
 [ext_resource type="Texture2D" uid="uid://t5yajrla72wd" path="res://assets/avoid_questions/olaf_00.png" id="9_o4med"]
 [ext_resource type="Texture2D" uid="uid://b3r71sqo3ljww" path="res://assets/avoid_questions/olaf_01.png" id="10_s2h3q"]
 [ext_resource type="Texture2D" uid="uid://b4j2biacn3kyx" path="res://assets/avoid_questions/olaf_02.png" id="11_hcsrd"]
