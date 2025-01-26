@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://crsdsuowd564w"]
 
-[ext_resource type="Script" path="res://level/avoid_questions/olaf.gd" id="1_38p7u"]
-[ext_resource type="SpriteFrames" uid="uid://dja1gom1r60kc" path="res://level/avoid_questions/olaf_body.tres" id="2_e5c8t"]
-[ext_resource type="SpriteFrames" uid="uid://ctd416c7io1db" path="res://level/avoid_questions/olaf_head_eyepatch.tres" id="4_cbeqs"]
+[ext_resource type="Script" path="res://level/avoid_questions/olaf/olaf.gd" id="1_38p7u"]
+[ext_resource type="SpriteFrames" uid="uid://dja1gom1r60kc" path="res://level/avoid_questions/olaf/olaf_body.tres" id="2_e5c8t"]
+[ext_resource type="SpriteFrames" uid="uid://ctd416c7io1db" path="res://level/avoid_questions/olaf/olaf_head_eyepatch.tres" id="4_cbeqs"]
 [ext_resource type="Script" path="res://level/avoid_questions/jumpChargeIndicator.gd" id="5_o1v7l"]
-[ext_resource type="SpriteFrames" uid="uid://jv05j4pqh224" path="res://level/avoid_questions/olaf_head_normal.tres" id="6_0h142"]
+[ext_resource type="SpriteFrames" uid="uid://jv05j4pqh224" path="res://level/avoid_questions/olaf/olaf_head_normal.tres" id="6_0h142"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7q5th"]
 radius = 7.14286
