@@ -12,6 +12,7 @@ extends CharacterBody2D
 
 var start_pos = null
 var has_eye_patch = false
+var is_ready = false
 
 func _reset():
 	has_eye_patch = false
@@ -33,6 +34,7 @@ func _get_black_eye():
 func _ready():
 	start_pos = position
 	_reset()
+	is_ready = true
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -77,13 +79,18 @@ func _set_animation(name: String):
 	body.play(name)
 
 func _on_plant_area_entered(body):
-	$eat.play()
+	pass
 
 func _on_plant_dead_area_entered(body):
-	if has_eye_patch:
-		_reset()
-	else:
-		_get_black_eye()
+	if body == self:
+		if has_eye_patch:
+			_reset()
+		else:
+			_get_black_eye()
 
-func _on_finish_entered():
-	$'..'.complete()
+signal completed
+
+func _on_finish_entered(body):
+	if body == self:
+		print("olaf::_on_finish_entered")
+		completed.emit()

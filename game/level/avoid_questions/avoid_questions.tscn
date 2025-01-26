@@ -1,9 +1,8 @@
-[gd_scene load_steps=24 format=3 uid="uid://x2csr3orue5p"]
+[gd_scene load_steps=25 format=3 uid="uid://x2csr3orue5p"]
 
 [ext_resource type="Script" path="res://level/avoid_questions/avoid_questions.gd" id="1_lylxr"]
 [ext_resource type="PackedScene" uid="uid://crsdsuowd564w" path="res://level/avoid_questions/olaf.tscn" id="2_ejlqe"]
 [ext_resource type="Texture2D" uid="uid://b3sre1k2w3j2m" path="res://assets/rainbow/meeple/blue.png" id="4_n6ii1"]
-[ext_resource type="Texture2D" uid="uid://dyqi04i7kat5n" path="res://assets/room_windows_border.png" id="4_sobkn"]
 [ext_resource type="Texture2D" uid="uid://bsa5x4s0snyo8" path="res://assets/rainbow/meeple/pink.png" id="5_lyixl"]
 [ext_resource type="Texture2D" uid="uid://b4shjx3r655oj" path="res://assets/rainbow/meeple/purple.png" id="6_p2xlq"]
 [ext_resource type="Texture2D" uid="uid://dp5v7tcjg3qlt" path="res://assets/rainbow/meeple/teal.png" id="7_vosj1"]
@@ -15,7 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://bx00tp7k6h4n5" path="res://assets/expose/speech_bubble.png" id="13_hi145"]
 
 [sub_resource type="Gradient" id="Gradient_kxm38"]
-colors = PackedColorArray(0, 3.36915e-07, 0.428186, 1, 1, 0.663547, 0.598011, 1)
+offsets = PackedFloat32Array(0.19697, 1)
+colors = PackedColorArray(0, 1.56425e-07, 0.284496, 1, 1, 0.663547, 0.598011, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_26x4w"]
 gradient = SubResource("Gradient_kxm38")
@@ -23,7 +23,13 @@ fill_from = Vector2(0.717949, 0.0769231)
 fill_to = Vector2(0.0534188, 0.649573)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sm5ut"]
-size = Vector2(0.754787, 74.0143)
+size = Vector2(1.00578, 74.0143)
+
+[sub_resource type="Gradient" id="Gradient_q3lrf"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_m2e3g"]
+gradient = SubResource("Gradient_q3lrf")
+fill_from = Vector2(0.337607, 0.403846)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_et8y8"]
 radius = 115.81
@@ -53,12 +59,12 @@ script = ExtResource("1_lylxr")
 position = Vector2(57, 948)
 
 [node name="Sprite2D2" type="Sprite2D" parent="floor"]
-position = Vector2(6254, -3695)
-scale = Vector2(244.25, 128.02)
+position = Vector2(6010, -3728.32)
+scale = Vector2(315.625, 126.979)
 texture = SubResource("GradientTexture2D_26x4w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
-position = Vector2(4474, 264)
+position = Vector2(6176.37, 264)
 scale = Vector2(13564.8, 9.60015)
 shape = SubResource("RectangleShape2D_sm5ut")
 
@@ -68,22 +74,23 @@ scale = Vector2(552.473, 40.3166)
 shape = SubResource("RectangleShape2D_sm5ut")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="floor"]
-position = Vector2(9793, -763)
+position = Vector2(13191, -789)
 scale = Vector2(552.473, 40.3166)
 shape = SubResource("RectangleShape2D_sm5ut")
 
 [node name="Sprite2D" type="Sprite2D" parent="floor"]
-position = Vector2(4814, -2644)
-scale = Vector2(-6.55923, 7.97442)
-texture = ExtResource("4_sobkn")
+position = Vector2(5971.13, 238)
+scale = Vector2(-13.4987, 0.81743)
+texture = SubResource("GradientTexture2D_m2e3g")
 region_enabled = true
 region_rect = Rect2(605.964, 380.483, 1535.58, 811.753)
 
 [node name="Olaf" parent="." instance=ExtResource("2_ejlqe")]
-position = Vector2(750, 734)
+position = Vector2(750, 766)
+JUMP_VELOCITY = -850.0
 
 [node name="plant_dead_6" type="Area2D" parent="."]
-position = Vector2(2709, 610)
+position = Vector2(2709, 660)
 
 [node name="Sprite2D" type="Sprite2D" parent="plant_dead_6"]
 position = Vector2(4, 18)
@@ -94,7 +101,7 @@ position = Vector2(5, 52)
 shape = SubResource("CapsuleShape2D_et8y8")
 
 [node name="plant_dead_10" type="Area2D" parent="."]
-position = Vector2(7091, 517)
+position = Vector2(7091, 682)
 
 [node name="Sprite2D" type="Sprite2D" parent="plant_dead_10"]
 position = Vector2(4, 18)
@@ -105,7 +112,7 @@ position = Vector2(5, 52)
 shape = SubResource("CapsuleShape2D_et8y8")
 
 [node name="plant_dead_5" type="Area2D" parent="."]
-position = Vector2(8749, 712)
+position = Vector2(9449, 712)
 
 [node name="Sprite2D" type="Sprite2D" parent="plant_dead_5"]
 position = Vector2(4, 18)
@@ -116,7 +123,7 @@ position = Vector2(5, 52)
 shape = SubResource("CapsuleShape2D_et8y8")
 
 [node name="plant_dead_7" type="Area2D" parent="."]
-position = Vector2(5122, 616)
+position = Vector2(5122, 691)
 
 [node name="Sprite2D" type="Sprite2D" parent="plant_dead_7"]
 position = Vector2(4, 18)
@@ -149,7 +156,7 @@ position = Vector2(5, 52)
 shape = SubResource("CapsuleShape2D_et8y8")
 
 [node name="plant_dead_9" type="Area2D" parent="."]
-position = Vector2(8623, 742)
+position = Vector2(9023, 742)
 
 [node name="Sprite2D" type="Sprite2D" parent="plant_dead_9"]
 position = Vector2(4, 18)
@@ -236,8 +243,32 @@ offset_bottom = 1074.0
 theme = SubResource("Theme_ti2vq")
 text = "Don't answer any Reporter"
 
+[node name="Label 2022" type="Label" parent="."]
+offset_left = 2982.0
+offset_top = 977.0
+offset_right = 3270.0
+offset_bottom = 1137.0
+theme = SubResource("Theme_ti2vq")
+text = "2022"
+
+[node name="Label 2023" type="Label" parent="."]
+offset_left = 5937.0
+offset_top = 960.0
+offset_right = 6225.0
+offset_bottom = 1120.0
+theme = SubResource("Theme_ti2vq")
+text = "2023"
+
+[node name="Label 2024" type="Label" parent="."]
+offset_left = 9176.0
+offset_top = 953.0
+offset_right = 9464.0
+offset_bottom = 1113.0
+theme = SubResource("Theme_ti2vq")
+text = "2024"
+
 [node name="finish" type="Area2D" parent="."]
-position = Vector2(9496, 30)
+position = Vector2(11344, 351)
 
 [node name="Sprite2D" type="Sprite2D" parent="finish"]
 position = Vector2(34, -12)
@@ -246,9 +277,9 @@ texture = ExtResource("13_hi145")
 
 [node name="Label" type="Label" parent="finish"]
 offset_left = -242.0
-offset_top = -94.0
+offset_top = -86.0
 offset_right = 353.0
-offset_bottom = 34.0
+offset_bottom = 42.0
 theme = SubResource("Theme_ti2vq")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Vertrauen?"
@@ -256,6 +287,7 @@ text = "Vertrauen?"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="finish"]
 shape = SubResource("RectangleShape2D_n08a0")
 
+[connection signal="completed" from="Olaf" to="." method="complete"]
 [connection signal="body_entered" from="plant_dead_6" to="Olaf" method="_on_plant_dead_area_entered"]
 [connection signal="body_entered" from="plant_dead_10" to="Olaf" method="_on_plant_dead_area_entered"]
 [connection signal="body_entered" from="plant_dead_5" to="Olaf" method="_on_plant_dead_area_entered"]
