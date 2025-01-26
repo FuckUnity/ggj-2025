@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://d35fcfy4ngulx"]
+[gd_scene load_steps=18 format=3 uid="uid://d35fcfy4ngulx"]
 
 [ext_resource type="Script" path="res://level/main/main.gd" id="1_rswi3"]
 [ext_resource type="Shader" path="res://shaders/grayscale.gdshader" id="2_ui23u"]
@@ -14,6 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://ciaomyl45n8k4" path="res://level/main/WohnzimmerBackroundloop.mp3" id="10_koedn"]
 [ext_resource type="Texture2D" uid="uid://c8xfefayg7bbw" path="res://assets/stage/bubble_04.png" id="11_5843r"]
 [ext_resource type="Texture2D" uid="uid://dnh836x0wn01q" path="res://assets/stage/microphone.png" id="13_iqgqi"]
+[ext_resource type="Texture2D" uid="uid://cm8k03jvldb7l" path="res://assets/stage/layer_04_chart_b.png" id="14_wc3fb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kowo6"]
 shader = ExtResource("2_ui23u")
@@ -120,7 +121,7 @@ texture_normal = ExtResource("6_c0vk8")
 ignore_texture_size = true
 stretch_mode = 4
 
-[node name="ButtonBubble05" type="TextureButton" parent="Control/AspectRatioContainer/Control"]
+[node name="ButtonMicrophone" type="TextureButton" parent="Control/AspectRatioContainer/Control"]
 layout_mode = 0
 offset_left = 3104.05
 offset_top = 1739.87
@@ -128,6 +129,16 @@ offset_right = 3569.05
 offset_bottom = 3040.87
 rotation = -0.87441
 texture_normal = ExtResource("13_iqgqi")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ButtonCredits" type="TextureButton" parent="Control/AspectRatioContainer/Control"]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 171.0
+offset_right = 1264.0
+offset_bottom = 723.0
+texture_normal = ExtResource("14_wc3fb")
 ignore_texture_size = true
 stretch_mode = 4
 

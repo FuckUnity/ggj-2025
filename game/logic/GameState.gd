@@ -18,6 +18,7 @@ func _init(scenes: Array[PackedScene]) -> void:
 		_levels.push_back(LevelScene.new(scene))
 		
 	_levels[0].state = MiniGameState.ACTIVE
+	_levels[1].state = MiniGameState.ACTIVE
 	_lastLevel = _levels.size() - 1
 
 func complete_current_level() -> void:
