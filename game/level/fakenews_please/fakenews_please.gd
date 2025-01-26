@@ -24,7 +24,7 @@ func play_next_customer():
 	customer_sprite.texture = customer.person_texture
 	customer_sprite.position = customer_start
 	var tween = create_tween()
-	tween.tween_property(customer_sprite, "position", customer_end, 2).set_ease(Tween.EASE_IN_OUT)
+	tween.tween_property(customer_sprite, "position", customer_end, 1.5).set_ease(Tween.EASE_IN_OUT)
 	tween.tween_interval(0.5)
 	tween.tween_callback(put_paper.bind(customer))
 	
@@ -38,8 +38,10 @@ func put_paper(customer: Customer):
 
 func hand_back(paper: Paper):
 	(response_confirm.get_parent() as Sprite2D).set_visible(true)
-	if paper.paper_state == paper.customer.is_fake:
+	if paper.paper_state == paper.customer.is_fake and paper.paper_state == Paper.PaperState.FAKE:
 		response_label.text = "Correct, that was fake, or not trustworthy news!"
+	elif paper.paper_state == paper.customer.is_fake and paper.paper_state == Paper.PaperState.CHECKED:
+		response_label.text = "Correct, that not obvious misinformation!"
 	else:
 		response_label.text = paper.customer.failure_message
 	remove_child(paper)
@@ -50,8 +52,8 @@ func on_confirm_response():
 	response_label.text = ""
 	
 	var tween = create_tween()
-	tween.tween_property(customer_sprite, "position", customer_start, 2).set_ease(Tween.EASE_IN_OUT)
-	tween.tween_interval(2)
+	tween.tween_property(customer_sprite, "position", customer_start, 1).set_ease(Tween.EASE_IN_OUT)
+	tween.tween_interval(1)
 	tween.tween_callback(next_or_end)
 	
 func next_or_end():

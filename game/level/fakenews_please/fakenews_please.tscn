@@ -92,7 +92,7 @@ expand_mode = 2
 position = Vector2(923, 525)
 sprite_frames = SubResource("SpriteFrames_2mayo")
 autoplay = "default"
-frame_progress = 0.246598
+frame_progress = 0.626019
 
 [node name="Response" type="Sprite2D" parent="CanvasLayer"]
 clip_children = 2
@@ -160,7 +160,11 @@ theme = SubResource("Theme_w8drq")
 bbcode_enabled = true
 text = "[font_size=50][center]Guidelines[/center][/font_size]
 Buzzwords used for misinformation campaigns
-  - Traitors
+  - Hoax
+  - Mainstream Media
+  - Propaganda
+  - Virtue Signaling
+  - Other overly emotional language
 
 Publications known for writing fake news
   - Runner
