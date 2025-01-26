@@ -39,5 +39,5 @@
 ### Musik
 
 - Dark City by Muncheybobo on <https://opengameart.org/content/dark-city>
-- audio_hero_Playroom_SIPML_K-0349 by zapsplat.com
-- stamp & spade-hacking-sound-with-gore-effects-96909 by pixabay.com
+- audio_hero_Playroom_SIPML_K-0349 & music_zapsplat_crazy_clowns by zapsplat.com
+- stamp & spade-hacking-sound-with-gore-effects-96909 & crowd-noise-284490 by pixabay.com
