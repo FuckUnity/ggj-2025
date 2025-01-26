@@ -4,6 +4,8 @@ class_name MerzSpawner extends Node3D
 
 @export var textures: Array[Texture2D] = []
 
+@export var merz_sound: AudioStreamPlayer
+
 func _ready() -> void:
 	var tween = create_tween()
 	tween.tween_interval(15 + randf() * 10)
@@ -18,6 +20,7 @@ func spawn_merz():
 	var mat = (mesh.get_surface_override_material(0) as StandardMaterial3D).duplicate(true)
 	mat.albedo_texture = textures.pick_random()
 	mesh.set_surface_override_material(0, mat)
+	merz_sound.play()
 	
 	var tween = create_tween()
 	tween.tween_interval(5 + randf() * 5)

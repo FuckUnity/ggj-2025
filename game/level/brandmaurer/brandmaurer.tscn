@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bt8qkdevwpkn4"]
+[gd_scene load_steps=23 format=3 uid="uid://bt8qkdevwpkn4"]
 
 [ext_resource type="Script" path="res://level/brandmaurer/brandmaurer.gd" id="1_bmxlc"]
 [ext_resource type="Script" path="res://level/brandmaurer/controller.gd" id="2_7uuj0"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://csek321fkaqal" path="res://assets/brandmauer/merz2.jpg" id="9_6fm16"]
 [ext_resource type="Texture2D" uid="uid://vqot4qnw5b44" path="res://assets/brandmauer/merz3.jpg" id="10_ikeem"]
 [ext_resource type="Texture2D" uid="uid://ceanepp6lg2x7" path="res://assets/brandmauer/merz4.jpg" id="11_cm448"]
+[ext_resource type="AudioStream" uid="uid://bobm7ea6o4r8u" path="res://audio/spade-hacking-sound-with-gore-effects-96909.mp3" id="13_e6g6g"]
 [ext_resource type="AudioStream" uid="uid://cbhy4yhbbv3wf" path="res://audio/audio_hero_Playroom_SIPML_K-0349.mp3" id="13_j1pny"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_kdeck"]
@@ -26,7 +27,7 @@ background_color = Color(2.40654e-08, 0.055521, 0.0593453, 1)
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_j7o8k"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qtcqh"]
-size = Vector3(1.83871, 0.00512695, 1)
+size = Vector3(1.83871, 0.00512695, 0.65332)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4dlb1"]
 albedo_texture = ExtResource("4_1ej2y")
@@ -54,7 +55,7 @@ transform = Transform3D(1.082, 0, 0, 0, 1.082, 0, 0, 0, 1.082, 0, 4.357, -5)
 text = "We need to build a Brandmauer
 against the rising threat of fascism!
 I sure hope no \"centrist\" politician
-sabotages our efforts"
+sabotages our efforts :>"
 font_size = 107
 
 [node name="EndLabel" type="Label3D" parent="."]
@@ -76,20 +77,14 @@ transform = Transform3D(3.71239, 0, 0, 0, 3.71239, 0, 0, 0, 3.71239, 0, 0, 0)
 physics_material_override = SubResource("PhysicsMaterial_j7o8k")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
-transform = Transform3D(2.821, 0, 0, 0, 2.821, 0, 0, 0, 2.821, -0.227301, 0, 0)
+transform = Transform3D(2.821, 0, 0, 0, 2.821, 0, 0, 0, 2.821, -0.227301, 0, 0.488992)
 shape = SubResource("BoxShape3D_qtcqh")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor/CollisionShape3D"]
-transform = Transform3D(1.845, 0, 0, 0, -8.06475e-08, 1.845, 0, -1.845, -8.06475e-08, 0, 0, 0)
+transform = Transform3D(1.845, 0, 0, 0, -5.61778e-08, 1.845, 0, -1.2852, -8.06475e-08, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_4dlb1")
 mesh = SubResource("QuadMesh_f2gvb")
 surface_material_override/0 = SubResource("StandardMaterial3D_fgxot")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.401133, 0.91602, 0, -0.91602, 0.401133, 0, 1.07984, -1.11804)
-visible = false
-light_energy = 0.175
-light_angular_distance = 1.47
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(0.995869, 0, 0.0908064, 0, 1, 0, -0.0908064, 0, 0.995869, 5.56103, 7.31188, 12.631)
@@ -101,14 +96,15 @@ spot_attenuation = 0.78
 [node name="BrickSpawner" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.3792, -1.43146)
 
-[node name="MerzSpawner" type="Node3D" parent="."]
+[node name="MerzSpawner" type="Node3D" parent="." node_paths=PackedStringArray("merz_sound")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00012961, 0.444504, 0.811123)
 script = ExtResource("7_rfq7w")
 merz_kapsel = ExtResource("6_ei426")
 textures = Array[Texture2D]([ExtResource("6_t5kjc"), ExtResource("9_6fm16"), ExtResource("10_ikeem"), ExtResource("11_cm448")])
+merz_sound = NodePath("merz_sound")
 
-[node name="Brick" parent="." instance=ExtResource("2_a35ou")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.57164, 0.543014, -1.18746)
+[node name="merz_sound" type="AudioStreamPlayer" parent="MerzSpawner"]
+stream = ExtResource("13_e6g6g")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_j1pny")

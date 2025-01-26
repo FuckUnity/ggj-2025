@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cv2xgcfitlne7"]
+[gd_scene load_steps=31 format=3 uid="uid://cv2xgcfitlne7"]
 
 [ext_resource type="Script" path="res://level/fakenews_please/fakenews_please.gd" id="1_2e40f"]
 [ext_resource type="Texture2D" uid="uid://cr5k7swqkui0v" path="res://assets/fakenews_please/IMG_0124.jpeg" id="2_q5xr0"]
@@ -17,6 +17,7 @@
 [ext_resource type="Script" path="res://level/fakenews_please/customer.gd" id="14_r88dh"]
 [ext_resource type="Texture2D" uid="uid://cd0ul7fvfw7du" path="res://assets/fakenews_please/steam_2.png" id="15_7nd5a"]
 [ext_resource type="Texture2D" uid="uid://d33tt1sa20rxs" path="res://assets/fakenews_please/steam_3.png" id="16_6sumv"]
+[ext_resource type="AudioStream" uid="uid://bnj6am03odhia" path="res://audio/stamp.wav" id="17_d624w"]
 [ext_resource type="Texture2D" uid="uid://dpvoijyn0tpmd" path="res://assets/fakenews_please/IMG_0172.png" id="19_llv06"]
 [ext_resource type="AudioStream" uid="uid://dilqt44eu3x6u" path="res://audio/Dark City.Wav" id="19_oiov1"]
 [ext_resource type="Texture2D" uid="uid://desrpepno8x8p" path="res://assets/fakenews_please/IMG_0173.png" id="20_0cibi"]
@@ -200,7 +201,7 @@ text = "[font_size=43]How to spot misinformation[/font_size]
 
 [node name="Fake" type="Node" parent="CanvasLayer/Stamps"]
 
-[node name="FAKE" type="Sprite2D" parent="CanvasLayer/Stamps/Fake" node_paths=PackedStringArray("papers_root")]
+[node name="FAKE" type="Sprite2D" parent="CanvasLayer/Stamps/Fake" node_paths=PackedStringArray("papers_root", "stamp_audio")]
 position = Vector2(1808, 407)
 texture = ExtResource("6_dlulk")
 script = ExtResource("6_oorjg")
@@ -209,10 +210,11 @@ pressed_texture = ExtResource("8_6hvg6")
 decal_texture = ExtResource("10_xruff")
 papers_root = NodePath("../../../Papers")
 stamp_state = 2
+stamp_audio = NodePath("../../stampSound")
 
 [node name="Checked" type="Node" parent="CanvasLayer/Stamps"]
 
-[node name="CHECKED" type="Sprite2D" parent="CanvasLayer/Stamps/Checked" node_paths=PackedStringArray("papers_root")]
+[node name="CHECKED" type="Sprite2D" parent="CanvasLayer/Stamps/Checked" node_paths=PackedStringArray("papers_root", "stamp_audio")]
 position = Vector2(1622, 413)
 texture = ExtResource("10_3viky")
 script = ExtResource("6_oorjg")
@@ -221,6 +223,10 @@ pressed_texture = ExtResource("11_toc38")
 decal_texture = ExtResource("13_tu3uw")
 papers_root = NodePath("../../../Papers")
 stamp_state = 1
+stamp_audio = NodePath("../../stampSound")
+
+[node name="stampSound" type="AudioStreamPlayer" parent="CanvasLayer/Stamps"]
+stream = ExtResource("17_d624w")
 
 [node name="CustomerPrefabs" type="Node" parent="."]
 
