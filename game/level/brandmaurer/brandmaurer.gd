@@ -4,6 +4,8 @@ class_name Brandmaurer extends level_base
 
 @export var bricks: Array[PackedScene]
 @export var brick_spawner: Node3D
+
+@export var start_label: Label3D
 @export var end_label: Label3D
 
 @export var spot_light: SpotLight3D
@@ -18,6 +20,7 @@ func _ready() -> void:
 		tween.tween_interval(randf() / 2)
 		tween.tween_callback(spawn_brick)
 		
+	tween.tween_callback(start_label.set_visible.bind(false))
 	tween.tween_callback(_spawn_brick_loop)
 	
 	var timer = Timer.new()

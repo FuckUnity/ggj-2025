@@ -35,10 +35,11 @@ albedo_texture = ExtResource("4_1ej2y")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fgxot"]
 albedo_texture = ExtResource("4_1ej2y")
 
-[node name="Brandmaurer" type="Node3D" node_paths=PackedStringArray("brick_spawner", "end_label", "spot_light")]
+[node name="Brandmaurer" type="Node3D" node_paths=PackedStringArray("brick_spawner", "start_label", "end_label", "spot_light")]
 script = ExtResource("1_bmxlc")
 bricks = Array[PackedScene]([ExtResource("2_a35ou"), ExtResource("3_2ch61")])
 brick_spawner = NodePath("BrickSpawner")
+start_label = NodePath("StartLabel")
 end_label = NodePath("EndLabel")
 spot_light = NodePath("SpotLight3D")
 
@@ -46,6 +47,14 @@ spot_light = NodePath("SpotLight3D")
 transform = Transform3D(71.8027, 0, 0, 0, 30.3592, 0, 0, 0, 3.51617, 0, 10.0324, -27.5488)
 mesh = SubResource("QuadMesh_kdeck")
 surface_material_override/0 = SubResource("StandardMaterial3D_cnwfh")
+
+[node name="StartLabel" type="Label3D" parent="."]
+transform = Transform3D(1.082, 0, 0, 0, 1.082, 0, 0, 0, 1.082, 0, 4.357, -5)
+text = "We need to build a Brandmauer
+against the rising threat of fascism!
+I sure hope no \"centrist\" politician
+sabotages our efforts"
+font_size = 107
 
 [node name="EndLabel" type="Label3D" parent="."]
 transform = Transform3D(2.045, 0, 0, 0, 2.045, 0, 0, 0, 2.045, 0, 4.357, -4.984)

@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://bwsjnlkswt6a2"]
 
 [ext_resource type="Script" path="res://level/fakenews_please/paper.gd" id="1_2go78"]
-[ext_resource type="Texture2D" uid="uid://cnjmx83eom82y" path="res://level/fakenews_please/paper.jpg" id="2_8hg2e"]
+[ext_resource type="Texture2D" uid="uid://jit6gpv363m6" path="res://assets/fakenews_please/IMG_0174.png" id="2_e8y87"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikm4t"]
-size = Vector2(432, 243)
+size = Vector2(432, 292)
 
 [node name="PaperPrefab" type="CharacterBody2D"]
 position = Vector2(802, 762)
@@ -17,10 +17,10 @@ platform_on_leave = 2
 script = ExtResource("1_2go78")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1.00001, -0.5)
+position = Vector2(-1, -2)
 shape = SubResource("RectangleShape2D_ikm4t")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 clip_children = 2
-scale = Vector2(0.225421, 0.225421)
-texture = ExtResource("2_8hg2e")
+scale = Vector2(0.73, 0.73)
+texture = ExtResource("2_e8y87")
