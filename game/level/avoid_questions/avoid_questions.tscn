@@ -326,7 +326,7 @@ text = "Vertrauen?"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="finish"]
 shape = SubResource("RectangleShape2D_n08a0")
 
-[connection signal="completed" from="Olaf" to="." method="complete"]
+[connection signal="completed" from="Olaf" to="." method="_on_complete"]
 [connection signal="body_entered" from="reporter1" to="Olaf" method="_on_plant_dead_area_entered"]
 [connection signal="body_entered" from="reporter2" to="Olaf" method="_on_plant_dead_area_entered"]
 [connection signal="body_entered" from="reporter3" to="Olaf" method="_on_plant_dead_area_entered"]
