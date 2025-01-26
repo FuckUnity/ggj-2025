@@ -13,6 +13,7 @@ config_version=5
 config/name="BurstTheBubble"
 run/main_scene="res://game.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
+boot_splash/image="res://splash.png"
 config/icon="res://icon.png"
 
 [display]
@@ -23,6 +24,7 @@ window/size/window_width_override=1600
 window/size/window_height_override=900
 window/stretch/mode="viewport"
 window/dpi/allow_hidpi=false
+mouse_cursor/custom_image="res://assets/_main/cursor.png"
 
 [dotnet]
 
