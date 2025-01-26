@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://bd4bwdejlbapj"]
+
+[ext_resource type="Texture2D" uid="uid://ceanepp6lg2x7" path="res://assets/brandmauer/merz4.jpg" id="1_w58dl"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_el0j8"]
+rough = true
+bounce = 0.28
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cpdoq"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_pl2ui"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_te8qe"]
+albedo_texture = ExtResource("1_w58dl")
+
+[node name="MerzKapsel" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.905119, 0.74894, -1.56116)
+mass = 18.614
+physics_material_override = SubResource("PhysicsMaterial_el0j8")
+gravity_scale = 0.3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_cpdoq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+transform = Transform3D(0.992612, 0, -0.121332, 0, 1, 0, 0.121332, 0, 0.992612, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_pl2ui")
+surface_material_override/0 = SubResource("StandardMaterial3D_te8qe")

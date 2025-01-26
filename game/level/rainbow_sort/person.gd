@@ -1,22 +1,26 @@
 extends Sprite2D
 
-enum COLOR {
-	BLUE,
-	RED,
-	YELLOW,
-	GREEN,
-	PURPLE,
-	RAINBOW	
+const Attributes = preload("res://level/rainbow_sort/attributes.gd").Attributes
+
+
+var places = {
+	'lone': ""
 }
 
-@export var alignment : COLOR
+@export var party : Attributes
 
-func _change_color(color: COLOR) -> void:
-	pass
+@export var attributes : Array[Attributes]
+
+var initial_position : Vector2
+
+var cur_bubble : Attributes
+
+var moving : bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	moving = false
+	initial_position = position
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,0 +1,34 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://hjtjbjxmf1n"]
+
+[ext_resource type="Texture2D" uid="uid://fy42ma4rexto" path="res://assets/rainbow/bubble/petrol1.png" id="1_bqoi2"]
+[ext_resource type="Texture2D" uid="uid://ca5sof1r05p2a" path="res://assets/rainbow/bubble/petrol2.png" id="2_t5cxk"]
+[ext_resource type="Texture2D" uid="uid://bqgn0ie4bmlwn" path="res://assets/rainbow/bubble/petrol3.png" id="3_rpcyk"]
+[ext_resource type="Texture2D" uid="uid://cdlga0betucqw" path="res://assets/rainbow/bubble/petrol4.png" id="4_xto8b"]
+[ext_resource type="Texture2D" uid="uid://clrdu5gjklvs7" path="res://assets/rainbow/bubble/petrol5.png" id="5_pjwim"]
+[ext_resource type="Texture2D" uid="uid://xf3smfiwd34m" path="res://assets/rainbow/bubble/empty.png" id="6_wijl7"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bqoi2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_t5cxk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rpcyk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xto8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pjwim")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wijl7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

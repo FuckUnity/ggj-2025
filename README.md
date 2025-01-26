@@ -34,6 +34,7 @@
 
 - Christian Linder: Foto: Stefan Sauer, dpa
 - Olaf Scholz: <https://commons.wikimedia.org/wiki/File:Olaf_Scholz_2024.jpg>
+- Olaf Scholz: <https://www.sueddeutsche.de/2023/09/04/e5da8ea1-acd6-417e-a782-1a8b31048777.jpeg> (Augenklappe) Foto: Steffen Kugler/Bundesregierung/dpa
 
 ### Musik
 

@@ -1,103 +1,107 @@
-[gd_scene load_steps=14 format=3 uid="uid://be7ddha5a1yoa"]
+[gd_scene load_steps=16 format=3 uid="uid://be7ddha5a1yoa"]
 
 [ext_resource type="Script" path="res://level/expose/expose.gd" id="1_ubmwc"]
-[ext_resource type="Texture2D" uid="uid://fqy0ypvfr8v8" path="res://assets/expose/bg.png" id="2_8hgep"]
+[ext_resource type="Texture2D" uid="uid://dktk1cih7iqli" path="res://assets/stage/layer_00_bg.png" id="2_mxnah"]
+[ext_resource type="Texture2D" uid="uid://dy78gmlnbnv0j" path="res://assets/stage/layer_04_chart.png" id="3_4thug"]
 [ext_resource type="Texture2D" uid="uid://bc1v84yfaikor" path="res://assets/expose/icons/war.png" id="3_32r83"]
-[ext_resource type="Texture2D" uid="uid://b5kvd30jowqfq" path="res://assets/expose/icons/child.png" id="4_63i5p"]
 [ext_resource type="Script" path="res://level/expose/clickable.gd" id="4_l0e6d"]
+[ext_resource type="Texture2D" uid="uid://bqslba55e18gv" path="res://assets/stage/bubble_02.png" id="4_m4r1w"]
 [ext_resource type="Texture2D" uid="uid://b88rygfs35f1m" path="res://assets/expose/icons/cross.png" id="5_k0hkt"]
-[ext_resource type="Texture2D" uid="uid://bx00tp7k6h4n5" path="res://level/coffee/icons/speech_bubble.png" id="6_xql26"]
-[ext_resource type="Texture2D" uid="uid://ywoeu355rr1s" path="res://assets/expose/start.png" id="7_8uv3r"]
-[ext_resource type="Texture2D" uid="uid://bcwn3lt8wnev4" path="res://assets/expose/face.png" id="8_pf4vq"]
-[ext_resource type="Texture2D" uid="uid://dgytvly01mpkg" path="res://assets/expose/arm.png" id="9_c6u3r"]
-[ext_resource type="Texture2D" uid="uid://c6k8q2nb0k6cl" path="res://assets/expose/end.png" id="10_uyn6f"]
-
-[sub_resource type="Gradient" id="Gradient_klgjw"]
-offsets = PackedFloat32Array(0, 0.260417)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_0i4ae"]
-gradient = SubResource("Gradient_klgjw")
-fill_from = Vector2(0.9, 0.3)
-fill_to = Vector2(0, 0.4)
+[ext_resource type="Texture2D" uid="uid://ekxwgpqhllcw" path="res://assets/expose/icons/communist.png" id="6_tippm"]
+[ext_resource type="Texture2D" uid="uid://de05bnwkfn2ps" path="res://assets/stage/IMG_0164.png" id="8_kjou2"]
+[ext_resource type="Texture2D" uid="uid://cadyhda27aplb" path="res://assets/stage/layer_06_podium.png" id="12_62dxx"]
+[ext_resource type="Texture2D" uid="uid://bsul0hlup17k8" path="res://assets/stage/layer_10_crowd.png" id="13_xq3on"]
+[ext_resource type="Texture2D" uid="uid://cgj6grpyavywa" path="res://assets/stage/layer_20_bubble_01.png" id="14_s1vnr"]
+[ext_resource type="Texture2D" uid="uid://c64e2lcvg31k2" path="res://assets/stage/layer_20_bubble_03.png" id="16_yyvl8"]
+[ext_resource type="Texture2D" uid="uid://rgagkfulge4l" path="res://assets/stage/layer_20_bubble_05.png" id="18_pr4in"]
+[ext_resource type="Texture2D" uid="uid://3qs42viwu7bv" path="res://assets/expose/icons/nature.png" id="20_tosgk"]
 
 [node name="Expose" type="Node2D"]
 script = ExtResource("1_ubmwc")
 
 [node name="bg_placeholder" type="Sprite2D" parent="."]
-position = Vector2(942, 534)
-scale = Vector2(29.7813, 16.7625)
-texture = SubResource("GradientTexture2D_0i4ae")
+position = Vector2(960, 540)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_mxnah")
+
+[node name="Layer04Chart" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_4thug")
+
+[node name="SpeechBubble" type="Sprite2D" parent="."]
+position = Vector2(1251, 106)
+scale = Vector2(2, 1)
+texture = ExtResource("4_m4r1w")
+
+[node name="Q" type="Node2D" parent="SpeechBubble"]
+scale = Vector2(0.500001, 0.439453)
+
+[node name="q1" type="Sprite2D" parent="SpeechBubble/Q"]
+position = Vector2(-120, -23)
+scale = Vector2(0.5, 1.138)
+texture = ExtResource("3_32r83")
+
+[node name="q2" type="Sprite2D" parent="SpeechBubble/Q"]
+position = Vector2(11, -23)
+scale = Vector2(0.5, 1.138)
+texture = ExtResource("6_tippm")
+
+[node name="q3" type="Sprite2D" parent="SpeechBubble/Q"]
+position = Vector2(123, -23)
+scale = Vector2(0.5, 1.138)
+texture = ExtResource("5_k0hkt")
+
+[node name="Start" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("8_kjou2")
+
+[node name="Layer06Podium" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("12_62dxx")
+
+[node name="Layer06Crowd" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("13_xq3on")
+
+[node name="Layer06bubble1" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("14_s1vnr")
+
+[node name="Layer06bubble3" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("16_yyvl8")
+
+[node name="Layer06bubble5" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("18_pr4in")
 
 [node name="scene" type="Node2D" parent="."]
 position = Vector2(66, 363)
 scale = Vector2(0.6, 0.6)
 
-[node name="people" type="Sprite2D" parent="scene"]
-position = Vector2(820, 560)
-scale = Vector2(4, 4)
-texture = ExtResource("2_8hgep")
-
 [node name="Arguments" type="Node2D" parent="scene"]
 
 [node name="a1" type="Sprite2D" parent="scene/Arguments"]
-position = Vector2(675, 301.667)
-scale = Vector2(4.27083, 3.64746)
+position = Vector2(555, 191.667)
+scale = Vector2(0.9, 0.9)
 texture = ExtResource("3_32r83")
 script = ExtResource("4_l0e6d")
 
 [node name="a2" type="Sprite2D" parent="scene/Arguments"]
-position = Vector2(1048.33, 285)
-scale = Vector2(4.27083, 3.64746)
-texture = ExtResource("4_63i5p")
+position = Vector2(1871.67, -26.6667)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("20_tosgk")
 script = ExtResource("4_l0e6d")
 
 [node name="a3" type="Sprite2D" parent="scene/Arguments"]
-position = Vector2(1496.67, 231.667)
-scale = Vector2(4.27083, 3.64746)
+position = Vector2(2528.33, -26.6667)
+scale = Vector2(0.9, 0.9)
 texture = ExtResource("5_k0hkt")
 script = ExtResource("4_l0e6d")
-
-[node name="SpeechBubble" type="Sprite2D" parent="scene"]
-position = Vector2(866.667, -345)
-scale = Vector2(1.66667, 0.732422)
-texture = ExtResource("6_xql26")
-
-[node name="Q" type="Node2D" parent="scene/SpeechBubble"]
-
-[node name="q1" type="Sprite2D" parent="scene/SpeechBubble/Q"]
-position = Vector2(-74, -34.1334)
-scale = Vector2(2.5625, 4.98)
-texture = ExtResource("3_32r83")
-
-[node name="q2" type="Sprite2D" parent="scene/SpeechBubble/Q"]
-position = Vector2(35, -29.5466)
-scale = Vector2(2.5625, 4.98)
-texture = ExtResource("4_63i5p")
-
-[node name="q3" type="Sprite2D" parent="scene/SpeechBubble/Q"]
-position = Vector2(123, -31.8578)
-scale = Vector2(2.5625, 4.98)
-texture = ExtResource("5_k0hkt")
-
-[node name="Start" type="Sprite2D" parent="scene"]
-position = Vector2(348.25, -43.5)
-scale = Vector2(7, 7)
-texture = ExtResource("7_8uv3r")
-
-[node name="Face" type="Sprite2D" parent="scene"]
-visible = false
-position = Vector2(347.293, -256.977)
-scale = Vector2(9.2, 7.23)
-texture = ExtResource("8_pf4vq")
-
-[node name="Arm" type="Sprite2D" parent="scene"]
-visible = false
-position = Vector2(590.543, -196.976)
-scale = Vector2(9.2, 7)
-texture = ExtResource("9_c6u3r")
-
-[node name="End" type="Sprite2D" parent="scene"]
-visible = false
-position = Vector2(477.543, -101.976)
-scale = Vector2(9.2, 7.029)
-texture = ExtResource("10_uyn6f")
