@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://xqmj2pm06rq7"]
+[gd_scene load_steps=53 format=3 uid="uid://xqmj2pm06rq7"]
 
 [ext_resource type="Script" path="res://level/rainbow_sort/rainbow.gd" id="1_d2fdv"]
 [ext_resource type="Script" path="res://level/rainbow_sort/rainbow_game.gd" id="2_7wg4w"]
@@ -11,6 +11,7 @@
 [ext_resource type="SpriteFrames" uid="uid://hjtjbjxmf1n" path="res://assets/rainbow/bubble/bubbleteal.tres" id="7_ojkgs"]
 [ext_resource type="SpriteFrames" uid="uid://bebiq3ttrll04" path="res://assets/rainbow/bubble/bubblepink.tres" id="7_w1hpd"]
 [ext_resource type="Texture2D" uid="uid://dp5v7tcjg3qlt" path="res://assets/rainbow/meeple/teal.png" id="8_t7wqd"]
+[ext_resource type="Script" path="res://level/rainbow_sort/peer_bubble.gd" id="9_rglih"]
 [ext_resource type="Texture2D" uid="uid://b3sre1k2w3j2m" path="res://assets/rainbow/meeple/blue.png" id="9_sg8ur"]
 [ext_resource type="Texture2D" uid="uid://b88rygfs35f1m" path="res://assets/expose/icons/cross.png" id="10_al6hs"]
 [ext_resource type="Texture2D" uid="uid://wgnksete20k8" path="res://assets/rainbow/bubble/türkis.png" id="10_ujuhe"]
@@ -38,11 +39,14 @@
 [ext_resource type="Texture2D" uid="uid://mbntn6kc5re6" path="res://assets/expose/icons/bankruptcy.png" id="34_og2l1"]
 [ext_resource type="Texture2D" uid="uid://dqscxk0tcijg5" path="res://assets/expose/icons/glasses.png" id="35_xeth6"]
 [ext_resource type="Texture2D" uid="uid://bc1v84yfaikor" path="res://assets/expose/icons/war.png" id="36_0yrj8"]
-[ext_resource type="Texture2D" uid="uid://cmfyc31nr2uci" path="res://assets/expose/icons/wildfire.png" id="37_kkjo5"]
 [ext_resource type="Script" path="res://level/rainbow_sort/help.gd" id="38_r735w"]
 [ext_resource type="Script" path="res://level/rainbow_sort/close_help.gd" id="39_1lvxw"]
 [ext_resource type="Texture2D" uid="uid://c0e7xtumpvakk" path="res://assets/rainbow/rules.png" id="39_7siv2"]
-[ext_resource type="Texture2D" uid="uid://bx4kkq0oqrj0e" path="res://assets/rainbow/medium_bubble.png" id="40_14w2m"]
+[ext_resource type="Texture2D" uid="uid://d0oc8smk56skq" path="res://assets/rainbow/fragebox.png" id="40_ng0l4"]
+[ext_resource type="Texture2D" uid="uid://dktk1cih7iqli" path="res://assets/stage/layer_00_bg.png" id="41_51i21"]
+[ext_resource type="Texture2D" uid="uid://dy78gmlnbnv0j" path="res://assets/stage/layer_04_chart.png" id="42_nl5qy"]
+[ext_resource type="Texture2D" uid="uid://ctc1fm28lj1wu" path="res://assets/rainbow/rule_bg.png" id="43_6kfl3"]
+[ext_resource type="Texture2D" uid="uid://cnvxuqdejvegx" path="res://assets/rainbow/xbox.png" id="46_kg4gf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xgdab"]
 animations = [{
@@ -65,9 +69,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("16_y82ym")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
-"speed": 5.0
+"speed": 8.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ykhdu"]
@@ -97,9 +101,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("16_y82ym")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
-"speed": 5.0
+"speed": 8.0
 }]
 
 [node name="Rainbow" type="Node"]
@@ -117,7 +121,7 @@ position = Vector2(9, -104)
 scale = Vector2(0.22, 0.22)
 sprite_frames = SubResource("SpriteFrames_xgdab")
 frame = 1
-script = ExtResource("5_36yos")
+script = ExtResource("9_rglih")
 
 [node name="icon" type="Sprite2D" parent="game/lone_parent/bubble"]
 self_modulate = Color(1, 1, 1, 0.588235)
@@ -142,13 +146,15 @@ position = Vector2(9, -104)
 scale = Vector2(0.22, 0.22)
 sprite_frames = SubResource("SpriteFrames_xgdab")
 frame = 1
-script = ExtResource("5_36yos")
+script = ExtResource("9_rglih")
 
 [node name="icon" type="Sprite2D" parent="game/wheelchair/bubble"]
 self_modulate = Color(1, 1, 1, 0.588235)
 position = Vector2(-20, 58.3333)
 scale = Vector2(2, 2)
 texture = ExtResource("30_wpco5")
+script = ExtResource("11_prr17")
+attribute = 1
 
 [node name="Area2D" type="Area2D" parent="game/wheelchair/bubble"]
 
@@ -166,13 +172,15 @@ position = Vector2(9, -104)
 scale = Vector2(0.22, 0.22)
 sprite_frames = SubResource("SpriteFrames_xgdab")
 frame = 1
-script = ExtResource("5_36yos")
+script = ExtResource("9_rglih")
 
 [node name="icon" type="Sprite2D" parent="game/guitar/bubble"]
 self_modulate = Color(1, 1, 1, 0.588235)
 position = Vector2(-20, 58.3333)
 scale = Vector2(2, 2)
 texture = ExtResource("31_urdsr")
+script = ExtResource("11_prr17")
+attribute = 2
 
 [node name="Area2D" type="Area2D" parent="game/guitar/bubble"]
 
@@ -190,13 +198,15 @@ position = Vector2(9, -104)
 scale = Vector2(0.22, 0.22)
 sprite_frames = SubResource("SpriteFrames_xgdab")
 frame = 1
-script = ExtResource("5_36yos")
+script = ExtResource("9_rglih")
 
 [node name="icon" type="Sprite2D" parent="game/family/bubble"]
 self_modulate = Color(1, 1, 1, 0.588235)
 position = Vector2(-20, 58.3333)
 scale = Vector2(2, 2)
 texture = ExtResource("32_3fe7m")
+script = ExtResource("11_prr17")
+attribute = 3
 
 [node name="Area2D" type="Area2D" parent="game/family/bubble"]
 
@@ -214,13 +224,15 @@ position = Vector2(9, -104)
 scale = Vector2(0.22, 0.22)
 sprite_frames = SubResource("SpriteFrames_xgdab")
 frame = 1
-script = ExtResource("5_36yos")
+script = ExtResource("9_rglih")
 
 [node name="icon" type="Sprite2D" parent="game/pets/bubble"]
 self_modulate = Color(1, 1, 1, 0.588235)
 position = Vector2(-20, 58.3333)
 scale = Vector2(2, 2)
 texture = ExtResource("16_yqcjw")
+script = ExtResource("11_prr17")
+attribute = 4
 
 [node name="Area2D" type="Area2D" parent="game/pets/bubble"]
 
@@ -238,13 +250,15 @@ position = Vector2(9, -104)
 scale = Vector2(0.22, 0.22)
 sprite_frames = SubResource("SpriteFrames_xgdab")
 frame = 1
-script = ExtResource("5_36yos")
+script = ExtResource("9_rglih")
 
 [node name="icon" type="Sprite2D" parent="game/poor/bubble"]
 self_modulate = Color(1, 1, 1, 0.588235)
 position = Vector2(-20, 58.3333)
 scale = Vector2(2, 2)
 texture = ExtResource("34_og2l1")
+script = ExtResource("11_prr17")
+attribute = 5
 
 [node name="Area2D" type="Area2D" parent="game/poor/bubble"]
 
@@ -262,13 +276,15 @@ position = Vector2(9, -104)
 scale = Vector2(0.22, 0.22)
 sprite_frames = SubResource("SpriteFrames_xgdab")
 frame = 1
-script = ExtResource("5_36yos")
+script = ExtResource("9_rglih")
 
 [node name="icon" type="Sprite2D" parent="game/glasses/bubble"]
 self_modulate = Color(1, 1, 1, 0.588235)
 position = Vector2(-20, 58.3333)
 scale = Vector2(2, 2)
 texture = ExtResource("35_xeth6")
+script = ExtResource("11_prr17")
+attribute = 6
 
 [node name="Area2D" type="Area2D" parent="game/glasses/bubble"]
 
@@ -286,13 +302,15 @@ position = Vector2(9, -104)
 scale = Vector2(0.22, 0.22)
 sprite_frames = SubResource("SpriteFrames_xgdab")
 frame = 1
-script = ExtResource("5_36yos")
+script = ExtResource("9_rglih")
 
 [node name="icon" type="Sprite2D" parent="game/war/bubble"]
 self_modulate = Color(1, 1, 1, 0.588235)
 position = Vector2(-20, 58.3333)
 scale = Vector2(2, 2)
 texture = ExtResource("36_0yrj8")
+script = ExtResource("11_prr17")
+attribute = 7
 
 [node name="Area2D" type="Area2D" parent="game/war/bubble"]
 
@@ -845,18 +863,36 @@ scale = Vector2(5, 5)
 shape = SubResource("CapsuleShape2D_h3cwy")
 
 [node name="HelpButton" type="Sprite2D" parent="game"]
-position = Vector2(41, 41.875)
-scale = Vector2(0.205263, 0.21144)
-texture = ExtResource("37_kkjo5")
+position = Vector2(56, 59)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("40_ng0l4")
 script = ExtResource("38_r735w")
 
 [node name="Help" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(958.395, 541.926)
-scale = Vector2(1.19701, 1.20461)
+position = Vector2(960, 540)
+
+[node name="bg" type="Sprite2D" parent="Help"]
+position = Vector2(-13, 0)
+scale = Vector2(1.52031, 1.5)
+texture = ExtResource("41_51i21")
+
+[node name="chart" type="Sprite2D" parent="Help"]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("42_nl5qy")
+
+[node name="rule_bg" type="Sprite2D" parent="Help"]
+position = Vector2(533, -327)
+scale = Vector2(3.4246, 2.47619)
+texture = ExtResource("43_6kfl3")
+
+[node name="Rules" type="Sprite2D" parent="Help/rule_bg"]
+self_modulate = Color(1, 1, 1, 0.870588)
+position = Vector2(-0.147644, 22.6154)
+scale = Vector2(0.105122, 0.145385)
 texture = ExtResource("39_7siv2")
 
 [node name="CloseButton" type="Sprite2D" parent="Help"]
-position = Vector2(646.283, 294.763)
-texture = ExtResource("40_14w2m")
+position = Vector2(882, -464)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("46_kg4gf")
 script = ExtResource("39_1lvxw")
