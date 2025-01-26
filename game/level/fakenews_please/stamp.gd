@@ -9,6 +9,8 @@ extends Sprite2D
 
 @export var stamp_state: Paper.PaperState
 
+@export var stamp_audio: AudioStreamPlayer
+
 func _draw() -> void:
 	draw_rect(Rect2(self.position, Vector2(self.texture.get_width(), self.texture.get_height())), Color.AQUA, true)
 	pass
@@ -38,6 +40,7 @@ func _input(event: InputEvent) -> void:
 		is_pressed = true
 		self.texture = pressed_texture
 		check_document_to_stamp()
+		stamp_audio.play()
 
 func check_document_to_stamp():
 	var papers = papers_root.get_children()
