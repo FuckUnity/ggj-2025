@@ -60,6 +60,12 @@ func _ready() -> void:
 var meeple_to_send : Array[Person]
 
 func activate(attr: Attributes) -> void:
+	var a_bubble = bubbles[attr]
+	
+	# don't reactivate this attr until it is empty again
+	if a_bubble.meeples > 0:
+		return
+	
 	var count = 0
 	meeple_to_send = []
 	for  meeple in meeples:
@@ -70,12 +76,11 @@ func activate(attr: Attributes) -> void:
 		if meeple.has_attr(attr):
 			meeple_to_send.push_back(meeple)
 			count += 1
-	if count <= 3:		
+	if count <= 3:
 		for m in meeple_to_send:
 			m.move_to_fake()
 		return
 	
-	var a_bubble = bubbles[attr]
 	for m in meeple_to_send:
 		var i = count % a_bubble.positions.size()
 		m.move_to(a_bubble.positions[i])
@@ -93,6 +98,21 @@ func get_party_bubble(a: Attributes) -> Bubble:
 		Attributes.Petrol: return $Petrol/bubble
 		Attributes.Orange: return $Orange/bubble
 		_: return $Orange/bubble
+		
+func get_attr_bubble(a: Attributes) -> Bubble:
+	Attributes.Petrol
+	match a:
+		Attributes.Lone:   			return $lone_parent/bubble
+		Attributes.Wheelchair:   	return $wheelchair/bubble
+		Attributes.Guitar:   		return $guitar/bubble
+		Attributes.Family: 			return $family/bubble
+		Attributes.Pets: 			return $pets/bubble
+		Attributes.Poor:   			return $poor/bubble
+		Attributes.Glasses: 		return $glasses/bubble
+		Attributes.War: 			return $war/bubble
+		_: return $lone_parent/bubble
+		
+
 
 func all_done_mobving() -> bool:
 	for m in meeples:
