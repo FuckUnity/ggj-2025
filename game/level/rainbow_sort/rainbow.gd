@@ -8,7 +8,8 @@ func _process(delta: float) -> void:
 		$game/Pink/bubble.frame == 5 &&
 		$game/Teal/bubble.frame == 5 &&
 		$game/Petrol/bubble.frame == 5 &&
-		$game/Orange/bubble.frame == 5):
-		var tween = create_tween()
-		tween.tween_interval(5)
-		tween.tween_callback(complete)
+		$game/Orange/bubble.frame == 5 &&
+		$game.all_done_mobving()):
+			var tween = create_tween()
+			tween.tween_interval(3)
+			tween.tween_callback(complete)

@@ -61,8 +61,10 @@ var meeple_to_send : Array[Person]
 
 func activate(attr: Attributes) -> void:
 	var count = 0
-	meeple_to_send = []	
+	meeple_to_send = []
 	for  meeple in meeples:
+		if meeple.moving:
+			continue
 		if meeple.global_position != meeple.initial_position:
 			continue
 		if meeple.has_attr(attr):
@@ -72,6 +74,7 @@ func activate(attr: Attributes) -> void:
 		for m in meeple_to_send:
 			m.move_to_fake()
 		return
+	
 	var a_bubble = bubbles[attr]
 	for m in meeple_to_send:
 		var i = count % a_bubble.positions.size()
@@ -90,6 +93,11 @@ func get_party_bubble(a: Attributes) -> Bubble:
 		Attributes.Petrol: return $Petrol/bubble
 		Attributes.Orange: return $Orange/bubble
 		_: return $Orange/bubble
+
+func all_done_mobving() -> bool:
+	for m in meeples:
+		if m.moving: return false
+	return true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

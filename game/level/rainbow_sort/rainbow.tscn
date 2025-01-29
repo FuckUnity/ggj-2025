@@ -843,7 +843,7 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("13_c4me8")
 script = ExtResource("3_jstp7")
 party = 12
-attributes = Array[int]([5])
+attributes = Array[int]([5, 0])
 
 [node name="Area2D" type="Area2D" parent="game/Orange/Person5"]
 scale = Vector2(0.999998, 0.999998)
@@ -858,7 +858,7 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("13_c4me8")
 script = ExtResource("3_jstp7")
 party = 12
-attributes = Array[int]([0])
+attributes = Array[int]([0, 5, 2])
 
 [node name="Area2D" type="Area2D" parent="game/Orange/Person6"]
 scale = Vector2(0.999998, 0.999998)
